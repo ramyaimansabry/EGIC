@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9025F44BA4A73714AC7FC7A /* Pods_EGIC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38395999298B91A549E5F5D /* Pods_EGIC.framework */; };
 		F060107022CF6D9E008BDCF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060106F22CF6D9E008BDCF4 /* AppDelegate.swift */; };
 		F060107222CF6D9E008BDCF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060107122CF6D9E008BDCF4 /* ViewController.swift */; };
 		F060107522CF6D9E008BDCF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F060107322CF6D9E008BDCF4 /* Main.storyboard */; };
 		F060107722CF6DA0008BDCF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F060107622CF6DA0008BDCF4 /* Assets.xcassets */; };
 		F060107A22CF6DA0008BDCF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */; };
+		F060108922CF73A5008BDCF4 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060108822CF73A5008BDCF4 /* ApiManager.swift */; };
+		F060108B22CF7450008BDCF4 /* ClientServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060108A22CF7450008BDCF4 /* ClientServices.swift */; };
+		F060108D22CF7485008BDCF4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060108C22CF7485008BDCF4 /* Client.swift */; };
+		F060108F22CF766A008BDCF4 /* HelperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060108E22CF766A008BDCF4 /* HelperData.swift */; };
+		F060109122CF7759008BDCF4 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109022CF7759008BDCF4 /* Extentions.swift */; };
+		F060109322CF781B008BDCF4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109222CF781B008BDCF4 /* Categories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DF6B3BA010C8B7ABC3DCB76 /* Pods-EGIC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGIC.release.xcconfig"; path = "Target Support Files/Pods-EGIC/Pods-EGIC.release.xcconfig"; sourceTree = "<group>"; };
+		B38395999298B91A549E5F5D /* Pods_EGIC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EGIC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE405B41A53D09E8F6FB046 /* Pods-EGIC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGIC.debug.xcconfig"; path = "Target Support Files/Pods-EGIC/Pods-EGIC.debug.xcconfig"; sourceTree = "<group>"; };
 		F060106C22CF6D9E008BDCF4 /* EGIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EGIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F060106F22CF6D9E008BDCF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F060107122CF6D9E008BDCF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,12 @@
 		F060107622CF6DA0008BDCF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F060107922CF6DA0008BDCF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F060107B22CF6DA0008BDCF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F060108822CF73A5008BDCF4 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		F060108A22CF7450008BDCF4 /* ClientServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientServices.swift; sourceTree = "<group>"; };
+		F060108C22CF7485008BDCF4 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		F060108E22CF766A008BDCF4 /* HelperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperData.swift; sourceTree = "<group>"; };
+		F060109022CF7759008BDCF4 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		F060109222CF781B008BDCF4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9025F44BA4A73714AC7FC7A /* Pods_EGIC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D0D4F89E16F2195A477A9EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B38395999298B91A549E5F5D /* Pods_EGIC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19AF3C647077439581E3DA1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAE405B41A53D09E8F6FB046 /* Pods-EGIC.debug.xcconfig */,
+				4DF6B3BA010C8B7ABC3DCB76 /* Pods-EGIC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F060106322CF6D9E008BDCF4 = {
 			isa = PBXGroup;
 			children = (
 				F060106E22CF6D9E008BDCF4 /* EGIC */,
 				F060106D22CF6D9E008BDCF4 /* Products */,
+				19AF3C647077439581E3DA1D /* Pods */,
+				0D0D4F89E16F2195A477A9EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +90,76 @@
 		F060106E22CF6D9E008BDCF4 /* EGIC */ = {
 			isa = PBXGroup;
 			children = (
-				F060106F22CF6D9E008BDCF4 /* AppDelegate.swift */,
-				F060107122CF6D9E008BDCF4 /* ViewController.swift */,
-				F060107322CF6D9E008BDCF4 /* Main.storyboard */,
-				F060107622CF6DA0008BDCF4 /* Assets.xcassets */,
-				F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */,
+				F060108522CF7356008BDCF4 /* Storyboard */,
+				F060108622CF7364008BDCF4 /* Helpers */,
+				F060108422CF734C008BDCF4 /* Model */,
+				F060108322CF733E008BDCF4 /* View */,
+				F060108222CF7326008BDCF4 /* Controller */,
+				F060108122CF731E008BDCF4 /* Assets */,
 				F060107B22CF6DA0008BDCF4 /* Info.plist */,
 			);
 			path = EGIC;
+			sourceTree = "<group>";
+		};
+		F060108122CF731E008BDCF4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F060107622CF6DA0008BDCF4 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F060108222CF7326008BDCF4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F060106F22CF6D9E008BDCF4 /* AppDelegate.swift */,
+				F060107122CF6D9E008BDCF4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F060108322CF733E008BDCF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F060108422CF734C008BDCF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F060108C22CF7485008BDCF4 /* Client.swift */,
+				F060109222CF781B008BDCF4 /* Categories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F060108522CF7356008BDCF4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */,
+				F060107322CF6D9E008BDCF4 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F060108622CF7364008BDCF4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F060108722CF7383008BDCF4 /* Services */,
+				F060108E22CF766A008BDCF4 /* HelperData.swift */,
+				F060109022CF7759008BDCF4 /* Extentions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F060108722CF7383008BDCF4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F060108822CF73A5008BDCF4 /* ApiManager.swift */,
+				F060108A22CF7450008BDCF4 /* ClientServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F060107E22CF6DA0008BDCF4 /* Build configuration list for PBXNativeTarget "EGIC" */;
 			buildPhases = (
+				75A5FAFFF7E54D27C8C26A88 /* [CP] Check Pods Manifest.lock */,
 				F060106822CF6D9E008BDCF4 /* Sources */,
 				F060106922CF6D9E008BDCF4 /* Frameworks */,
 				F060106A22CF6D9E008BDCF4 /* Resources */,
+				80DF892A1B952595932023F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +230,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		75A5FAFFF7E54D27C8C26A88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EGIC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80DF892A1B952595932023F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EGIC/Pods-EGIC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EGIC/Pods-EGIC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F060106822CF6D9E008BDCF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F060107222CF6D9E008BDCF4 /* ViewController.swift in Sources */,
+				F060108922CF73A5008BDCF4 /* ApiManager.swift in Sources */,
+				F060108B22CF7450008BDCF4 /* ClientServices.swift in Sources */,
+				F060108D22CF7485008BDCF4 /* Client.swift in Sources */,
 				F060107022CF6D9E008BDCF4 /* AppDelegate.swift in Sources */,
+				F060108F22CF766A008BDCF4 /* HelperData.swift in Sources */,
+				F060109122CF7759008BDCF4 /* Extentions.swift in Sources */,
+				F060109322CF781B008BDCF4 /* Categories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +441,7 @@
 		};
 		F060107F22CF6DA0008BDCF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAE405B41A53D09E8F6FB046 /* Pods-EGIC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,7 +451,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ramysabry1996.EGIC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramysabry1996.EGIC6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,6 +460,7 @@
 		};
 		F060108022CF6DA0008BDCF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DF6B3BA010C8B7ABC3DCB76 /* Pods-EGIC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,7 +470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ramysabry1996.EGIC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramysabry1996.EGIC6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
