@@ -17,6 +17,7 @@ class SignUpController: UIViewController {
     @IBOutlet weak var termsLabel: UILabel!
     private let jobDataSource: [[String]] = [["فني سباكة - Plumber","1"],["مهندس - Engineer","2"],["اخري - Other","3"]]
     var selectedJobId: String = "1"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTermsLabel()

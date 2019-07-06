@@ -10,7 +10,6 @@ import UIKit
 
 class SignInController: UIViewController {
 
-    @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var languageTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -36,18 +35,7 @@ class SignInController: UIViewController {
             let storyboard = UIStoryboard(name: "LoginBoard", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "SignUpController") as! SignUpController
             self.navigationController?.pushViewController(controller, animated: true)
-            return
         }
-        
-        let text2 = (label2.text)!
-        let range2 = (text2 as NSString).range(of: "سجل بياناتك هنا")
-        
-        if sender.didTapAttributedTextInLabel(label: label2, inRange: range2){
-            let storyboard = UIStoryboard(name: "LoginBoard", bundle: nil)
-            let controller2 = storyboard.instantiateViewController(withIdentifier: "SignUpController") as! SignUpController
-            self.navigationController?.pushViewController(controller2, animated: true)
-       }
-        
     }
     func setupSignUpLabel(){
         label1.text = "Don't have account? Sign Up"
@@ -63,22 +51,6 @@ class SignInController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapLabel(_:)))
         label1.addGestureRecognizer(tap)
         label1.isUserInteractionEnabled = true
-        
-        
-        label2.text = "ليس لديك حساب؟ سجل بياناتك هنا"
-        let text2 = (label2.text)!
-        let underlineAttriString2 = NSMutableAttributedString(string: text2)
-        let range2 = (text2 as NSString).range(of: "سجل بياناتك هنا")
-        let strokeTextAttributes2: [NSAttributedString.Key: Any] = [
-            .foregroundColor : UIColor.mainAppColor(),
-            .underlineStyle: NSUnderlineStyle.single.rawValue
-        ]
-        underlineAttriString2.addAttributes(strokeTextAttributes2, range: range2)
-        label2.attributedText = underlineAttriString2
-        let tap2 = UITapGestureRecognizer(target: self, action: #selector(tapLabel(_:)))
-        label2.addGestureRecognizer(tap2)
-        label2.isUserInteractionEnabled = true
-        
     }
    
     lazy var languagePickerView: UIPickerView = {

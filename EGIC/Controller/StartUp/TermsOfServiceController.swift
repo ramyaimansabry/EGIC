@@ -25,19 +25,16 @@ class TermsOfServiceController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     func setupTerms(){
-        textView.text = """
-        Thank you for downloading our application. the below terms will apply as soon as you press the register button.
-        
-        
-        - The data you entered while registering will be used in internal marketing campaigns and visitor insights.
-        
-        - Each time you login, your ip address will be obtained for our geographical analysis tools.
-        
-        - Your activity within the products section will be recorded to provide insights for the firm.
-            - Your data WILL NOT BE FORWARDED to third parties.
-        
-        - If there is any change in our ToS, we will notify you 30 days prior to the change. - The locations provided in our maps are genuine. However, we are not responsible for any circumstances that occur en route.
-        """
+        let htmlText = """
+         <h4 class="p1" style="text-align: left;">Thank you for downloading our application. the below terms will apply as soon as you press the register button</h4>
+         <p>&nbsp;</p>
+         <p class="p1" style="text-align: left;">- The data you entered while registering will be used in internal marketing campaigns and visitor insights.</p>
+         <p class="p1" style="text-align: left;">- Each time you login, your ip address will be obtained for our geographical analysis tools.</p>
+         <p class="p1" style="text-align: left;">- Your activity within the products section will be recorded to provide insights for the firm.</p>
+         <p class="p1" style="text-align: left;">- Your data WILL NOT BE FORWARDED to third parties.</p>
+         <p class="p1" style="text-align: left;">- If there is any change in our ToS, we will notify you 30 days prior to the change. - The locations provided in our maps are genuine. However, we are not responsible for any circumstances that occur en route.</p>
+         """
+        textView.attributedText = htmlText.htmlToAttributedString
     }
     func setupNavigationBar(){
         navigationController?.navigationBar.barStyle = .default

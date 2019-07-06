@@ -19,10 +19,10 @@
 		F060108F22CF766A008BDCF4 /* HelperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060108E22CF766A008BDCF4 /* HelperData.swift */; };
 		F060109122CF7759008BDCF4 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109022CF7759008BDCF4 /* Extentions.swift */; };
 		F060109322CF781B008BDCF4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109222CF781B008BDCF4 /* Categories.swift */; };
-		F060109522CFB5B8008BDCF4 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F060109422CFB5B8008BDCF4 /* LoginBoard.storyboard */; };
 		F060109822CFBFA9008BDCF4 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109722CFBFA9008BDCF4 /* SignInController.swift */; };
 		F060109A22CFC283008BDCF4 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109922CFC283008BDCF4 /* SignUpController.swift */; };
 		F060109C22CFCBF8008BDCF4 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */; };
+		F0DA4C4122D0E26C001C5FA0 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DA4C4022D0E26C001C5FA0 /* LoginBoard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +42,10 @@
 		F060108E22CF766A008BDCF4 /* HelperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperData.swift; sourceTree = "<group>"; };
 		F060109022CF7759008BDCF4 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		F060109222CF781B008BDCF4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
-		F060109422CFB5B8008BDCF4 /* LoginBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginBoard.storyboard; sourceTree = "<group>"; };
 		F060109722CFBFA9008BDCF4 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		F060109922CFC283008BDCF4 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
+		F0DA4C4022D0E26C001C5FA0 /* LoginBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginBoard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,6 @@
 				F060108522CF7356008BDCF4 /* Storyboard */,
 				F060108622CF7364008BDCF4 /* Helpers */,
 				F060108422CF734C008BDCF4 /* Model */,
-				F060108322CF733E008BDCF4 /* View */,
 				F060108222CF7326008BDCF4 /* Controller */,
 				F060108122CF731E008BDCF4 /* Assets */,
 				F060107B22CF6DA0008BDCF4 /* Info.plist */,
@@ -126,13 +125,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		F060108322CF733E008BDCF4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		F060108422CF734C008BDCF4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +139,7 @@
 			children = (
 				F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */,
 				F060107322CF6D9E008BDCF4 /* Main.storyboard */,
-				F060109422CFB5B8008BDCF4 /* LoginBoard.storyboard */,
+				F0DA4C4022D0E26C001C5FA0 /* LoginBoard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -243,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F060107A22CF6DA0008BDCF4 /* LaunchScreen.storyboard in Resources */,
-				F060109522CFB5B8008BDCF4 /* LoginBoard.storyboard in Resources */,
+				F0DA4C4122D0E26C001C5FA0 /* LoginBoard.storyboard in Resources */,
 				F060107722CF6DA0008BDCF4 /* Assets.xcassets in Resources */,
 				F060107522CF6D9E008BDCF4 /* Main.storyboard in Resources */,
 			);
@@ -286,8 +278,10 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MOLH/MOLH.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -296,8 +290,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MOLH.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -351,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -412,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
