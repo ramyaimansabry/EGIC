@@ -22,7 +22,7 @@
 		F060109822CFBFA9008BDCF4 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109722CFBFA9008BDCF4 /* SignInController.swift */; };
 		F060109A22CFC283008BDCF4 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109922CFC283008BDCF4 /* SignUpController.swift */; };
 		F060109C22CFCBF8008BDCF4 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */; };
-		F0DA4C4122D0E26C001C5FA0 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DA4C4022D0E26C001C5FA0 /* LoginBoard.storyboard */; };
+		F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +45,10 @@
 		F060109722CFBFA9008BDCF4 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		F060109922CFC283008BDCF4 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
-		F0DA4C4022D0E26C001C5FA0 /* LoginBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginBoard.storyboard; sourceTree = "<group>"; };
+		F0CE691422D0E49F0042D94E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoginBoard.strings; sourceTree = "<group>"; };
 		F0DA4C4222D0E437001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F0DA4C4322D0E438001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		F0DA4C4522D0E469001C5FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginBoard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +142,7 @@
 			children = (
 				F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */,
 				F060107322CF6D9E008BDCF4 /* Main.storyboard */,
-				F0DA4C4022D0E26C001C5FA0 /* LoginBoard.storyboard */,
+				F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -220,6 +221,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = F060106322CF6D9E008BDCF4;
 			productRefGroup = F060106D22CF6D9E008BDCF4 /* Products */;
@@ -237,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F060107A22CF6DA0008BDCF4 /* LaunchScreen.storyboard in Resources */,
-				F0DA4C4122D0E26C001C5FA0 /* LoginBoard.storyboard in Resources */,
+				F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */,
 				F060107722CF6DA0008BDCF4 /* Assets.xcassets in Resources */,
 				F060107522CF6D9E008BDCF4 /* Main.storyboard in Resources */,
 			);
@@ -342,6 +344,15 @@
 				F0DA4C4222D0E437001C5FA0 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0DA4C4522D0E469001C5FA0 /* Base */,
+				F0CE691422D0E49F0042D94E /* ar */,
+			);
+			name = LoginBoard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -1,0 +1,57 @@
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "0C1-Cb-606"; */
+"0C1-Cb-606.text" = "Name";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "64H-kg-QAC"; */
+"64H-kg-QAC.text" = "Language";
+
+/* Class = "UILabel"; text = "By pressing  the register button, you agree to our Terms & Conditions"; ObjectID = "9ID-CA-rAj"; */
+"9ID-CA-rAj.text" = "By pressing  the register button, you agree to our Terms & Conditions";
+
+/* Class = "UILabel"; text = "Mobile Number"; ObjectID = "EaI-HR-YNK"; */
+"EaI-HR-YNK.text" = "Mobile Number";
+
+/* Class = "UILabel"; text = "Job"; ObjectID = "FCg-H2-OZG"; */
+"FCg-H2-OZG.text" = "Job";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "GS5-SL-Fpm"; */
+"GS5-SL-Fpm.normalTitle" = "Register";
+
+/* Class = "UITextField"; placeholder = "4 char minimum"; ObjectID = "GS5-iK-fY4"; */
+"GS5-iK-fY4.placeholder" = "4 char minimum";
+
+/* Class = "UITextField"; placeholder = "Enter email here"; ObjectID = "JY0-V0-7c6"; */
+"JY0-V0-7c6.placeholder" = "Enter email here";
+
+/* Class = "UITextField"; placeholder = "Select Language"; ObjectID = "NPk-hJ-voY"; */
+"NPk-hJ-voY.placeholder" = "Select Language";
+
+/* Class = "UILabel"; text = "Email (optional)"; ObjectID = "SgU-az-5AD"; */
+"SgU-az-5AD.text" = "Email (optional)";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "ZtK-n5-S2r"; */
+"ZtK-n5-S2r.text" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "blV-j0-CFq"; */
+"blV-j0-CFq.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Mobile Number"; ObjectID = "gzO-fP-wUv"; */
+"gzO-fP-wUv.text" = "Mobile Number";
+
+/* Class = "UITextField"; placeholder = "Choose a job"; ObjectID = "k7g-NP-6ho"; */
+"k7g-NP-6ho.placeholder" = "Choose a job";
+
+/* Class = "UITextField"; placeholder = "01XXXXXXXX"; ObjectID = "mf3-dl-WEG"; */
+"mf3-dl-WEG.placeholder" = "01XXXXXXXX";
+
+/* Class = "UITextField"; placeholder = "01XXXXXXXX"; ObjectID = "o52-Hn-qu4"; */
+"o52-Hn-qu4.placeholder" = "01XXXXXXXX";
+
+/* Class = "UILabel"; text = "First visit?"; ObjectID = "pSd-yc-WFs"; */
+"pSd-yc-WFs.text" = "First visit?";
+
+/* Class = "UITextView"; text = "Terms"; ObjectID = "vRm-50-hcV"; */
+"vRm-50-hcV.text" = "Terms";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "xNA-m6-Yme"; */
+"xNA-m6-Yme.text" = "Sign In";
