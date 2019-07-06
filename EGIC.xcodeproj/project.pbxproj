@@ -46,6 +46,8 @@
 		F060109922CFC283008BDCF4 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
 		F0DA4C4022D0E26C001C5FA0 /* LoginBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginBoard.storyboard; sourceTree = "<group>"; };
+		F0DA4C4222D0E437001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F0DA4C4322D0E438001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +330,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F060107422CF6D9E008BDCF4 /* Base */,
+				F0DA4C4322D0E438001C5FA0 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F060107922CF6DA0008BDCF4 /* Base */,
+				F0DA4C4222D0E437001C5FA0 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
