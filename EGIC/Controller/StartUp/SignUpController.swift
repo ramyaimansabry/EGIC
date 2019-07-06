@@ -30,10 +30,10 @@ class SignUpController: UIViewController {
         
     }
     func setupTermsLabel(){
-        termsLabel.text = "By pressing register button, you are agree to our Terms & Conditions"
-        let text = (termsLabel.text)!
+        termsLabel.text = "termsOfService".localized
+        let text = "termsOfService".localized
         let underlineAttriString = NSMutableAttributedString(string: text)
-        let range = (text as NSString).range(of: "Terms & Conditions")
+        let range = (text as NSString).range(of: "termsLabel".localized)
         let strokeTextAttributes: [NSAttributedString.Key: Any] = [
             .underlineStyle: NSUnderlineStyle.single.rawValue
         ]
@@ -45,9 +45,14 @@ class SignUpController: UIViewController {
         termsLabel.addGestureRecognizer(tapGesture)
     }
     @objc func termsLabel(_ sender: UITapGestureRecognizer){
-        let storyboard = UIStoryboard(name: "LoginBoard", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "TermsOfServiceController") as! TermsOfServiceController
-        self.navigationController?.pushViewController(controller, animated: true)
+        let text = "termsOfService".localized
+        let range = (text as NSString).range(of: "termsLabel".localized)
+        
+        if sender.didTapAttributedTextInLabel(label: termsLabel, inRange: range){
+            let storyboard = UIStoryboard(name: "LoginBoard", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "TermsOfServiceController") as! TermsOfServiceController
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
     }
     @IBAction func backButtonAction(_ sender: UIButton) {
         self.view.endEditing(true)

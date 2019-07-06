@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  EGIC
+
+  Created by Ramy Ayman Sabry on 7/6/19.
+  Copyright © 2019 Ramy Ayman Sabry. All rights reserved.
+*/
+
+"dontHaveAccount" = "Don't have account? Sign Up";
+"signUpLabel" = "Sign Up";
+
+"termsOfService" = "By pressing register button, you are agree to our Terms & Conditions";
+"termsLabel" = "Terms & Conditions";

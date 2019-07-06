@@ -172,6 +172,9 @@ extension String {
         }else { return true }
     }
     
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
     
     var htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return NSAttributedString() }

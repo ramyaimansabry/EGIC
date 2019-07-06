@@ -38,7 +38,7 @@ class SplashScreenController: UIViewController {
     
     func ShowViewController(){
         let storyboard = UIStoryboard(name: "LoginBoard", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "SignInController") as! SignInController
+        let controller = storyboard.instantiateViewController(withIdentifier: "LanguageController") as! LanguageController
         let loginController = UINavigationController(rootViewController: controller)
         controller.navigationController?.isNavigationBarHidden = true
         present(loginController, animated: true, completion: nil)
