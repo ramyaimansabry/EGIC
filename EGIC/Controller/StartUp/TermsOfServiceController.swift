@@ -9,8 +9,8 @@
 import UIKit
 
 class TermsOfServiceController: UIViewController {
-
     @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()

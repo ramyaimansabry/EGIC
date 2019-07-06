@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
         if let loggedInClient = UserDefaults.standard.dictionary(forKey: "loggedInClient"){
-            HelperData.sharedInstance.loggedInClient._id = loggedInClient["user_id"] as! Int
+            HelperData.sharedInstance.loggedInClient.user_id = loggedInClient["user_id"] as! Int
             HelperData.sharedInstance.loggedInClient.name = loggedInClient["name"] as! String
             HelperData.sharedInstance.loggedInClient.mobile = loggedInClient["mobile"] as! String
             HelperData.sharedInstance.loggedInClient.token = loggedInClient["token"] as! String

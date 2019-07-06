@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SplashScreenController: UIViewController {
     
@@ -14,6 +15,7 @@ class SplashScreenController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SVProgressHUD.setupView()
      //   fetchHalls()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

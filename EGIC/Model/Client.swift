@@ -8,16 +8,21 @@
 
 import UIKit
 
-class Client: Decodable {
-    var _id: Int = -1
+struct Client: Decodable {
+    var user_id: Int = 0
     var name: String = ""
     var mobile: String = ""
     var token: String = ""
+    var language: String?
     
+    
+}
+
+extension Client {
     fileprivate func constructDict() -> [String: Any]{
         return ["name": self.name,
                 "mobile": self.mobile,
-                "user_id": self._id,
+                "user_id": self.user_id,
                 "token": self.token]
     }
     

@@ -9,7 +9,6 @@
 import UIKit
 
 class LanguageController: UIViewController {
-    
     @IBOutlet weak var languageTextField: UITextField!
     private let languageDataSource: [[String]] = [["English","en"],["العربية","ar"]]
     var selectedLanguage: String = "en"
@@ -19,20 +18,29 @@ class LanguageController: UIViewController {
         
         languageTextField.inputView = languagePickerView
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        languageTextField.text = languageDataSource[0][0]
+    }
     
-    
-    func changeLanguage(){
-        
+    func changeLanguage(language: String){
+        let storyboard = UIStoryboard(name: "LoginBoard", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SignInController") as! SignInController
+        controller.selectedLanguage = self.selectedLanguage
+        navigationController?.pushViewController(controller, animated: true)
         
         
         
     }
     
     @IBAction func continueButtonAction(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "LoginBoard", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "SignInController") as! SignInController
-        controller.selectedLanguage = self.selectedLanguage
-        navigationController?.pushViewController(controller, animated: true)
+        guard let language = languageTextField.text, languageTextField.text?.isEmpty == false else {
+            self.show1buttonAlert(title: "خطا - Error", message: "اختر اللغة - Choose language", buttonTitle: "OK") {
+            }
+            return
+        }
+        
+        changeLanguage(language: language)
     }
     lazy var languagePickerView: UIPickerView = {
         let pk = UIPickerView(frame: CGRect(x: 0, y: 0, width: 0, height: 150))

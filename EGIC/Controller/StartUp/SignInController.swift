@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SignInController: UIViewController {
-
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var phoneTextField: UITextField!
     var selectedLanguage: String = "en"
@@ -17,14 +17,30 @@ class SignInController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSignUpLabel()
+        SVProgressHUD.setupView()
     }
     
+    func login(phone: String){
+        SVProgressHUD.show()
+        ApiManager.sharedInstance.signIn(phoneNumber: phone, language: selectedLanguage) { (valid, msg) in
+            self.dismissRingIndecator()
+            if valid {
+                print(msg)
+            }else {
+                self.show1buttonAlert(title: "Error".localized, message: "LoginError".localized, buttonTitle: "OK") {
+                }
+            }
+        }
+        
+    }
     
     @IBAction func LoginButtonAction(_ sender: UIButton) {
-        
-        
-        
-        
+        guard let phone = phoneTextField.text, phoneTextField.text?.count == 11, phoneTextField.text?.IsValidString() ?? false else {
+            self.show1buttonAlert(title: "Error".localized, message: "LoginError".localized, buttonTitle: "OK") {
+            }
+            return
+        }
+        login(phone: phone)
     }
     @objc func tapLabel(_ sender: UITapGestureRecognizer) {
         let text = "dontHaveAccount".localized
@@ -33,6 +49,7 @@ class SignInController: UIViewController {
         if sender.didTapAttributedTextInLabel(label: label1, inRange: range){
             let storyboard = UIStoryboard(name: "LoginBoard", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "SignUpController") as! SignUpController
+            controller.selectedLanguage = self.selectedLanguage
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }

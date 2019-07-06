@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SignUpController: UIViewController {
-
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -17,17 +17,52 @@ class SignUpController: UIViewController {
     @IBOutlet weak var termsLabel: UILabel!
     private let jobDataSource: [[String]] = [["فني سباكة - Plumber","1"],["مهندس - Engineer","2"],["اخري - Other","3"]]
     var selectedJobId: String = "1"
+    var selectedLanguage: String = "en"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTermsLabel()
         jobTextField.inputView = jobPickerView
+        SVProgressHUD.setupView()
     }
     
-
+    func signUp(name: String, email: String = "", phone: String, jobId: String){
+        SVProgressHUD.show()
+        ApiManager.sharedInstance.signUp(phoneNumber: phone, name: name, email: email, job_id: jobId, language: selectedLanguage) { (valid, msg) in
+            self.dismissRingIndecator()
+            if valid {
+                print(msg)
+                
+            }else {
+                self.show1buttonAlert(title: "Error".localized, message: "SignUpError".localized, buttonTitle: "OK") {
+                }
+            }
+            
+        }
+    }
+    
     @IBAction func RegisterButtonAction(_ sender: UIButton) {
+        guard let phone = phoneTextField.text, phoneTextField.text?.count == 11, phoneTextField.text?.IsValidString() ?? false else {
+            self.show1buttonAlert(title: "Error".localized, message: "SignUpError".localized, buttonTitle: "OK") {
+            }
+            return
+        }
+        guard let name = nameTextField.text, nameTextField.text?.IsValidString() ?? false else {
+            self.show1buttonAlert(title: "Error".localized, message: "SignUpError".localized, buttonTitle: "OK") {
+            }
+            return
+        }
+        guard let _ = jobTextField.text, jobTextField.text?.IsValidString() ?? false else {
+            self.show1buttonAlert(title: "Error".localized, message: "SignUpError".localized, buttonTitle: "OK") {
+            }
+            return
+        }
         
-        
+        if emailTextField.text?.isEmpty ?? true {
+            signUp(name: name, phone: phone, jobId: selectedJobId)
+        }else{
+            signUp(name: name, email: emailTextField.text ?? "", phone: phone, jobId: selectedJobId)
+        }
     }
     func setupTermsLabel(){
         termsLabel.text = "termsOfService".localized

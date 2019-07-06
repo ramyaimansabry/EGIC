@@ -11,3 +11,8 @@
 
 "termsOfService" = "By pressing register button, you are agree to our Terms & Conditions";
 "termsLabel" = "Terms & Conditions";
+
+"Error" = "Error";
+"LoginError" = "Enter valid phone number!";
+
+"SignUpError" = "Enter valid info!";

@@ -10,7 +10,7 @@ import UIKit
 
 class HelperData {
     static let sharedInstance = HelperData()
-    final let serverBasePath = ""
+    final let serverBasePath = "https://1301201905092018.com/egic/mobile/api"
     var loggedInClient: Client = Client()
    
     
