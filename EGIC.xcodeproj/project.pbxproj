@@ -139,9 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				F060106F22CF6D9E008BDCF4 /* AppDelegate.swift */,
-				F0CE692122D225680042D94E /* HomeController.swift */,
-				F0CE692322D24A450042D94E /* LeftMenuController.swift */,
-				F0CE692522D24A850042D94E /* LeftMenuCell.swift */,
+				F0CE692722D269660042D94E /* Home */,
+				F0CE692822D269800042D94E /* SideMenu */,
 				F060109622CFBF8A008BDCF4 /* StartUp */,
 			);
 			path = Controller;
@@ -197,6 +196,23 @@
 				F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */,
 			);
 			path = StartUp;
+			sourceTree = "<group>";
+		};
+		F0CE692722D269660042D94E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE692122D225680042D94E /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F0CE692822D269800042D94E /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE692322D24A450042D94E /* LeftMenuController.swift */,
+				F0CE692522D24A850042D94E /* LeftMenuCell.swift */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

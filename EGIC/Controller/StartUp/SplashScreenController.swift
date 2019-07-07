@@ -18,6 +18,8 @@ class SplashScreenController: UIViewController {
     func ShowViewController(){
         if loggedInClient() == true {
             LoadingActivityIndicator.startAnimating()
+            HelperData.sharedInstance.loggedInClient.language = "currentLang".localized
+            HelperData.sharedInstance.loggedInClient.login()
             ApiManager.sharedInstance.loadHomeCategories { (valid, msg, homeCategories) in
                 self.LoadingActivityIndicator.stopAnimating()
                 if valid {
