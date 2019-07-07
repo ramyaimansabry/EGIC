@@ -53,14 +53,14 @@
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="01XXXXXXXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o52-Hn-qu4">
+                                                    <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="01XXXXXXXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o52-Hn-qu4">
                                                         <rect key="frame" x="0.0" y="19.5" width="315" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="p3N-OC-G4v"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" returnKeyType="done" textContentType="tel"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -110,27 +110,12 @@
                                     <constraint firstAttribute="trailing" secondItem="blV-j0-CFq" secondAttribute="trailing" constant="10" id="kSq-d1-tTw"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9If-QS-2rS">
-                                <rect key="frame" x="10" y="30" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="DEW-AU-lMm"/>
-                                    <constraint firstAttribute="width" constant="25" id="Z5T-Ld-lwo"/>
-                                </constraints>
-                                <color key="tintColor" red="0.17632684109999999" green="0.38740345840000001" blue="0.1872707009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="BackICON"/>
-                                <connections>
-                                    <action selector="backButtonAction:" destination="8nb-y2-V3g" eventType="touchUpInside" id="BVk-Sc-M9y"/>
-                                    <action selector="backButtonAction:" destination="hOM-vJ-Rv1" eventType="touchUpInside" id="wgu-Ax-vEv"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IDb-Nb-F7I" firstAttribute="trailing" secondItem="CN5-v8-9JQ" secondAttribute="trailing" constant="20" id="1IM-hA-9Sq"/>
-                            <constraint firstItem="9If-QS-2rS" firstAttribute="top" secondItem="IDb-Nb-F7I" secondAttribute="top" constant="10" id="EmV-Cp-w6q"/>
                             <constraint firstItem="CN5-v8-9JQ" firstAttribute="top" secondItem="IDb-Nb-F7I" secondAttribute="top" constant="25" id="UBW-hy-IMM"/>
                             <constraint firstItem="CN5-v8-9JQ" firstAttribute="leading" secondItem="IDb-Nb-F7I" secondAttribute="leading" constant="20" id="Yc3-jv-aO3"/>
-                            <constraint firstItem="9If-QS-2rS" firstAttribute="leading" secondItem="IDb-Nb-F7I" secondAttribute="leading" constant="10" id="mxl-ga-ZjE"/>
                             <constraint firstItem="IDb-Nb-F7I" firstAttribute="bottom" secondItem="CN5-v8-9JQ" secondAttribute="bottom" constant="25" id="uJb-Ra-vp9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IDb-Nb-F7I"/>
@@ -211,7 +196,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" returnKeyType="done"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -235,7 +220,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>

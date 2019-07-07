@@ -16,3 +16,8 @@
 "LoginError" = "Enter valid phone number!";
 
 "SignUpError" = "Enter valid info!";
+
+"LoadingHomeError" = "Unexpected Error Please Try Again In A While";
+
+
+"currentLang" = "en";

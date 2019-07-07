@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="10" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Controller-->
         <scene sceneID="9bs-QG-WaO">
             <objects>
-                <viewController id="ZjG-BF-QdO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeController" id="ZjG-BF-QdO" customClass="HomeController" customModule="EGIC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="COK-rt-R2R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

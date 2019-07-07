@@ -14,8 +14,6 @@ struct Client: Decodable {
     var mobile: String = ""
     var token: String = ""
     var language: String?
-    
-    
 }
 
 extension Client {
@@ -23,7 +21,8 @@ extension Client {
         return ["name": self.name,
                 "mobile": self.mobile,
                 "user_id": self.user_id,
-                "token": self.token]
+                "token": self.token,
+                "language": self.language ?? "en"]
     }
     
     func login(){

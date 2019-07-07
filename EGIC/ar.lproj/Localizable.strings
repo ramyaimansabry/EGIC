@@ -18,3 +18,9 @@
 
 
 "SignUpError" = "ادخل بيانات صحيحة";
+
+
+"LoadingHomeError" = "خطا غير متوقع، من فضلك حاول بعد قليل";
+
+
+"currentLang" = "ar";

@@ -12,20 +12,25 @@ import SVProgressHUD
 class SignInController: UIViewController {
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var phoneTextField: UITextField!
-    var selectedLanguage: String = "en"
+    var currentAppLanguage: String = "currentLang".localized
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSignUpLabel()
         SVProgressHUD.setupView()
+        phoneTextField.keyboardType = .asciiCapableNumberPad
     }
     
+    // MARK:- Network
+/********************************************************************************/
     func login(phone: String){
         SVProgressHUD.show()
-        ApiManager.sharedInstance.signIn(phoneNumber: phone, language: selectedLanguage) { (valid, msg) in
+        ApiManager.sharedInstance.signIn(phoneNumber: phone, language: currentAppLanguage) { (valid, msg) in
             self.dismissRingIndecator()
             if valid {
-                print(msg)
+                UserDefaults.standard.set(true, forKey: "clientLoggedIn")
+                UserDefaults.standard.synchronize()
+                self.dismiss(animated: true, completion: nil)
             }else {
                 self.show1buttonAlert(title: "Error".localized, message: "LoginError".localized, buttonTitle: "OK") {
                 }
@@ -42,6 +47,11 @@ class SignInController: UIViewController {
         }
         login(phone: phone)
     }
+    
+    
+    
+    // MARK:- Helper functions
+/********************************************************************************/
     @objc func tapLabel(_ sender: UITapGestureRecognizer) {
         let text = "dontHaveAccount".localized
         let range = (text as NSString).range(of: "signUpLabel".localized)
@@ -49,7 +59,6 @@ class SignInController: UIViewController {
         if sender.didTapAttributedTextInLabel(label: label1, inRange: range){
             let storyboard = UIStoryboard(name: "LoginBoard", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "SignUpController") as! SignUpController
-            controller.selectedLanguage = self.selectedLanguage
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
@@ -67,11 +76,6 @@ class SignInController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapLabel(_:)))
         label1.addGestureRecognizer(tap)
         label1.isUserInteractionEnabled = true
-    }
-   
-    @IBAction func backButtonAction(_ sender: UIButton) {
-        self.view.endEditing(true)
-        navigationController?.popViewController(animated: true)
     }
     
 }

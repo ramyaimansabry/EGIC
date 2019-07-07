@@ -17,7 +17,7 @@ class SignUpController: UIViewController {
     @IBOutlet weak var termsLabel: UILabel!
     private let jobDataSource: [[String]] = [["فني سباكة - Plumber","1"],["مهندس - Engineer","2"],["اخري - Other","3"]]
     var selectedJobId: String = "1"
-    var selectedLanguage: String = "en"
+   var currentAppLanguage: String = "currentLang".localized
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +26,16 @@ class SignUpController: UIViewController {
         SVProgressHUD.setupView()
     }
     
+    // MARK:- Network
+/********************************************************************************/
     func signUp(name: String, email: String = "", phone: String, jobId: String){
         SVProgressHUD.show()
-        ApiManager.sharedInstance.signUp(phoneNumber: phone, name: name, email: email, job_id: jobId, language: selectedLanguage) { (valid, msg) in
+        ApiManager.sharedInstance.signUp(phoneNumber: phone, name: name, email: email, job_id: jobId, language: currentAppLanguage) { (valid, msg) in
             self.dismissRingIndecator()
             if valid {
-                print(msg)
-                
+                UserDefaults.standard.set(true, forKey: "clientLoggedIn")
+                UserDefaults.standard.synchronize()
+                self.dismiss(animated: true, completion: nil)
             }else {
                 self.show1buttonAlert(title: "Error".localized, message: "SignUpError".localized, buttonTitle: "OK") {
                 }
@@ -64,6 +67,11 @@ class SignUpController: UIViewController {
             signUp(name: name, email: emailTextField.text ?? "", phone: phone, jobId: selectedJobId)
         }
     }
+    
+    
+    
+    // MARK:- Helper functions
+/********************************************************************************/
     func setupTermsLabel(){
         termsLabel.text = "termsOfService".localized
         let text = "termsOfService".localized

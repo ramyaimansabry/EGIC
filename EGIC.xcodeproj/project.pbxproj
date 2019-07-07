@@ -24,6 +24,9 @@
 		F060109C22CFCBF8008BDCF4 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */; };
 		F0CE691622D0EDA80042D94E /* LanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE691522D0EDA80042D94E /* LanguageController.swift */; };
 		F0CE691922D0F2CA0042D94E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0CE691B22D0F2CA0042D94E /* Localizable.strings */; };
+		F0CE691E22D21FFA0042D94E /* HomeCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE691D22D21FFA0042D94E /* HomeCategories.swift */; };
+		F0CE692022D220460042D94E /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE691F22D220450042D94E /* AppServices.swift */; };
+		F0CE692222D225680042D94E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE692122D225680042D94E /* HomeController.swift */; };
 		F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		F0CE691522D0EDA80042D94E /* LanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageController.swift; sourceTree = "<group>"; };
 		F0CE691A22D0F2CA0042D94E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F0CE691C22D0F2E20042D94E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F0CE691D22D21FFA0042D94E /* HomeCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategories.swift; sourceTree = "<group>"; };
+		F0CE691F22D220450042D94E /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		F0CE692122D225680042D94E /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		F0DA4C4222D0E437001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F0DA4C4322D0E438001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F0DA4C4522D0E469001C5FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginBoard.storyboard; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				F060106F22CF6D9E008BDCF4 /* AppDelegate.swift */,
+				F0CE692122D225680042D94E /* HomeController.swift */,
 				F060109622CFBF8A008BDCF4 /* StartUp */,
 			);
 			path = Controller;
@@ -139,6 +146,7 @@
 			children = (
 				F060108C22CF7485008BDCF4 /* Client.swift */,
 				F060109222CF781B008BDCF4 /* Categories.swift */,
+				F0CE691D22D21FFA0042D94E /* HomeCategories.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 			children = (
 				F060108822CF73A5008BDCF4 /* ApiManager.swift */,
 				F060108A22CF7450008BDCF4 /* ClientServices.swift */,
+				F0CE691F22D220450042D94E /* AppServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -319,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CE691E22D21FFA0042D94E /* HomeCategories.swift in Sources */,
 				F060107222CF6D9E008BDCF4 /* SplashScreenController.swift in Sources */,
 				F060108922CF73A5008BDCF4 /* ApiManager.swift in Sources */,
 				F060108B22CF7450008BDCF4 /* ClientServices.swift in Sources */,
@@ -327,10 +337,12 @@
 				F060108D22CF7485008BDCF4 /* Client.swift in Sources */,
 				F060109A22CFC283008BDCF4 /* SignUpController.swift in Sources */,
 				F060107022CF6D9E008BDCF4 /* AppDelegate.swift in Sources */,
+				F0CE692022D220460042D94E /* AppServices.swift in Sources */,
 				F060108F22CF766A008BDCF4 /* HelperData.swift in Sources */,
 				F060109122CF7759008BDCF4 /* Extentions.swift in Sources */,
 				F060109322CF781B008BDCF4 /* Categories.swift in Sources */,
 				F0CE691622D0EDA80042D94E /* LanguageController.swift in Sources */,
+				F0CE692222D225680042D94E /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

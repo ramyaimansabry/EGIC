@@ -24,6 +24,8 @@ class TermsOfServiceController: UIViewController {
         super.viewWillDisappear(true)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
+    
     func setupTerms(){
         let htmlText = """
          <h4 class="p1" style="text-align: left;">Thank you for downloading our application. the below terms will apply as soon as you press the register button</h4>
