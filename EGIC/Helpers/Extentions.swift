@@ -128,7 +128,25 @@ extension UIViewController{
        
     }
     
-    
+    func showLanguageAlert( callback: @escaping (_ language: String) -> ()) {
+        let alert = UIAlertController(title: "changeLanguage".localized, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+
+        alert.addAction(UIAlertAction(title: "العربية", style: .default, handler: {
+            alertAction in
+            callback("ar")
+        }))
+        alert.addAction(UIAlertAction(title: "English", style: .default, handler: {
+            alertAction in
+            callback("en")
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            alertAction in
+            callback("cance")
+        }))
+        
+        alert.view.tintColor = UIColor.mainAppColor()
+        self.present(alert, animated: true, completion: nil)
+    }
     
     func dismissRingIndecator(){
         DispatchQueue.main.async {

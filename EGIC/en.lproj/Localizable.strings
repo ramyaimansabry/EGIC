@@ -20,4 +20,23 @@
 "LoadingHomeError" = "Unexpected Error Please Try Again In A While";
 
 
-"currentLang" = "en";
+"currentLang" = "en";  // app language
+
+
+/**********************/
+// side menu strings
+
+"Home" = "Home";
+"Products" = "Products";
+"Calculate" = "Calculate & estimate";
+"Stores" = "Stores";
+"Social" = "Social wall";
+"About" = "About EGIC";
+"Contact" = "Contact us";
+"lang" = "Change language";
+"Logout" = "Logout";
+
+/***********************/
+
+"changeLanguage" = "Choose language"; // change language action sheet alert
+"LogoutAlert" = "Are you sure you want to logout?"; // logout alert

@@ -12,15 +12,30 @@
 "termsOfService" = "بالضغط علي زر التسجيل، انت توافق علي الشروط و الاحكام";
 "termsLabel" = "الشروط و الاحكام";
 
-
 "Error" = "خطا";
 "LoginError" = "ادخل رقم هاتف صحيح!";
 
-
 "SignUpError" = "ادخل بيانات صحيحة";
-
 
 "LoadingHomeError" = "خطا غير متوقع، من فضلك حاول بعد قليل";
 
-
 "currentLang" = "ar";
+
+
+/**********************/
+// side menu strings
+
+"Home" = "الرئيسية";
+"Products" = "المنتجات";
+"Calculate" = "احسب الكميات";
+"Stores" = "منافذ البيع";
+"Social" = "التواصل الاجتماعي";
+"About" = "عن الشركة";
+"Contact" = "اتصل بنا";
+"lang" = "تغيير اللغة";
+"Logout" = "تسجيل الخروج";
+
+/***********************/
+
+"changeLanguage" = "اختر اللغة"; // change language action sheet alert
+"LogoutAlert" = "هل انت متاكد من تسجيل الخروج؟"; // logout alert
