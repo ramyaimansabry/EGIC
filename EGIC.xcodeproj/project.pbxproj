@@ -29,6 +29,8 @@
 		F0CE692222D225680042D94E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE692122D225680042D94E /* HomeController.swift */; };
 		F0CE692422D24A450042D94E /* LeftMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE692322D24A450042D94E /* LeftMenuController.swift */; };
 		F0CE692622D24A860042D94E /* LeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE692522D24A850042D94E /* LeftMenuCell.swift */; };
+		F0CE692A22D26C430042D94E /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE692922D26C430042D94E /* SliderCell.swift */; };
+		F0CE692C22D26C530042D94E /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE692B22D26C530042D94E /* CatalogCell.swift */; };
 		F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		F0CE692122D225680042D94E /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		F0CE692322D24A450042D94E /* LeftMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuController.swift; sourceTree = "<group>"; };
 		F0CE692522D24A850042D94E /* LeftMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuCell.swift; sourceTree = "<group>"; };
+		F0CE692922D26C430042D94E /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		F0CE692B22D26C530042D94E /* CatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
 		F0DA4C4222D0E437001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F0DA4C4322D0E438001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F0DA4C4522D0E469001C5FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginBoard.storyboard; sourceTree = "<group>"; };
@@ -159,8 +163,8 @@
 		F060108522CF7356008BDCF4 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */,
 				F060107322CF6D9E008BDCF4 /* Main.storyboard */,
+				F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */,
 				F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */,
 			);
 			path = Storyboard;
@@ -202,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				F0CE692122D225680042D94E /* HomeController.swift */,
+				F0CE692B22D26C530042D94E /* CatalogCell.swift */,
+				F0CE692922D26C430042D94E /* SliderCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				F060107222CF6D9E008BDCF4 /* SplashScreenController.swift in Sources */,
 				F0CE692622D24A860042D94E /* LeftMenuCell.swift in Sources */,
 				F060108922CF73A5008BDCF4 /* ApiManager.swift in Sources */,
+				F0CE692A22D26C430042D94E /* SliderCell.swift in Sources */,
 				F060108B22CF7450008BDCF4 /* ClientServices.swift in Sources */,
 				F060109822CFBFA9008BDCF4 /* SignInController.swift in Sources */,
 				F060109C22CFCBF8008BDCF4 /* TermsOfServiceController.swift in Sources */,
@@ -362,6 +369,7 @@
 				F060109A22CFC283008BDCF4 /* SignUpController.swift in Sources */,
 				F060107022CF6D9E008BDCF4 /* AppDelegate.swift in Sources */,
 				F0CE692022D220460042D94E /* AppServices.swift in Sources */,
+				F0CE692C22D26C530042D94E /* CatalogCell.swift in Sources */,
 				F060108F22CF766A008BDCF4 /* HelperData.swift in Sources */,
 				F060109122CF7759008BDCF4 /* Extentions.swift in Sources */,
 				F060109322CF781B008BDCF4 /* Categories.swift in Sources */,

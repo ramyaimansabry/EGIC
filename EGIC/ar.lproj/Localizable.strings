@@ -39,3 +39,6 @@
 
 "changeLanguage" = "اختر اللغة"; // change language action sheet alert
 "LogoutAlert" = "هل انت متاكد من تسجيل الخروج؟"; // logout alert
+
+"label1" = "احدث اصداراتنا"; // home lebel 1
+"label2" = "العلامات التجارية"; // home label 2

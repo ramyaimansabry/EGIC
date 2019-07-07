@@ -40,3 +40,6 @@
 
 "changeLanguage" = "Choose language"; // change language action sheet alert
 "LogoutAlert" = "Are you sure you want to logout?"; // logout alert
+
+"label1" = "New Launches"; // home lebel 1
+"label2" = "Our Brands"; // home label 2
