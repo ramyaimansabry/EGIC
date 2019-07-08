@@ -6,6 +6,8 @@
   Copyright © 2019 Ramy Ayman Sabry. All rights reserved.
 */
 
+"Retry" = "Retry";
+
 "dontHaveAccount" = "Don't have account? Sign Up";
 "signUpLabel" = "Sign Up";
 
@@ -51,4 +53,7 @@
 "Email" = "Email";
 "Tel" = "Tel";
 "Hotline" = "Hotline";
+
+"LocationError" = "Check location permission from setting";
+"OpenExternalMap" = "Show store location on apple maps?";
 

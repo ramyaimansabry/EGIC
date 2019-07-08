@@ -6,6 +6,9 @@
   Copyright © 2019 Ramy Ayman Sabry. All rights reserved.
 */
 
+"Retry" = "اعد المحاولة";
+
+
 "dontHaveAccount" = "لا تمتلك حساب؟ سجل من هنا";
 "signUpLabel" = "سجل من هنا";
 
@@ -48,3 +51,7 @@
 "Email" = "البريد";
 "Tel" = "هاتف ارضي";
 "Hotline" = "الخط الساخن";
+
+
+"LocationError" = "تحقق من صلاحيات تحديد الموقع من الاعدادات";
+"OpenExternalMap" = "عرض موقع الفرع علي خريطة ابل؟";

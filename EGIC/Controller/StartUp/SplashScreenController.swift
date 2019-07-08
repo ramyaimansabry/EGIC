@@ -32,10 +32,9 @@ class SplashScreenController: UIViewController {
                 }else {
                     // must check if token expires > will force user to login again
                     // or if token works must present error
-                    self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK", callback: {
-                        
+                    self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "Retry".localized, callback: {
+                        self.ShowViewController()
                     })
-                    self.LoadingActivityIndicator.isHidden = true
                 }
             }
         }else {
