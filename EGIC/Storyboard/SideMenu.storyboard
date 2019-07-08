@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3sf-p4-MVs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contact Us Controller-->
+        <scene sceneID="fV7-tu-Bpw">
+            <objects>
+                <viewController storyboardIdentifier="ContactUsController" id="3sf-p4-MVs" customClass="ContactUsController" customModule="EGIC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rzr-xZ-WpP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1hh-2Y-RJI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PDR-sw-VLV">
+                                <rect key="frame" x="0.0" y="499" width="375" height="148"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RJl-OD-40J">
+                                    <size key="itemSize" width="257" height="107"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ContactUsCell" id="kuv-Zi-UUJ" customClass="ContactUsCell" customModule="EGIC" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20.5" width="257" height="107"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="257" height="107"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPe-9N-ihJ">
+                                                    <rect key="frame" x="0.0" y="81" width="257" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="AppICON" translatesAutoresizingMaskIntoConstraints="NO" id="6Iy-NE-MJf">
+                                                    <rect key="frame" x="0.0" y="10" width="257" height="61"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="pPe-9N-ihJ" secondAttribute="trailing" id="0ec-qs-ZPI"/>
+                                            <constraint firstItem="6Iy-NE-MJf" firstAttribute="leading" secondItem="kuv-Zi-UUJ" secondAttribute="leading" id="8o2-nG-5m1"/>
+                                            <constraint firstAttribute="bottom" secondItem="pPe-9N-ihJ" secondAttribute="bottom" constant="8" id="D8O-VZ-EM7"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Iy-NE-MJf" secondAttribute="trailing" id="F6x-da-Uln"/>
+                                            <constraint firstItem="6Iy-NE-MJf" firstAttribute="top" secondItem="kuv-Zi-UUJ" secondAttribute="top" constant="10" id="JPz-vT-ySb"/>
+                                            <constraint firstItem="pPe-9N-ihJ" firstAttribute="top" secondItem="6Iy-NE-MJf" secondAttribute="bottom" constant="10" id="LkH-ah-jvB"/>
+                                            <constraint firstItem="pPe-9N-ihJ" firstAttribute="leading" secondItem="kuv-Zi-UUJ" secondAttribute="leading" id="gpM-RX-Ps0"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="6Iy-NE-MJf" id="oiA-co-hSf"/>
+                                            <outlet property="label" destination="pPe-9N-ihJ" id="OzS-5O-pgi"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PDR-sw-VLV" firstAttribute="height" secondItem="rzr-xZ-WpP" secondAttribute="height" multiplier="2:9" id="4aI-vU-NrS"/>
+                            <constraint firstItem="1hh-2Y-RJI" firstAttribute="top" secondItem="V9L-Gy-iZP" secondAttribute="top" id="5Sh-Xd-PeY"/>
+                            <constraint firstItem="PDR-sw-VLV" firstAttribute="leading" secondItem="V9L-Gy-iZP" secondAttribute="leading" id="7aK-6s-9zS"/>
+                            <constraint firstItem="V9L-Gy-iZP" firstAttribute="trailing" secondItem="1hh-2Y-RJI" secondAttribute="trailing" id="9ss-9x-hiE"/>
+                            <constraint firstAttribute="bottom" secondItem="1hh-2Y-RJI" secondAttribute="bottom" id="MxQ-dj-bGY"/>
+                            <constraint firstItem="V9L-Gy-iZP" firstAttribute="bottom" secondItem="PDR-sw-VLV" secondAttribute="bottom" constant="20" id="TQg-MJ-FQ5"/>
+                            <constraint firstItem="1hh-2Y-RJI" firstAttribute="leading" secondItem="V9L-Gy-iZP" secondAttribute="leading" id="U48-yF-s5R"/>
+                            <constraint firstItem="V9L-Gy-iZP" firstAttribute="trailing" secondItem="PDR-sw-VLV" secondAttribute="trailing" id="mNH-4i-qct"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V9L-Gy-iZP"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView1" destination="PDR-sw-VLV" id="phm-PB-i0m"/>
+                        <outlet property="mapView1" destination="1hh-2Y-RJI" id="jmf-uP-dY8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXu-xB-Lub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="167.76611694152925"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppICON" width="1024" height="1024"/>
+    </resources>
+</document>

@@ -43,3 +43,6 @@
 
 "label1" = "New Launches"; // home lebel 1
 "label2" = "Our Brands"; // home label 2
+
+"EGICName" = "EGIC";
+"EGICAddress" = "53 El Manial st - Cairo - Egypt";

@@ -31,6 +31,12 @@
 		F0CE692622D24A860042D94E /* LeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE692522D24A850042D94E /* LeftMenuCell.swift */; };
 		F0CE692A22D26C430042D94E /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE692922D26C430042D94E /* SliderCell.swift */; };
 		F0CE692C22D26C530042D94E /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE692B22D26C530042D94E /* CatalogCell.swift */; };
+		F0CE692E22D359B90042D94E /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CE692D22D359B90042D94E /* SideMenu.storyboard */; };
+		F0CE693122D35EB90042D94E /* ContactUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693022D35EB90042D94E /* ContactUsCell.swift */; };
+		F0CE693322D35ED20042D94E /* ContactUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693222D35ED20042D94E /* ContactUsController.swift */; };
+		F0CE693522D36BE60042D94E /* ContactUsController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693422D36BE60042D94E /* ContactUsController++.swift */; };
+		F0CE693722D373110042D94E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693622D373110042D94E /* Contact.swift */; };
+		F0CE693922D373340042D94E /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693822D373340042D94E /* CustomPointAnnotation.swift */; };
 		F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +71,12 @@
 		F0CE692522D24A850042D94E /* LeftMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuCell.swift; sourceTree = "<group>"; };
 		F0CE692922D26C430042D94E /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		F0CE692B22D26C530042D94E /* CatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
+		F0CE692D22D359B90042D94E /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		F0CE693022D35EB90042D94E /* ContactUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsCell.swift; sourceTree = "<group>"; };
+		F0CE693222D35ED20042D94E /* ContactUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsController.swift; sourceTree = "<group>"; };
+		F0CE693422D36BE60042D94E /* ContactUsController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactUsController++.swift"; sourceTree = "<group>"; };
+		F0CE693622D373110042D94E /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		F0CE693822D373340042D94E /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
 		F0DA4C4222D0E437001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F0DA4C4322D0E438001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F0DA4C4522D0E469001C5FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginBoard.storyboard; sourceTree = "<group>"; };
@@ -145,6 +157,7 @@
 				F060106F22CF6D9E008BDCF4 /* AppDelegate.swift */,
 				F0CE692722D269660042D94E /* Home */,
 				F0CE692822D269800042D94E /* SideMenu */,
+				F0CE692F22D35E8F0042D94E /* SideMenu-SubViews */,
 				F060109622CFBF8A008BDCF4 /* StartUp */,
 			);
 			path = Controller;
@@ -164,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				F060107322CF6D9E008BDCF4 /* Main.storyboard */,
+				F0CE692D22D359B90042D94E /* SideMenu.storyboard */,
 				F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */,
 				F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */,
 			);
@@ -219,6 +233,26 @@
 				F0CE692522D24A850042D94E /* LeftMenuCell.swift */,
 			);
 			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		F0CE692F22D35E8F0042D94E /* SideMenu-SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE693A22D3735F0042D94E /* Contact Us */,
+			);
+			path = "SideMenu-SubViews";
+			sourceTree = "<group>";
+		};
+		F0CE693A22D3735F0042D94E /* Contact Us */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE693222D35ED20042D94E /* ContactUsController.swift */,
+				F0CE693422D36BE60042D94E /* ContactUsController++.swift */,
+				F0CE693822D373340042D94E /* CustomPointAnnotation.swift */,
+				F0CE693022D35EB90042D94E /* ContactUsCell.swift */,
+				F0CE693622D373110042D94E /* Contact.swift */,
+			);
+			path = "Contact Us";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CE692E22D359B90042D94E /* SideMenu.storyboard in Resources */,
 				F0CE691922D0F2CA0042D94E /* Localizable.strings in Resources */,
 				F060107A22CF6DA0008BDCF4 /* LaunchScreen.storyboard in Resources */,
 				F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */,
@@ -360,6 +395,8 @@
 				F060107222CF6D9E008BDCF4 /* SplashScreenController.swift in Sources */,
 				F0CE692622D24A860042D94E /* LeftMenuCell.swift in Sources */,
 				F060108922CF73A5008BDCF4 /* ApiManager.swift in Sources */,
+				F0CE693722D373110042D94E /* Contact.swift in Sources */,
+				F0CE693322D35ED20042D94E /* ContactUsController.swift in Sources */,
 				F0CE692A22D26C430042D94E /* SliderCell.swift in Sources */,
 				F060108B22CF7450008BDCF4 /* ClientServices.swift in Sources */,
 				F060109822CFBFA9008BDCF4 /* SignInController.swift in Sources */,
@@ -370,10 +407,13 @@
 				F060107022CF6D9E008BDCF4 /* AppDelegate.swift in Sources */,
 				F0CE692022D220460042D94E /* AppServices.swift in Sources */,
 				F0CE692C22D26C530042D94E /* CatalogCell.swift in Sources */,
+				F0CE693122D35EB90042D94E /* ContactUsCell.swift in Sources */,
+				F0CE693522D36BE60042D94E /* ContactUsController++.swift in Sources */,
 				F060108F22CF766A008BDCF4 /* HelperData.swift in Sources */,
 				F060109122CF7759008BDCF4 /* Extentions.swift in Sources */,
 				F060109322CF781B008BDCF4 /* Categories.swift in Sources */,
 				F0CE691622D0EDA80042D94E /* LanguageController.swift in Sources */,
+				F0CE693922D373340042D94E /* CustomPointAnnotation.swift in Sources */,
 				F0CE692222D225680042D94E /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

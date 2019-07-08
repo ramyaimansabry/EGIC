@@ -26,10 +26,8 @@ class HomeController: UIViewController {
         let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: leftMenuController)
         if "currentLang".localized == "en" {
             SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
-
         }else {
             SideMenuManager.default.menuRightNavigationController = menuLeftNavigationController
-
         }
         SideMenuManager.default.menuFadeStatusBar = false
         SideMenuManager.default.menuPushStyle = .preserve
@@ -97,7 +95,17 @@ class HomeController: UIViewController {
             }
         }
     }
+    
+    func goContactUs(){
+        let storyboard = UIStoryboard(name: "SideMenu", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ContactUsController") as! ContactUsController
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+ 
+    
 }
+
+
 
 
 extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
