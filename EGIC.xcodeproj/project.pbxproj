@@ -37,6 +37,7 @@
 		F0CE693522D36BE60042D94E /* ContactUsController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693422D36BE60042D94E /* ContactUsController++.swift */; };
 		F0CE693722D373110042D94E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693622D373110042D94E /* Contact.swift */; };
 		F0CE693922D373340042D94E /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693822D373340042D94E /* CustomPointAnnotation.swift */; };
+		F0CE693C22D374050042D94E /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693B22D374050042D94E /* AboutController.swift */; };
 		F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		F0CE693422D36BE60042D94E /* ContactUsController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactUsController++.swift"; sourceTree = "<group>"; };
 		F0CE693622D373110042D94E /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		F0CE693822D373340042D94E /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
+		F0CE693B22D374050042D94E /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		F0DA4C4222D0E437001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F0DA4C4322D0E438001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F0DA4C4522D0E469001C5FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginBoard.storyboard; sourceTree = "<group>"; };
@@ -157,7 +159,8 @@
 				F060106F22CF6D9E008BDCF4 /* AppDelegate.swift */,
 				F0CE692722D269660042D94E /* Home */,
 				F0CE692822D269800042D94E /* SideMenu */,
-				F0CE692F22D35E8F0042D94E /* SideMenu-SubViews */,
+				F0CE693A22D3735F0042D94E /* Contact Us */,
+				F0CE692F22D35E8F0042D94E /* About Us */,
 				F060109622CFBF8A008BDCF4 /* StartUp */,
 			);
 			path = Controller;
@@ -176,8 +179,8 @@
 		F060108522CF7356008BDCF4 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				F060107322CF6D9E008BDCF4 /* Main.storyboard */,
 				F0CE692D22D359B90042D94E /* SideMenu.storyboard */,
+				F060107322CF6D9E008BDCF4 /* Main.storyboard */,
 				F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */,
 				F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */,
 			);
@@ -235,12 +238,12 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
-		F0CE692F22D35E8F0042D94E /* SideMenu-SubViews */ = {
+		F0CE692F22D35E8F0042D94E /* About Us */ = {
 			isa = PBXGroup;
 			children = (
-				F0CE693A22D3735F0042D94E /* Contact Us */,
+				F0CE693B22D374050042D94E /* AboutController.swift */,
 			);
-			path = "SideMenu-SubViews";
+			path = "About Us";
 			sourceTree = "<group>";
 		};
 		F0CE693A22D3735F0042D94E /* Contact Us */ = {
@@ -392,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CE691E22D21FFA0042D94E /* HomeCategories.swift in Sources */,
+				F0CE693C22D374050042D94E /* AboutController.swift in Sources */,
 				F060107222CF6D9E008BDCF4 /* SplashScreenController.swift in Sources */,
 				F0CE692622D24A860042D94E /* LeftMenuCell.swift in Sources */,
 				F060108922CF73A5008BDCF4 /* ApiManager.swift in Sources */,

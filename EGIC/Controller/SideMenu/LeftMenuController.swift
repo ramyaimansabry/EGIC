@@ -75,7 +75,9 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
           //  self.homeController?.goPrivacyPolicy()
             return
         case 5:
-          //  self.homeController?.goTermsOfService()
+             self.dismiss(animated: true) {
+                self.homeController?.goAboutUs()
+             }
             return
         case 6:
              self.dismiss(animated: true) {

@@ -42,3 +42,9 @@
 
 "EGICName" = "ايجيك";
 "EGICAddress" =  "53 شارع المنيل - القاهرة - مصر";
+
+
+// contact us screen
+"Email" = "البريد";
+"Tel" = "هاتف ارضي";
+"Hotline" = "الخط الساخن";

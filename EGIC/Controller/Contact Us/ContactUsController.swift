@@ -7,9 +7,9 @@ class ContactUsController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView1: MKMapView!
     
     let array: [Contact] = {
-        let contact1 = Contact(title: "Hotline", color: UIColor.orange, number: "19678", image: "ContactUs1")
-        let contact2 = Contact(title: "Tel", color: UIColor.gray, number: "20223666500", image: "ContactUs2")
-        let contact3 = Contact(title: "Email", color: UIColor.blue, number: "info@egic.com.eg", image: "ContactUs3")
+        let contact1 = Contact(title: "Hotline".localized, color: UIColor.orange, number: "19678", image: "ContactUs1")
+        let contact2 = Contact(title: "Tel".localized, color: UIColor.gray, number: "20223666500", image: "ContactUs2")
+        let contact3 = Contact(title: "Email".localized, color: UIColor.blue, number: "info@egic.com.eg", image: "ContactUs3")
         return [contact1, contact2, contact3]
     }()
     
@@ -50,7 +50,7 @@ class ContactUsController: UIViewController, MKMapViewDelegate {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.isNavigationBarHidden = false
-        navigationItem.title = "Contact Us"
+        navigationItem.title = "Contact".localized
         
         collectionView1.delegate = self
         collectionView1.dataSource = self

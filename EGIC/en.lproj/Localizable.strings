@@ -46,3 +46,9 @@
 
 "EGICName" = "EGIC";
 "EGICAddress" = "53 El Manial st - Cairo - Egypt";
+
+// contact us screen
+"Email" = "Email";
+"Tel" = "Tel";
+"Hotline" = "Hotline";
+

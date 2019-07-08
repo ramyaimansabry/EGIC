@@ -101,7 +101,12 @@ class HomeController: UIViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: "ContactUsController") as! ContactUsController
         self.navigationController?.pushViewController(controller, animated: true)
     }
- 
+    func goAboutUs(){
+        let storyboard = UIStoryboard(name: "SideMenu", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "AboutController") as! AboutController
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     
 }
 
