@@ -60,7 +60,9 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.item {
         case 0:
-        //    self.homeController?.goHome()
+            self.dismiss(animated: true) {
+                self.homeController?.goHome()
+            }
             return
         case 1:
         //    self.homeController?.goMyProfile()
@@ -69,10 +71,14 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
         //    self.homeController?.goFavorites()
             return
         case 3:
-         //   self.homeController?.goGiveUsFeedback()
+            self.dismiss(animated: true) {
+                self.homeController?.goStores()
+            }
             return
         case 4:
-          //  self.homeController?.goPrivacyPolicy()
+            self.dismiss(animated: true) {
+                self.homeController?.goSocial()
+            }
             return
         case 5:
              self.dismiss(animated: true) {

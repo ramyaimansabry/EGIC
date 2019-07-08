@@ -69,6 +69,11 @@ class HomeController: UIViewController {
         }
     }
     
+    
+    func goHome(){
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     func signOut(){
         self.show2buttonAlert(title: "Logout".localized, message: "LogoutAlert".localized, cancelButtonTitle: "Cancel", defaultButtonTitle: "OK") { (yes) in
             if yes {
@@ -107,7 +112,17 @@ class HomeController: UIViewController {
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
+    func goSocial(){
+        let storyboard = UIStoryboard(name: "SideMenu", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SocialController") as! SocialController
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
     
+    func goStores(){
+        let storyboard = UIStoryboard(name: "SideMenu", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "StoresController") as! StoresController
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 

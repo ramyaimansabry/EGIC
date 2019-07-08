@@ -38,6 +38,9 @@
 		F0CE693722D373110042D94E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693622D373110042D94E /* Contact.swift */; };
 		F0CE693922D373340042D94E /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693822D373340042D94E /* CustomPointAnnotation.swift */; };
 		F0CE693C22D374050042D94E /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693B22D374050042D94E /* AboutController.swift */; };
+		F0CE693F22D385500042D94E /* SocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE693E22D385500042D94E /* SocialController.swift */; };
+		F0CE694122D38BAA0042D94E /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE694022D38BAA0042D94E /* SocialCell.swift */; };
+		F0CE694422D397510042D94E /* StoresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE694322D397510042D94E /* StoresController.swift */; };
 		F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +82,9 @@
 		F0CE693622D373110042D94E /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		F0CE693822D373340042D94E /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
 		F0CE693B22D374050042D94E /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
+		F0CE693E22D385500042D94E /* SocialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialController.swift; sourceTree = "<group>"; };
+		F0CE694022D38BAA0042D94E /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
+		F0CE694322D397510042D94E /* StoresController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresController.swift; sourceTree = "<group>"; };
 		F0DA4C4222D0E437001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F0DA4C4322D0E438001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F0DA4C4522D0E469001C5FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginBoard.storyboard; sourceTree = "<group>"; };
@@ -159,6 +165,8 @@
 				F060106F22CF6D9E008BDCF4 /* AppDelegate.swift */,
 				F0CE692722D269660042D94E /* Home */,
 				F0CE692822D269800042D94E /* SideMenu */,
+				F0CE694222D3970E0042D94E /* Stores */,
+				F0CE693D22D3852A0042D94E /* Social Wall */,
 				F0CE693A22D3735F0042D94E /* Contact Us */,
 				F0CE692F22D35E8F0042D94E /* About Us */,
 				F060109622CFBF8A008BDCF4 /* StartUp */,
@@ -256,6 +264,23 @@
 				F0CE693622D373110042D94E /* Contact.swift */,
 			);
 			path = "Contact Us";
+			sourceTree = "<group>";
+		};
+		F0CE693D22D3852A0042D94E /* Social Wall */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE693E22D385500042D94E /* SocialController.swift */,
+				F0CE694022D38BAA0042D94E /* SocialCell.swift */,
+			);
+			path = "Social Wall";
+			sourceTree = "<group>";
+		};
+		F0CE694222D3970E0042D94E /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE694322D397510042D94E /* StoresController.swift */,
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,11 +420,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CE691E22D21FFA0042D94E /* HomeCategories.swift in Sources */,
+				F0CE694422D397510042D94E /* StoresController.swift in Sources */,
 				F0CE693C22D374050042D94E /* AboutController.swift in Sources */,
 				F060107222CF6D9E008BDCF4 /* SplashScreenController.swift in Sources */,
 				F0CE692622D24A860042D94E /* LeftMenuCell.swift in Sources */,
 				F060108922CF73A5008BDCF4 /* ApiManager.swift in Sources */,
 				F0CE693722D373110042D94E /* Contact.swift in Sources */,
+				F0CE694122D38BAA0042D94E /* SocialCell.swift in Sources */,
 				F0CE693322D35ED20042D94E /* ContactUsController.swift in Sources */,
 				F0CE692A22D26C430042D94E /* SliderCell.swift in Sources */,
 				F060108B22CF7450008BDCF4 /* ClientServices.swift in Sources */,
@@ -410,6 +437,7 @@
 				F060109A22CFC283008BDCF4 /* SignUpController.swift in Sources */,
 				F060107022CF6D9E008BDCF4 /* AppDelegate.swift in Sources */,
 				F0CE692022D220460042D94E /* AppServices.swift in Sources */,
+				F0CE693F22D385500042D94E /* SocialController.swift in Sources */,
 				F0CE692C22D26C530042D94E /* CatalogCell.swift in Sources */,
 				F0CE693122D35EB90042D94E /* ContactUsCell.swift in Sources */,
 				F0CE693522D36BE60042D94E /* ContactUsController++.swift in Sources */,

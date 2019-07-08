@@ -1,47 +1,23 @@
-//
-//  AboutController.swift
-//  EGIC
-//
-//  Created by Ramy Ayman Sabry on 7/8/19.
-//  Copyright © 2019 Ramy Ayman Sabry. All rights reserved.
-//
-
 import UIKit
 import SVProgressHUD
 
-class AboutController: UIViewController {
-    @IBOutlet weak var textView: UITextView!
+class StoresController: UIViewController {
+    @IBOutlet weak var collectionView1: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        fetchData()
+        
     }
-    func fetchData(){
-        SVProgressHUD.show()
-        ApiManager.sharedInstance.loadAbout { (valid, msg) in
-            self.dismissRingIndecator()
-            if valid {
-                let style = NSMutableParagraphStyle()
-                style.lineSpacing = 4
-                style.alignment = NSTextAlignment.center
-                let atributes = [NSAttributedString.Key.paragraphStyle: style, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]
-
-                self.textView.attributedText = NSAttributedString(string: msg, attributes: atributes)
-            }else {
-                self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK", callback: {
-                    
-                })
-            }
-        }
-    }
+    
+    
     func setupNavigationBar(){
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.isNavigationBarHidden = false
-        navigationItem.title = "About".localized
+        navigationItem.title = "Stores".localized
         
         let leftButton = UIButton(type: .custom)
         leftButton.setImage(UIImage(named: "BackICON")?.withRenderingMode(.alwaysTemplate).imageFlippedForRightToLeftLayoutDirection(), for: .normal)
@@ -55,4 +31,5 @@ class AboutController: UIViewController {
     @objc func leftButtonAction(){
         navigationController?.popViewController(animated: true)
     }
+    
 }

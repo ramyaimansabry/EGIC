@@ -57,7 +57,7 @@ class ContactUsController: UIViewController, MKMapViewDelegate {
         mapView1.delegate = self
         
         let leftButton = UIButton(type: .custom)
-        leftButton.setImage(UIImage(named: "BackICON")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        leftButton.setImage(UIImage(named: "BackICON")?.withRenderingMode(.alwaysTemplate).imageFlippedForRightToLeftLayoutDirection(), for: .normal)
         leftButton.tintColor = UIColor.mainAppColor()
         leftButton.translatesAutoresizingMaskIntoConstraints = false
         leftButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
