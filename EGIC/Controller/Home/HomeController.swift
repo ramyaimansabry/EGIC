@@ -4,8 +4,7 @@ import SideMenu
 import MOLH
 
 class HomeController: UIViewController {
-    @IBOutlet weak var label1: UILabel!
-    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView1: UICollectionView!
     @IBOutlet weak var collectionView2: UICollectionView!
     let leftMenuController = LeftMenuController()
@@ -22,10 +21,7 @@ class HomeController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.isNavigationBarHidden = false
-        
-        label1.text = "label1".localized
-        label2.text = "label2".localized
-        
+
         leftMenuController.homeController = self
         let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: leftMenuController)
         if "currentLang".localized == "en" {
@@ -37,8 +33,8 @@ class HomeController: UIViewController {
         }
         SideMenuManager.default.menuFadeStatusBar = false
         SideMenuManager.default.menuPushStyle = .preserve
-        SideMenuManager.defaultManager.menuPresentMode = .menuSlideIn
-        SideMenuManager.default.menuWidth = min(3*(self.view.frame.width/4), 400)
+        SideMenuManager.defaultManager.menuPresentMode = .viewSlideInOut
+        SideMenuManager.default.menuWidth = min(4*(self.view.frame.width/6), 400)
         SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
         SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         
@@ -46,6 +42,8 @@ class HomeController: UIViewController {
         collectionView1.dataSource = self
         collectionView2.delegate = self
         collectionView2.dataSource = self
+        
+        pageControl.numberOfPages = bassedHomeCategories?.slider.count ?? 0
         
         let iconImage = UIImageView()
         iconImage.image = UIImage(named: "AppICON")
@@ -125,8 +123,7 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, 
             let url = URL(string: downloadURL!)
             cell.image.kf.indicatorType = .activity
             cell.image.kf.setImage(with: url)
-            print(indexPath.row)
-            cell.backgroundColor = UIColor.yellow
+            cell.backgroundColor = UIColor.white
             return cell
         }else {
             let cell: CatalogCell = collectionView2.dequeueReusableCell(withReuseIdentifier: "CatalogCustomCell", for: indexPath) as! CatalogCell
@@ -135,10 +132,11 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, 
             let stringUrl = bassedHomeCategories?.catalog[indexPath.row].image
             let downloadURL = stringUrl!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
             let url = URL(string: downloadURL!)
-           
             cell.image.kf.indicatorType = .activity
             cell.image.kf.setImage(with: url)
-            cell.backgroundColor = UIColor.red
+            cell.backgroundColor = UIColor.white
+            cell.layer.masksToBounds = true
+            cell.layer.cornerRadius = 5
             return cell
         }
     }
@@ -149,7 +147,7 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, 
         if collectionView == collectionView1 {
             return CGSize(width: collectionView1.frame.width, height: collectionView1.frame.height)
         }else {
-            return CGSize(width: (collectionView2.frame.width-30)/3, height: collectionView2.frame.height-30)
+            return CGSize(width: (collectionView2.frame.width-50)/3, height: collectionView2.frame.height-30)
         }
     }
     
@@ -160,6 +158,13 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, 
         }else {
             return 0
         }
+    }
+    
+    
+     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let pageNumber = Int(targetContentOffset.pointee.x / view.frame.width)
+        pageControl.currentPage = pageNumber
+        pageControl.updateCurrentPageDisplay()
     }
     
     

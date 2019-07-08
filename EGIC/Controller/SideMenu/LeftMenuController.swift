@@ -97,10 +97,6 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
     
     //   MARK :- Helper Methods
 /**********************************************************************************************/
-    @objc func  handleLogout() {
-      //  homeController?.signOut()
-        //    self.dismiss(animated: true, completion: nil)
-    }
     func loadUserInfo(){
         if (UserDefaults.standard.object(forKey: "loggedInClient") != nil) {
             nameLabel.text = HelperData.sharedInstance.loggedInClient.name
@@ -119,7 +115,7 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
         let bottomPadding = window.safeAreaInsets.bottom
         let viewHeight = window.frame.height-topPadding-bottomPadding
         
-        let x = min(viewHeight/6, 350)
+        let x = min(viewHeight/8, 350)
         let headerHeight = max(x, 140)
         let finalHeaderHeight = min(headerHeight, 200)
         view.addSubview(headerView)

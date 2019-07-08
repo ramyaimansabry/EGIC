@@ -30,8 +30,7 @@ class LeftMenuCell: UICollectionViewCell{
             titleLabel.rightAnchor.constraint(equalTo: iconImage.leftAnchor, constant: -frame.width/18).isActive = true
         }
         
-        
-        
+
         addSubview(lineView)
         lineView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor,size: CGSize(width: 0, height: 0.6))
     }
@@ -46,7 +45,7 @@ class LeftMenuCell: UICollectionViewCell{
     let titleLabel: UILabel = {
         let titleL = UILabel()
         titleL.text = "Label"
-        titleL.font = UIFont.systemFont(ofSize: 15)
+        titleL.font = UIFont.systemFont(ofSize: 14)
         titleL.textColor = UIColor.black
         titleL.textAlignment = .center
         titleL.numberOfLines = 0
