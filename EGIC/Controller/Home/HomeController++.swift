@@ -98,7 +98,7 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, 
         } else {
             collectionView1.scrollToItem(at: IndexPath(row: index, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
         }
-        print(index)
+
         pageControl.currentPage = index
         
         if inForwardDirection {

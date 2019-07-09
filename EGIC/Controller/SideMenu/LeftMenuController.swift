@@ -66,10 +66,14 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
             }
             return
         case 1:
-        //    self.homeController?.goMyProfile()
+            self.dismiss(animated: true) {
+                self.homeController?.goCategories()
+            }
             return
         case 2:
-        //    self.homeController?.goFavorites()
+            
+            
+       
             return
         case 3:
             self.dismiss(animated: true) {
