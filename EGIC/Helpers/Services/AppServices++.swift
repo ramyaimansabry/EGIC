@@ -3,7 +3,7 @@ import Alamofire
 
 extension ApiManager {
 
-    func loadCategories(completed: @escaping (_ valid:Bool,_ msg:String,_ categories: [Categories])->()){
+    func loadCategories(id: String = "",completed: @escaping (_ valid:Bool,_ msg:String,_ categories: [Categories])->()){
         self.stopAllRequests()
         let url = "\(HelperData.sharedInstance.serverBasePath)/products/categories"
         let headers: HTTPHeaders = [
@@ -11,7 +11,10 @@ extension ApiManager {
             "lang": "\(HelperData.sharedInstance.loggedInClient.language ?? "en")",
             "Authorization": "Bearer \(HelperData.sharedInstance.loggedInClient.token)"
         ]
-        Alamofire.request(url, method: .get ,parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+        let parameters: Parameters = [
+            "parent" : id,
+        ]
+        Alamofire.request(url, method: .get ,parameters: parameters, encoding: URLEncoding(destination: .queryString), headers: headers).responseJSON { (response) in
             if let jsonResponse = response.result.value{
                 if response.result.isSuccess {
                     let data = jsonResponse as! [String : Any]

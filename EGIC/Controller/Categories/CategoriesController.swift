@@ -7,16 +7,36 @@ class CategoriesController: UIViewController {
     var categoriesArray = [Categories]()
     var currentCategoriesArray = [Categories]()
     var previousCategoriesArray = [[Categories]]()
+    var bassedCategoryId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        fetchCategories()
+        if bassedCategoryId == nil{
+            fetchCategories()
+        }else {
+            fetchCategoriesWithId()
+        }
     }
     
     func fetchCategories(){
         SVProgressHUD.show()
         ApiManager.sharedInstance.loadCategories { (valid, msg, categories) in
+            self.dismissRingIndecator()
+            if valid {
+                self.categoriesArray = categories
+                self.currentCategoriesArray = categories
+                self.collectionView1.reloadData()
+            }else {
+                self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK", callback: {
+                    
+                })
+            }
+        }
+    }
+    func fetchCategoriesWithId(){
+        SVProgressHUD.show()
+        ApiManager.sharedInstance.loadCategories(id: bassedCategoryId!) { (valid, msg, categories) in
             self.dismissRingIndecator()
             if valid {
                 self.categoriesArray = categories

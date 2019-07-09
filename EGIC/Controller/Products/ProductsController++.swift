@@ -14,9 +14,13 @@ extension ProductsController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ProductsCell = collectionView1.dequeueReusableCell(withReuseIdentifier: "ProductsCell", for: indexPath) as! ProductsCell
         
-        cell.tag = indexPath.row
         let rowCategory = productsArray[indexPath.row]
-        cell.product = rowCategory
+        cell.title.text = rowCategory.title
+        let stringUrl = rowCategory.image
+        let downloadURL = stringUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url = URL(string: downloadURL!)
+        cell.image.kf.indicatorType = .activity
+        cell.image.kf.setImage(with: url)
         cell.backgroundColor = UIColor.white
         cell.layer.masksToBounds = true
         cell.makeShadow(cornerRadius: 5)

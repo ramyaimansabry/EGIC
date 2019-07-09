@@ -19,22 +19,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="289" height="387"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWy-R1-Wws">
-                        <rect key="frame" x="8" y="348.5" width="273" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWy-R1-Wws">
+                        <rect key="frame" x="8" y="349.5" width="273" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QPw-D1-lDr">
-                        <rect key="frame" x="0.0" y="0.0" width="289" height="338.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="289" height="336.5"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="DWy-R1-Wws" firstAttribute="top" secondItem="QPw-D1-lDr" secondAttribute="bottom" constant="13" id="00q-mK-MKm"/>
                 <constraint firstItem="QPw-D1-lDr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="11H-pJ-id9"/>
                 <constraint firstItem="QPw-D1-lDr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ibu-6a-S9U"/>
                 <constraint firstAttribute="trailing" secondItem="DWy-R1-Wws" secondAttribute="trailing" constant="8" id="ZlK-0i-l7Y"/>
-                <constraint firstItem="DWy-R1-Wws" firstAttribute="top" secondItem="QPw-D1-lDr" secondAttribute="bottom" constant="10" id="aNo-m7-tqT"/>
                 <constraint firstAttribute="trailing" secondItem="QPw-D1-lDr" secondAttribute="trailing" id="n3b-6v-4Zp"/>
                 <constraint firstAttribute="bottom" secondItem="DWy-R1-Wws" secondAttribute="bottom" constant="18" id="pL6-W4-NRg"/>
                 <constraint firstItem="DWy-R1-Wws" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="yZO-UI-QRF"/>
@@ -45,7 +45,7 @@
                 <outlet property="image" destination="QPw-D1-lDr" id="yNG-LV-Q09"/>
                 <outlet property="title" destination="DWy-R1-Wws" id="8Tc-jW-VAZ"/>
             </connections>
-            <point key="canvasLocation" x="-18.399999999999999" y="107.49625187406298"/>
+            <point key="canvasLocation" x="-97" y="82"/>
         </collectionViewCell>
     </objects>
 </document>

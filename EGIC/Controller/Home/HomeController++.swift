@@ -79,7 +79,14 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, 
         startTimer()
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == collectionView2 {
+            let selectedRow = bassedHomeCategories?.catalog[indexPath.row].id
+            self.goCategoriesWithId(id: selectedRow!)
+        }else {
+            
+        }
+    }
     
     
     // MARK-: Slide timer

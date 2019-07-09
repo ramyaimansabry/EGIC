@@ -20,6 +20,13 @@ class HomeController: UIViewController {
         startTimer()
     }
     
+    func goCategoriesWithId(id: Int){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "CategoriesController") as! CategoriesController
+        controller.bassedCategoryId = "\(id)"
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     func setupNavigationBar(){
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.isTranslucent = false

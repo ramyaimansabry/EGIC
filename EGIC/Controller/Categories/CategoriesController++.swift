@@ -17,7 +17,12 @@ extension CategoriesController: UICollectionViewDelegate, UICollectionViewDataSo
         
         cell.tag = indexPath.row
         let rowCategory = currentCategoriesArray[indexPath.row]
-        cell.category = rowCategory
+        cell.title.text = rowCategory.title
+        let stringUrl = rowCategory.image
+        let downloadURL = stringUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url = URL(string: downloadURL!)
+        cell.image.kf.indicatorType = .activity
+        cell.image.kf.setImage(with: url)
         cell.backgroundColor = UIColor.white
         cell.layer.masksToBounds = true
         cell.makeShadow(cornerRadius: 5)
