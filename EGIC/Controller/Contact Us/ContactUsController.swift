@@ -1,6 +1,7 @@
 
 import UIKit
 import MapKit
+import SVProgressHUD
 
 class ContactUsController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var collectionView1: UICollectionView!
@@ -23,7 +24,6 @@ class ContactUsController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        
         addAnnotation()
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -51,6 +51,7 @@ class ContactUsController: UIViewController, MKMapViewDelegate {
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.isNavigationBarHidden = false
         navigationItem.title = "Contact".localized
+        SVProgressHUD.setupView()
         
         collectionView1.delegate = self
         collectionView1.dataSource = self

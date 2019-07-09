@@ -1,15 +1,9 @@
-//
-//  SignUpController.swift
-//  EGIC
-//
-//  Created by Ramy Ayman Sabry on 7/5/19.
-//  Copyright © 2019 Ramy Ayman Sabry. All rights reserved.
-//
 
 import UIKit
 import SVProgressHUD
 
 class SignUpController: UIViewController {
+    @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -21,9 +15,7 @@ class SignUpController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTermsLabel()
-        jobTextField.inputView = jobPickerView
-        SVProgressHUD.setupView()
+        setupComponent()
     }
     
     // MARK:- Network
@@ -72,7 +64,7 @@ class SignUpController: UIViewController {
     
     // MARK:- Helper functions
 /********************************************************************************/
-    func setupTermsLabel(){
+    func setupComponent(){
         termsLabel.text = "termsOfService".localized
         let text = "termsOfService".localized
         let underlineAttriString = NSMutableAttributedString(string: text)
@@ -86,6 +78,13 @@ class SignUpController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(termsLabel(_ :)))
         termsLabel.isUserInteractionEnabled = true
         termsLabel.addGestureRecognizer(tapGesture)
+        
+        jobTextField.inputView = jobPickerView
+        SVProgressHUD.setupView()
+        leftButton.setImage(UIImage(named: "BackICON")?.withRenderingMode(.alwaysTemplate).imageFlippedForRightToLeftLayoutDirection(), for: .normal)
+        
+        nameTextField.delegate = self
+        emailTextField.delegate = self
     }
     @objc func termsLabel(_ sender: UITapGestureRecognizer){
         let text = "termsOfService".localized
@@ -101,7 +100,10 @@ class SignUpController: UIViewController {
         self.view.endEditing(true)
         self.navigationController?.popViewController(animated: true)
     }
-    
+    private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     lazy var jobPickerView: UIPickerView = {
         let pk = UIPickerView(frame: CGRect(x: 0, y: 0, width: 0, height: 160))

@@ -1,12 +1,6 @@
-//
-//  TermsOfServiceController.swift
-//  EGIC
-//
-//  Created by Ramy Ayman Sabry on 7/5/19.
-//  Copyright © 2019 Ramy Ayman Sabry. All rights reserved.
-//
 
 import UIKit
+import SVProgressHUD
 
 class TermsOfServiceController: UIViewController {
     @IBOutlet weak var textView: UITextView!
@@ -44,9 +38,10 @@ class TermsOfServiceController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationItem.title = "Terms & Conditions"
+        SVProgressHUD.setupView()
         
         let leftButton = UIButton(type: .custom)
-        leftButton.setImage(UIImage(named: "BackICON")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        leftButton.setImage(UIImage(named: "BackICON")?.withRenderingMode(.alwaysTemplate).imageFlippedForRightToLeftLayoutDirection(), for: .normal)
         leftButton.tintColor = UIColor.mainAppColor()
         leftButton.translatesAutoresizingMaskIntoConstraints = false
         leftButton.widthAnchor.constraint(equalToConstant: 24).isActive = true

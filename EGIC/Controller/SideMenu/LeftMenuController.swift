@@ -1,6 +1,7 @@
 
 import UIKit
 import Kingfisher
+import SVProgressHUD
 
 class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     weak var homeController: HomeController?
@@ -124,6 +125,7 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
         let topPadding =  window.safeAreaInsets.top
         let bottomPadding = window.safeAreaInsets.bottom
         let viewHeight = window.frame.height-topPadding-bottomPadding
+        SVProgressHUD.setupView()
         
         let x = min(viewHeight/8, 350)
         let headerHeight = max(x, 140)

@@ -40,6 +40,7 @@ class SocialController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.isNavigationBarHidden = false
         navigationItem.title = "Social".localized
+        SVProgressHUD.setupView()
         
         collectionView1.delegate = self
         collectionView1.dataSource = self

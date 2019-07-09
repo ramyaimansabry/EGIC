@@ -96,8 +96,13 @@ extension SVProgressHUD {
     }
 }
 
-
-extension UIViewController{
+extension UIViewController: UITextFieldDelegate{
+    
+//    private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
+    
     
     func show1buttonAlert(title: String, message: String, buttonTitle: String, callback: @escaping () -> ()){
        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
@@ -151,7 +156,6 @@ extension UIViewController{
     func dismissRingIndecator(){
         DispatchQueue.main.async {
             SVProgressHUD.dismiss()
-            SVProgressHUD.setDefaultMaskType(.none)
         }
     }
 }
@@ -270,3 +274,6 @@ extension UITapGestureRecognizer {
     }
     
 }
+
+
+

@@ -2,6 +2,7 @@
 import UIKit
 import SideMenu
 import MOLH
+import SVProgressHUD
 
 class HomeController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
@@ -9,18 +10,23 @@ class HomeController: UIViewController {
     @IBOutlet weak var collectionView2: UICollectionView!
     let leftMenuController = LeftMenuController()
     var bassedHomeCategories: HomeCategories?
+    var index = 0
+    var inForwardDirection = true
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        startTimer()
     }
-
+    
     func setupNavigationBar(){
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.isNavigationBarHidden = false
+        SVProgressHUD.setupView()
 
         leftMenuController.homeController = self
         let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: leftMenuController)
@@ -30,11 +36,12 @@ class HomeController: UIViewController {
             SideMenuManager.default.menuRightNavigationController = menuLeftNavigationController
         }
         SideMenuManager.default.menuFadeStatusBar = false
-        SideMenuManager.default.menuPushStyle = .preserve
+        SideMenuManager.default.menuPushStyle = .replace
+        SideMenuManager.default.menuAllowPushOfSameClassTwice = false
         SideMenuManager.defaultManager.menuPresentMode = .viewSlideInOut
-        SideMenuManager.default.menuWidth = min(4*(self.view.frame.width/6), 400)
-        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+        SideMenuManager.default.menuWidth = min(4*(self.view.frame.width/5), 400)
+//        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+//        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         
         collectionView1.delegate = self
         collectionView1.dataSource = self
@@ -70,6 +77,8 @@ class HomeController: UIViewController {
     }
     
     
+    // MARK-: Side menu functions
+/************************************************************************************/
     func goHome(){
         navigationController?.popToRootViewController(animated: true)
     }
@@ -125,75 +134,3 @@ class HomeController: UIViewController {
     }
 }
 
-
-
-
-extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-   
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == collectionView1 { return bassedHomeCategories?.slider.count ?? 0 }
-        else { return bassedHomeCategories?.catalog.count ?? 0 }
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == collectionView1 {
-            let cell: SliderCell = collectionView1.dequeueReusableCell(withReuseIdentifier: "SliderCustomCell", for: indexPath) as! SliderCell
-            
-            cell.tag = indexPath.row
-            cell.title.text = bassedHomeCategories?.slider[indexPath.row].title
-            let stringUrl = bassedHomeCategories?.slider[indexPath.row].image
-            let downloadURL = stringUrl!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-            let url = URL(string: downloadURL!)
-            cell.image.kf.indicatorType = .activity
-            cell.image.kf.setImage(with: url)
-            cell.backgroundColor = UIColor.white
-            return cell
-        }else {
-            let cell: CatalogCell = collectionView2.dequeueReusableCell(withReuseIdentifier: "CatalogCustomCell", for: indexPath) as! CatalogCell
-            
-            cell.tag = indexPath.row
-            let stringUrl = bassedHomeCategories?.catalog[indexPath.row].image
-            let downloadURL = stringUrl!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-            let url = URL(string: downloadURL!)
-            cell.image.kf.indicatorType = .activity
-            cell.image.kf.setImage(with: url)
-            cell.backgroundColor = UIColor.white
-            cell.layer.masksToBounds = true
-            cell.layer.cornerRadius = 5
-            return cell
-        }
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if collectionView == collectionView1 {
-            return CGSize(width: collectionView1.frame.width, height: collectionView1.frame.height)
-        }else {
-            return CGSize(width: (collectionView2.frame.width-50)/3, height: collectionView2.frame.height-30)
-        }
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        if collectionView == collectionView2 {
-            return 15
-        }else {
-            return 0
-        }
-    }
-    
-    
-     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let pageNumber = Int(targetContentOffset.pointee.x / view.frame.width)
-        pageControl.currentPage = pageNumber
-        pageControl.updateCurrentPageDisplay()
-    }
-    
-    
-}

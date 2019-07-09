@@ -1,10 +1,3 @@
-//
-//  LanguageController.swift
-//  EGIC
-//
-//  Created by Ramy Ayman Sabry on 7/6/19.
-//  Copyright © 2019 Ramy Ayman Sabry. All rights reserved.
-//
 
 import UIKit
 import MOLH
@@ -45,6 +38,8 @@ class LanguageController: UIViewController {
         return pk
     }()
 }
+
+
 
 
 extension LanguageController: UIPickerViewDelegate,UIPickerViewDataSource {

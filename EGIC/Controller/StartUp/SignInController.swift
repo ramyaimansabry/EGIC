@@ -1,10 +1,3 @@
-//
-//  SignInController.swift
-//  EGIC
-//
-//  Created by Ramy Ayman Sabry on 7/5/19.
-//  Copyright © 2019 Ramy Ayman Sabry. All rights reserved.
-//
 
 import UIKit
 import SVProgressHUD
@@ -16,9 +9,7 @@ class SignInController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSignUpLabel()
-        SVProgressHUD.setupView()
-        phoneTextField.keyboardType = .asciiCapableNumberPad
+        setupComponent()
     }
     
     // MARK:- Network
@@ -62,7 +53,7 @@ class SignInController: UIViewController {
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
-    func setupSignUpLabel(){
+    func setupComponent(){
         label1.text = "dontHaveAccount".localized
         let text = "dontHaveAccount".localized
         let underlineAttriString = NSMutableAttributedString(string: text)
@@ -76,6 +67,9 @@ class SignInController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapLabel(_:)))
         label1.addGestureRecognizer(tap)
         label1.isUserInteractionEnabled = true
+        
+        SVProgressHUD.setupView()
+        phoneTextField.keyboardType = .asciiCapableNumberPad
     }
     
 }

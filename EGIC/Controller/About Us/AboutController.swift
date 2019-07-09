@@ -42,6 +42,7 @@ class AboutController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.isNavigationBarHidden = false
         navigationItem.title = "About".localized
+        SVProgressHUD.setupView()
         
         let leftButton = UIButton(type: .custom)
         leftButton.setImage(UIImage(named: "BackICON")?.withRenderingMode(.alwaysTemplate).imageFlippedForRightToLeftLayoutDirection(), for: .normal)

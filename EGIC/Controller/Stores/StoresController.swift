@@ -61,6 +61,7 @@ class StoresController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.isNavigationBarHidden = false
         navigationItem.title = "Stores".localized
+        SVProgressHUD.setupView()
         
         mapView1.delegate = self
         

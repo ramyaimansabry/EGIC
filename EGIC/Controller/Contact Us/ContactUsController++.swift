@@ -2,7 +2,6 @@ import UIKit
 import MapKit
 
 
-
 extension ContactUsController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

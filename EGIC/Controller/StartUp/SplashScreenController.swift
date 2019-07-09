@@ -8,7 +8,7 @@ class SplashScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SVProgressHUD.setupView()
-       LoadingActivityIndicator.startAnimating()
+        LoadingActivityIndicator.startAnimating()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -18,10 +18,12 @@ class SplashScreenController: UIViewController {
     func ShowViewController(){
         if loggedInClient() == true {
             LoadingActivityIndicator.startAnimating()
+            self.LoadingActivityIndicator.isHidden = false
             HelperData.sharedInstance.loggedInClient.language = "currentLang".localized
             HelperData.sharedInstance.loggedInClient.login()
             ApiManager.sharedInstance.loadHomeCategories { (valid, msg, homeCategories) in
                 self.LoadingActivityIndicator.stopAnimating()
+                self.LoadingActivityIndicator.isHidden = true
                 if valid {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let controller = storyboard.instantiateViewController(withIdentifier: "HomeController") as! HomeController

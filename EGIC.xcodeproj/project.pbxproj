@@ -43,6 +43,7 @@
 		F0CE694422D397510042D94E /* StoresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE694322D397510042D94E /* StoresController.swift */; };
 		F0CE694622D3987B0042D94E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE694522D3987B0042D94E /* Store.swift */; };
 		F0CE694822D3CB690042D94E /* StoresController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE694722D3CB690042D94E /* StoresController++.swift */; };
+		F0CE694A22D40C5C0042D94E /* HomeController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE694922D40C5C0042D94E /* HomeController++.swift */; };
 		F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		F0CE694322D397510042D94E /* StoresController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresController.swift; sourceTree = "<group>"; };
 		F0CE694522D3987B0042D94E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		F0CE694722D3CB690042D94E /* StoresController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoresController++.swift"; sourceTree = "<group>"; };
+		F0CE694922D40C5C0042D94E /* HomeController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeController++.swift"; sourceTree = "<group>"; };
 		F0DA4C4222D0E437001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F0DA4C4322D0E438001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F0DA4C4522D0E469001C5FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginBoard.storyboard; sourceTree = "<group>"; };
@@ -193,8 +195,8 @@
 			children = (
 				F0CE692D22D359B90042D94E /* SideMenu.storyboard */,
 				F060107322CF6D9E008BDCF4 /* Main.storyboard */,
-				F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */,
 				F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */,
+				F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				F0CE692122D225680042D94E /* HomeController.swift */,
+				F0CE694922D40C5C0042D94E /* HomeController++.swift */,
 				F0CE692B22D26C530042D94E /* CatalogCell.swift */,
 				F0CE692922D26C430042D94E /* SliderCell.swift */,
 			);
@@ -448,6 +451,7 @@
 				F0CE692C22D26C530042D94E /* CatalogCell.swift in Sources */,
 				F0CE693122D35EB90042D94E /* ContactUsCell.swift in Sources */,
 				F0CE693522D36BE60042D94E /* ContactUsController++.swift in Sources */,
+				F0CE694A22D40C5C0042D94E /* HomeController++.swift in Sources */,
 				F060108F22CF766A008BDCF4 /* HelperData.swift in Sources */,
 				F060109122CF7759008BDCF4 /* Extentions.swift in Sources */,
 				F060109322CF781B008BDCF4 /* Categories.swift in Sources */,
