@@ -84,7 +84,8 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, 
             let selectedRow = bassedHomeCategories?.catalog[indexPath.row].id
             self.goCategoriesWithId(id: selectedRow!)
         }else {
-            
+             let selectedRow = bassedHomeCategories?.slider[indexPath.row].category_id
+            self.goProductsWithId(id: Int(selectedRow!)!)
         }
     }
     

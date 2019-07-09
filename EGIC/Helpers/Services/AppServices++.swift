@@ -59,9 +59,9 @@ extension ApiManager {
             "Authorization": "Bearer \(HelperData.sharedInstance.loggedInClient.token)"
         ]
         let parameters: Parameters = [
-            "parent" : "\(id)",
-            "count": "\(limit)",
-            "page": "\(offset)",
+            "parent" : id,
+            "count": limit,
+            "page": offset,
         ]
         Alamofire.request(url, method: .get ,parameters: parameters, encoding: URLEncoding(destination: .queryString), headers: headers).responseJSON { (response) in
             if let jsonResponse = response.result.value{

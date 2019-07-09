@@ -26,6 +26,13 @@ class HomeController: UIViewController {
         controller.bassedCategoryId = "\(id)"
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    func goProductsWithId(id: Int){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ProductsController") as! ProductsController
+        controller.bassedCategoryID = id
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     
     func setupNavigationBar(){
         navigationController?.navigationBar.barStyle = .default
