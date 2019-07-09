@@ -6,7 +6,7 @@ class ProductsController: UIViewController {
     @IBOutlet weak var collectionView1: UICollectionView!
     var isFinishedPaging = true
     var firstOpen: Bool = true
-    var pagesNumber: Int = 0
+    var pagesNumber: Int = 1
     var bassedCategoryID: Int?
     var productsArray = [Product]()
     
@@ -14,7 +14,7 @@ class ProductsController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         SVProgressHUD.show()
-        fetchProducts(id: bassedCategoryID!, offset: pagesNumber, limit: 10)
+        fetchProducts(id: bassedCategoryID!, offset: 0, limit: 10)
     }
     
     func fetchProducts(id: Int, offset: Int, limit: Int){
@@ -30,7 +30,7 @@ class ProductsController: UIViewController {
                     self.collectionView1.reloadData()
                 }else {
                     if self.firstOpen {
-                        self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK", callback: {
+                        self.show1buttonAlert(title: "Error".localized, message: "LoadingDataError".localized, buttonTitle: "OK", callback: {
                             self.navigationController?.popViewController(animated: true)
                         })
                     }

@@ -81,19 +81,16 @@ extension SocialController: UICollectionViewDelegate, UICollectionViewDataSource
         return cell
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let height = (collectionView1.frame.width-60)/2
+        let height = (collectionView1.frame.width-90)/2
         return CGSize(width: height, height: height)
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 20
+        return 30
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        self.openLink(link: array[indexPath.row].number)

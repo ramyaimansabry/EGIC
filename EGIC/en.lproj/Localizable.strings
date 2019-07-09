@@ -57,3 +57,5 @@
 "LocationError" = "Check location permission from setting";
 "OpenExternalMap" = "Show store location on apple maps?";
 
+
+"LoadingDataError" = "Error loading data, try again in a while";

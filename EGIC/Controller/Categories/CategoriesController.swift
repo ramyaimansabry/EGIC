@@ -28,7 +28,7 @@ class CategoriesController: UIViewController {
                 self.currentCategoriesArray = categories
                 self.collectionView1.reloadData()
             }else {
-                self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK", callback: {
+                self.show1buttonAlert(title: "Error".localized, message: "LoadingDataError".localized, buttonTitle: "OK", callback: {
                     
                 })
             }
@@ -43,7 +43,7 @@ class CategoriesController: UIViewController {
                 self.currentCategoriesArray = categories
                 self.collectionView1.reloadData()
             }else {
-                self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK", callback: {
+                self.show1buttonAlert(title: "Error".localized, message: "LoadingDataError".localized, buttonTitle: "OK", callback: {
                     
                 })
             }
