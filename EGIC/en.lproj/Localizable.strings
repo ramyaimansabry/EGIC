@@ -59,3 +59,12 @@
 
 
 "LoadingDataError" = "Error loading data, try again in a while";
+
+
+// segment control titles
+"View" = "View";
+"Spec" = "Spec";
+"Plan" = "Plan";
+
+"closeButton" = "Close";
+

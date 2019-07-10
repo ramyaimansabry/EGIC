@@ -4,49 +4,137 @@ import SVProgressHUD
 import WebKit
 
 class ProductDetailsController: UIViewController {
+    @IBOutlet weak var DetailedView: UIView!
+    @IBOutlet weak var titleHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var webView1: WKWebView!
-    var bassedUrl: String?
-    
-    @IBOutlet weak var webView2: UIWebView!
+    @IBOutlet weak var planImage: UIImageView!
+    @IBOutlet weak var viewImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var closeButton: UIButton!
+    var bassedProduct: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
-        webView1.navigationDelegate = self
-        webView1.scrollView.delegate = self
-        openURL()
+        setupComponent()
+        setupProductInfo()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        animateView()
     }
     
-    func openURL(){
-        let downloadURL = bassedUrl!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+    func setupProductInfo(){
+        segmentControl.selectedSegmentIndex = 0
+        
+        titleLabel.text = bassedProduct?.title
+        
+        let stringUrl = bassedProduct?.image
+        let downloadURL = stringUrl!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url = URL(string: downloadURL!)
+        viewImage.kf.indicatorType = .activity
+        viewImage.kf.setImage(with: url)
+        
+        let stringUrl2 = bassedProduct?.plan
+        let downloadURL2 = stringUrl2!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url2 = URL(string: downloadURL2!)
+        planImage.kf.indicatorType = .activity
+        planImage.kf.setImage(with: url2)
+        
+        if (bassedProduct?.dimensions.contains(".csv"))!{
+            openURL(stringURL: (bassedProduct?.dimensions)!)
+        }
+    }
+    
+    @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            viewImage.alpha = 1
+            planImage.alpha = 0
+            webView1.alpha = 0
+            break
+        case 1:
+            viewImage.alpha = 0
+            planImage.alpha = 1
+            webView1.alpha = 0
+            break
+        case 2:
+            viewImage.alpha = 0
+            planImage.alpha = 0
+            webView1.alpha = 1
+            break
+        default:
+            break
+        }
+    }
+    
+    @IBAction func closeButtonAction(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func openURL(stringURL: String){
+        let downloadURL = stringURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url = URL(string: downloadURL!)
         let finalRequest = URLRequest(url: url!)
-        //   webView1.load(finalRequest)
-        
-        webView2.loadRequest(finalRequest)
+        webView1.load(finalRequest)
     }
     
-    func setupNavigationBar(){
-        navigationController?.navigationBar.barStyle = .default
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.navigationBar.barTintColor = UIColor.white
-        navigationController?.isNavigationBarHidden = false
-        navigationItem.title = "Products".localized
+    func setupComponent(){
+        titleHeightConstraint.constant = estimateFrameForTitleText((bassedProduct?.title)!).height + 25
+        titleLabel.layoutIfNeeded()
+        
         SVProgressHUD.setupView()
-
-        let leftButton = UIButton(type: .custom)
-        leftButton.setImage(UIImage(named: "BackICON")?.withRenderingMode(.alwaysTemplate).imageFlippedForRightToLeftLayoutDirection(), for: .normal)
-        leftButton.tintColor = UIColor.mainAppColor()
-        leftButton.translatesAutoresizingMaskIntoConstraints = false
-        leftButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        leftButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        leftButton.addTarget(self, action: #selector(leftButtonAction), for: .touchUpInside)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+        
+        closeButton.setTitle("closeButton".localized, for: .normal)
+        
+        segmentControl.removeAllSegments()
+        segmentControl.insertSegment(withTitle: "View".localized, at: 0, animated: true)
+        segmentControl.insertSegment(withTitle: "Plan".localized, at: 1, animated: true)
+        segmentControl.insertSegment(withTitle: "Spec".localized, at: 2, animated: true)
+        
+        segmentControl.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
+        segmentControl.tintColor = .clear
+        
+        segmentControl.setTitleTextAttributes([
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15),
+            NSAttributedString.Key.foregroundColor: UIColor.gray
+            ], for: .normal)
+        
+        segmentControl.setTitleTextAttributes([
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16),
+            NSAttributedString.Key.foregroundColor: UIColor.mainAppColor()
+            ], for: .selected)
+        
+        webView1.navigationDelegate = self
+        webView1.scrollView.delegate = self
+        
     }
-    @objc func leftButtonAction(){
-        navigationController?.popViewController(animated: true)
+    func animateView() {
+        DetailedView.alpha = 0
+        self.DetailedView.frame.origin.y = self.DetailedView.frame.origin.y + 50
+        UIView.animate(withDuration: 0.2, animations: { () -> Void in
+            self.DetailedView.alpha = 1.0
+            self.DetailedView.frame.origin.y = self.DetailedView.frame.origin.y - 50
+        })
     }
+    
+    
+    // MARK : Text size
+    /*****************************************************************************************/
+    fileprivate func estimateFrameForTitleText(_ text: String) -> CGRect {
+        let width = view.frame.width-80
+        let size = CGSize(width: width, height: 1000)
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        return NSString(string: text).boundingRect(with: size, options: options, attributes: convertToOptionalNSAttributedStringKeyDictionary([convertFromNSAttributedStringKey(NSAttributedString.Key.font): UIFont.boldSystemFont(ofSize: 15)]), context: nil)
+    }
+    fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+        guard let input = input else { return nil }
+        return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+    }
+    fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+        return input.rawValue
+    }
+    
 }
 
 

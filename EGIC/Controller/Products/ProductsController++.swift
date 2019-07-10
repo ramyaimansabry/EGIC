@@ -41,16 +41,10 @@ extension ProductsController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let rowCategory = productsArray[indexPath.row]
-        print(rowCategory)
-        if (rowCategory.dimensions.contains(".csv")) {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "ProductDetailsController") as! ProductDetailsController
-            controller.bassedUrl = rowCategory.dimensions
-            let n = UINavigationController(rootViewController: controller)
-            present(n, animated: true, completion: nil)
-        }else {
-            
-        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ProductDetailsController") as! ProductDetailsController
+        controller.bassedProduct = rowCategory
+        present(controller, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {

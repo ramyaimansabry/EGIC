@@ -57,3 +57,12 @@
 "OpenExternalMap" = "عرض موقع الفرع علي خريطة ابل؟";
 
 "LoadingDataError" = "فشل في تحميل المنتجات، حاول مرة اخري بعد قليل";
+
+
+
+// segment control titles
+"View" = "عرض";
+"Spec" = "المواصفات";
+"Plan" = "مخطط";
+
+"closeButton" = "اغلاق";

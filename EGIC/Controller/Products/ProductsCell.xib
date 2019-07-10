@@ -31,7 +31,7 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="DWy-R1-Wws" firstAttribute="top" secondItem="QPw-D1-lDr" secondAttribute="bottom" constant="13" id="00q-mK-MKm"/>
+                <constraint firstItem="DWy-R1-Wws" firstAttribute="top" secondItem="QPw-D1-lDr" secondAttribute="bottom" priority="750" constant="13" id="00q-mK-MKm"/>
                 <constraint firstItem="QPw-D1-lDr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="11H-pJ-id9"/>
                 <constraint firstItem="QPw-D1-lDr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ibu-6a-S9U"/>
                 <constraint firstAttribute="trailing" secondItem="DWy-R1-Wws" secondAttribute="trailing" constant="8" id="ZlK-0i-l7Y"/>
