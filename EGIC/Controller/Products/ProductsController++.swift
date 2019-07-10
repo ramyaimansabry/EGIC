@@ -29,8 +29,9 @@ extension ProductsController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let cellWidth = (view.frame.width-60)/2
-        let cellHeight = 1.5*((view.frame.width-60)/2)
+        let cellWidth = min((view.frame.width-60)/2, 300)
+        print(view.frame.width-60)
+        let cellHeight = 1.2*cellWidth
         return CGSize(width: cellWidth, height: cellHeight)
     }
     

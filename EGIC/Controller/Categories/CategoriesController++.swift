@@ -31,8 +31,8 @@ extension CategoriesController: UICollectionViewDelegate, UICollectionViewDataSo
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: view.frame.width-20, height: 130)
+        let cellHeight = max(130, view.frame.height/6)
+        return CGSize(width: view.frame.width-20, height: cellHeight)
     }
     
     
