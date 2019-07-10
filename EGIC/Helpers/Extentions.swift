@@ -127,7 +127,7 @@ extension UIViewController: UITextFieldDelegate{
        
     }
     
-    func showLanguageAlert( callback: @escaping (_ language: String) -> ()) {
+    func showLanguageAlert(callback: @escaping (_ language: String) -> ()) {
         let alert = UIAlertController(title: "changeLanguage".localized, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
 
         alert.addAction(UIAlertAction(title: "العربية", style: .default, handler: {
@@ -145,14 +145,15 @@ extension UIViewController: UITextFieldDelegate{
          alert.view.tintColor = UIColor.mainAppColor()
         
         
-//        if let popoverController = alert.popoverPresentationController {
-//            popoverController.sourceView = button
-//            popoverController.sourceRect = button.bounds
-//
-//            self.present(alert, animated: true, completion: {
-//            })
-//            return
-//        }
+        if let popoverController = alert.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+
+            self.present(alert, animated: true, completion: {
+            })
+            return
+        }
         
         
         

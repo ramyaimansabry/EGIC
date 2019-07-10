@@ -118,7 +118,7 @@ class HomeController: UIViewController {
     
     func changeLanguage(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
-            self.showLanguageAlert { (language) in
+            self.showLanguageAlert(callback: { (language) in
                 if language == "en" && "currentLang".localized == "ar" {
                     MOLH.setLanguageTo(language)
                     MOLH.reset()
@@ -127,7 +127,7 @@ class HomeController: UIViewController {
                     MOLH.setLanguageTo(language)
                     MOLH.reset()
                 }
-            }
+            })
         }
     }
     
