@@ -27,6 +27,7 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
         loadUserInfo()
     }
     
+    
     // MARK :- Collectionview Methods
     /********************************************************************************************/
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -132,10 +133,10 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
         SVProgressHUD.setupView()
         
         let x = min(viewHeight/8, 350)
-        let headerHeight = max(x, 140)
-        let finalHeaderHeight = min(headerHeight, 200)
+        let headerHeight = max(x, 200)
+        let finalHeaderHeight = min(headerHeight, 300)
         view.addSubview(headerView)
-        headerView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor,size: CGSize(width: 0, height: finalHeaderHeight))
+        headerView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor,size: CGSize(width: 0, height: headerHeight))
         
         headerView.addSubview(iconImage)
         iconImage.translatesAutoresizingMaskIntoConstraints = false
