@@ -13,10 +13,9 @@ extension ProductsController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ProductsCell = collectionView1.dequeueReusableCell(withReuseIdentifier: "ProductsCell", for: indexPath) as! ProductsCell
-        
-        let rowCategory = productsArray[indexPath.row]
-        cell.title.text = rowCategory.title
-        let stringUrl = rowCategory.image
+        cell.tag = indexPath.row
+        cell.title.text = productsArray[indexPath.row].title
+        let stringUrl = productsArray[indexPath.row].image
         let downloadURL = stringUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url = URL(string: downloadURL!)
         cell.image.kf.indicatorType = .activity
@@ -31,7 +30,8 @@ extension ProductsController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let cellWidth = (view.frame.width-60)/2
-        return CGSize(width: cellWidth, height: 1.5*cellWidth)
+        let cellHeight = 1.5*((view.frame.width-60)/2)
+        return CGSize(width: cellWidth, height: cellHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

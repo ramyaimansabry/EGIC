@@ -27,7 +27,8 @@ class ProductsController: UIViewController {
                     for product in products {
                         self.productsArray.append(product)
                     }
-                    self.collectionView1.reloadData()
+                   self.collectionView1.reloadData()
+                    self.collectionView1.layoutIfNeeded()
                 }else {
                     if self.firstOpen {
                         self.show1buttonAlert(title: "Error".localized, message: "LoadingDataError".localized, buttonTitle: "OK", callback: {
