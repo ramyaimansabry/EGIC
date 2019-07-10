@@ -36,6 +36,7 @@ class SignInController: UIViewController {
             }
             return
         }
+        phoneTextField.endEditing(true)
         login(phone: phone)
     }
     

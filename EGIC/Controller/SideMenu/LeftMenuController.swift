@@ -6,8 +6,9 @@ import SVProgressHUD
 class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     weak var homeController: HomeController?
     let cellId = "cellId"
+    let headerID = "HeaderID"
     let settingOptions: [[String]] = [
-        ["Home".localized,"LeftMenu0"],
+       // ["Home".localized,"LeftMenu0"],
         ["Products".localized,"LeftMenu1"],
         ["Calculate".localized,"LeftMenu2"],
         ["Stores".localized,"LeftMenu3"],
@@ -54,7 +55,7 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let x = min(view.frame.height/12, 80)
+        let x = min(view.frame.height/13, 80)
         let cellHeight = max(x, 50)
         let finalCellHeight = min(cellHeight, 70)
         return CGSize(width: view.frame.width, height: finalCellHeight)
@@ -63,45 +64,40 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
         switch indexPath.item {
         case 0:
             self.dismiss(animated: true) {
-                self.homeController?.goHome()
-            }
-            return
-        case 1:
-            self.dismiss(animated: true) {
                 self.homeController?.goCategories()
             }
             return
-        case 2:
+        case 1:
             
             
        
             return
-        case 3:
+        case 2:
             self.dismiss(animated: true) {
                 self.homeController?.goStores()
             }
             return
-        case 4:
+        case 3:
             self.dismiss(animated: true) {
                 self.homeController?.goSocial()
             }
             return
-        case 5:
+        case 4:
              self.dismiss(animated: true) {
                 self.homeController?.goAboutUs()
              }
             return
-        case 6:
+        case 5:
              self.dismiss(animated: true) {
                self.homeController?.goContactUs()
              }
             return
-        case 7:
+        case 6:
             self.dismiss(animated: true) {
                self.homeController?.changeLanguage()
             }
             return
-        case 8:
+        case 7:
             self.dismiss(animated: true) {
                 self.homeController?.signOut()
             }
@@ -110,6 +106,19 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
             return
         }
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as! LeftMenuHeader
+//
+//
+//        header.backgroundColor = UIColor.white
+//        return header
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//
+//        let headerHeight = min(view.frame.height/5, 500)
+//        return CGSize(width: view.frame.width, height: headerHeight)
+//    }
     
     //   MARK :- Helper Methods
 /**********************************************************************************************/
@@ -128,37 +137,38 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
     private func setupViews(){
         guard let window = UIApplication.shared.keyWindow else { return }
         let topPadding =  window.safeAreaInsets.top
-        let bottomPadding = window.safeAreaInsets.bottom
-        let viewHeight = window.frame.height-topPadding-bottomPadding
         SVProgressHUD.setupView()
-        
-        let x = min(viewHeight/8, 350)
-        let headerHeight = max(x, 200)
-        let finalHeaderHeight = min(headerHeight, 300)
+
+        let x = min(view.frame.height/4.5, 400)
+        let headerHeight = max(x, 160)
+        let finalHeaderHeight = min(headerHeight, 200)
         view.addSubview(headerView)
-        headerView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor,size: CGSize(width: 0, height: headerHeight))
-        
+        headerView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor,size: CGSize(width: 0, height: finalHeaderHeight))
+
+        headerView.addSubview(backgroundImage)
+        backgroundImage.anchor(top: headerView.topAnchor, leading: headerView.leadingAnchor, bottom: headerView.bottomAnchor, trailing: headerView.trailingAnchor)
+
         headerView.addSubview(iconImage)
         iconImage.translatesAutoresizingMaskIntoConstraints = false
-      
-        
         iconImage.topAnchor.constraint(equalTo: headerView.topAnchor, constant: topPadding).isActive = true
         iconImage.centerXAnchor.constraint(equalTo: headerView.centerXAnchor, constant: 0).isActive = true
         iconImage.widthAnchor.constraint(equalToConstant: 75).isActive = true
         iconImage.heightAnchor.constraint(equalToConstant: 75).isActive = true
-        
-        
+
+
         headerView.addSubview(stackview)
         stackview.anchor(top: nil, leading: headerView.leadingAnchor, bottom: headerView.bottomAnchor, trailing: headerView.trailingAnchor, padding: .init(top: 0, left: 10, bottom: headerHeight/10, right: 10))
-        
+
         stackview.addArrangedSubview(nameLabel)
-        
+
         nameLabel.anchor(top: nil, leading: stackview.leadingAnchor, bottom: nil, trailing: stackview.trailingAnchor)
     
         
         
         view.addSubview(collectionView)
         collectionView.anchor(top: headerView.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
+      //  collectionView.register(LeftMenuHeader.self, forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: self.headerID)
+        
         collectionView.register(LeftMenuCell.self, forCellWithReuseIdentifier: cellId)
     }
     lazy var collectionView: UICollectionView = {
@@ -166,7 +176,7 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 0
         layout.sectionHeadersPinToVisibleBounds = false
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = UIColor(hexString: "#F1F1F1")
         cv.delegate = self
@@ -186,6 +196,13 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
         let iv = UIImageView()
         iv.image = UIImage(named: "ProfileICON777")
         iv.contentMode = .scaleAspectFit
+        iv.backgroundColor = UIColor.clear
+        return iv
+    }()
+    let backgroundImage: UIImageView = {
+        let iv = UIImageView()
+        iv.image = UIImage(named: "SideMenuImage")
+        iv.contentMode = .scaleAspectFill
         iv.backgroundColor = UIColor.clear
         return iv
     }()

@@ -24,13 +24,15 @@ extension ContactUsController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: (collectionView1.frame.width-80)/3, height: collectionView1.frame.height-40)
+        let x = (collectionView1.frame.width-120)/3
+        let cellWidth = min(x, 150)
+        return CGSize(width: cellWidth, height: cellWidth)
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 20
+        return 30
     }
     
     

@@ -62,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="i9r-Aa-AZN">
-                                <rect key="frame" x="0.0" y="65.5" width="375" height="409.5"/>
+                                <rect key="frame" x="0.0" y="65.5" width="375" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dx3-PT-yYY">
                                     <size key="itemSize" width="350" height="219"/>
@@ -72,7 +72,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderCustomCell" id="BZE-mS-Lbf" customClass="SliderCell" customModule="EGIC" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="95.5" width="350" height="219"/>
+                                        <rect key="frame" x="0.0" y="105" width="350" height="219"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="219"/>
@@ -107,12 +107,12 @@
                                 </cells>
                             </collectionView>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="uEU-ku-dGd">
-                                <rect key="frame" x="10" y="430" width="355" height="37"/>
+                                <rect key="frame" x="10" y="449.5" width="355" height="37"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.1764705882" green="0.38823529410000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7B5-aW-eT9">
-                                <rect key="frame" x="0.0" y="475" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="494.5" width="375" height="200"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.64099957190000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="8ii-OR-OAD"/>
@@ -124,14 +124,14 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Brands" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9P-Uq-aYE">
-                                <rect key="frame" x="10" y="490" width="355" height="25.5"/>
+                                <rect key="frame" x="10" y="509.5" width="355" height="25.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <color key="textColor" red="0.1764705882" green="0.38823529410000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0HW-2L-tE1">
-                                <rect key="frame" x="0.0" y="519.5" width="375" height="147.5"/>
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.64099957191780821" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pIS-QL-ipK">
                                     <size key="itemSize" width="323" height="144"/>
@@ -141,7 +141,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CatalogCustomCell" id="Ph2-hC-8fc" customClass="CatalogCell" customModule="EGIC" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="2" width="323" height="144"/>
+                                        <rect key="frame" x="10" y="-8" width="323" height="144"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="323" height="144"/>
@@ -175,7 +175,7 @@
                             <constraint firstAttribute="trailing" secondItem="L9P-Uq-aYE" secondAttribute="trailing" constant="10" id="GwT-Jd-YIl"/>
                             <constraint firstItem="0HW-2L-tE1" firstAttribute="leading" secondItem="lXa-aw-wZH" secondAttribute="leading" id="QFi-Ez-AGZ"/>
                             <constraint firstItem="lXa-aw-wZH" firstAttribute="trailing" secondItem="0HW-2L-tE1" secondAttribute="trailing" id="SHW-q0-Lmt"/>
-                            <constraint firstItem="i9r-Aa-AZN" firstAttribute="height" secondItem="COK-rt-R2R" secondAttribute="height" multiplier="4.3:7" id="VbE-b9-6La"/>
+                            <constraint firstItem="i9r-Aa-AZN" firstAttribute="height" secondItem="COK-rt-R2R" secondAttribute="height" multiplier="4.5:7" id="VbE-b9-6La"/>
                             <constraint firstItem="lXa-aw-wZH" firstAttribute="trailing" secondItem="7B5-aW-eT9" secondAttribute="trailing" id="W4J-Df-OcC"/>
                             <constraint firstItem="L9P-Uq-aYE" firstAttribute="leading" secondItem="lXa-aw-wZH" secondAttribute="leading" constant="10" id="ahY-CP-znk"/>
                             <constraint firstItem="uEU-ku-dGd" firstAttribute="bottom" secondItem="i9r-Aa-AZN" secondAttribute="bottom" constant="-8" id="bkm-RO-iHc"/>
@@ -354,7 +354,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="292"/>
                                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <wkWebViewConfiguration key="configuration" allowsAirPlayForMediaPlayback="NO" allowsPictureInPictureMediaPlayback="NO">
-                                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                                    <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
                                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                     <wkPreferences key="preferences"/>
                                                 </wkWebViewConfiguration>

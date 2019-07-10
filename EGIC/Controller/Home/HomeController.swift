@@ -60,7 +60,7 @@ class HomeController: UIViewController {
         SideMenuManager.default.menuPushStyle = .replace
         SideMenuManager.default.menuAllowPushOfSameClassTwice = false
         SideMenuManager.defaultManager.menuPresentMode = .viewSlideInOut
-        SideMenuManager.default.menuWidth = min(4*(self.view.frame.width/5), 400)
+        SideMenuManager.default.menuWidth = min(4*(self.view.frame.width/5), 500)
 //        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
 //        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         

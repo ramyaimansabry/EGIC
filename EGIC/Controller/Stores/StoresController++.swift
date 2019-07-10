@@ -62,6 +62,7 @@ extension StoresController: CLLocationManagerDelegate, MKMapViewDelegate {
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
+        centerViewOnUserLocation()
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         checkLocationAuthorization()

@@ -98,12 +98,6 @@ extension SVProgressHUD {
 
 extension UIViewController: UITextFieldDelegate{
     
-//    private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        textField.resignFirstResponder()
-//        return true
-//    }
-    
-    
     func show1buttonAlert(title: String, message: String, buttonTitle: String, callback: @escaping () -> ()){
        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         
@@ -148,8 +142,20 @@ extension UIViewController: UITextFieldDelegate{
             alertAction in
             callback("cance")
         }))
+         alert.view.tintColor = UIColor.mainAppColor()
         
-        alert.view.tintColor = UIColor.mainAppColor()
+        
+//        if let popoverController = alert.popoverPresentationController {
+//            popoverController.sourceView = button
+//            popoverController.sourceRect = button.bounds
+//
+//            self.present(alert, animated: true, completion: {
+//            })
+//            return
+//        }
+        
+        
+        
         self.present(alert, animated: true, completion: nil)
     }
     

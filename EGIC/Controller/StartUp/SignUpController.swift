@@ -53,6 +53,7 @@ class SignUpController: UIViewController {
             return
         }
         
+        view.endEditing(true)
         if emailTextField.text?.isEmpty ?? true {
             signUp(name: name, phone: phone, jobId: selectedJobId)
         }else{

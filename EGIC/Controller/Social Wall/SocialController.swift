@@ -83,8 +83,9 @@ extension SocialController: UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let height = (collectionView1.frame.width-90)/2
-        return CGSize(width: height, height: height)
+        let x = (collectionView1.frame.width-90)/2
+        let cellSize = min(x, 300)
+        return CGSize(width: cellSize, height: cellSize)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
