@@ -12,4 +12,5 @@ struct Product: Decodable {
     let image: String
     let plan: String?
     let dimensions: String
+    let x3d: String?
 }

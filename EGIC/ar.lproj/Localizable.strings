@@ -40,7 +40,7 @@
 
 /***********************/
 
-"changeLanguage" = "اختر اللغة"; // change language action sheet alert
+"changeLanguage" = "تغيير اللغة؟"; // change language action sheet alert
 "LogoutAlert" = "هل انت متاكد من تسجيل الخروج؟"; // logout alert
 
 "EGICName" = "ايجيك";
@@ -64,5 +64,6 @@
 "View" = "عرض";
 "Spec" = "المواصفات";
 "Plan" = "مخطط";
+"3d" = "ثلاثي الابعاد";
 
 "closeButton" = "اغلق";

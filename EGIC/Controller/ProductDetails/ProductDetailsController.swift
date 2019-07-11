@@ -4,6 +4,7 @@ import SVProgressHUD
 import WebKit
 
 class ProductDetailsController: UIViewController {
+    @IBOutlet weak var webView2: WKWebView!
     @IBOutlet weak var DetailedView: UIView!
     @IBOutlet weak var titleHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var webView1: WKWebView!
@@ -44,6 +45,13 @@ class ProductDetailsController: UIViewController {
         if (bassedProduct?.dimensions.contains(".csv"))!{
             openURL(stringURL: (bassedProduct?.dimensions)!)
         }
+        
+        if bassedProduct?.x3d != nil {
+            if (bassedProduct?.x3d!.contains(".html"))!{
+                openURL2(stringURL: (bassedProduct?.x3d)!)
+            }
+        }
+        
     }
     
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
@@ -52,16 +60,25 @@ class ProductDetailsController: UIViewController {
             viewImage.alpha = 1
             planImage.alpha = 0
             webView1.alpha = 0
+            webView2.alpha = 0
             break
         case 1:
             viewImage.alpha = 0
             planImage.alpha = 1
             webView1.alpha = 0
+            webView2.alpha = 0
             break
         case 2:
             viewImage.alpha = 0
             planImage.alpha = 0
             webView1.alpha = 1
+            webView2.alpha = 0
+            break
+        case 3:
+            viewImage.alpha = 0
+            planImage.alpha = 0
+            webView1.alpha = 0
+            webView2.alpha = 1
             break
         default:
             break
@@ -78,6 +95,12 @@ class ProductDetailsController: UIViewController {
         let finalRequest = URLRequest(url: url!)
         webView1.load(finalRequest)
     }
+    func openURL2(stringURL: String){
+        let downloadURL = stringURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url = URL(string: downloadURL!)
+        let finalRequest = URLRequest(url: url!)
+        webView2.load(finalRequest)
+    }
     
     func setupComponent(){
         titleHeightConstraint.constant = estimateFrameForTitleText((bassedProduct?.title)!).height + 25
@@ -87,10 +110,12 @@ class ProductDetailsController: UIViewController {
         
         closeButton.setTitle("closeButton".localized, for: .normal)
         
+        segmentControl.apportionsSegmentWidthsByContent = true
         segmentControl.removeAllSegments()
         segmentControl.insertSegment(withTitle: "View".localized, at: 0, animated: true)
         segmentControl.insertSegment(withTitle: "Plan".localized, at: 1, animated: true)
         segmentControl.insertSegment(withTitle: "Spec".localized, at: 2, animated: true)
+        segmentControl.insertSegment(withTitle: "3d".localized, at: 3, animated: true)
         
         segmentControl.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         segmentControl.tintColor = .clear
@@ -107,6 +132,8 @@ class ProductDetailsController: UIViewController {
         
         webView1.navigationDelegate = self
         webView1.scrollView.delegate = self
+        webView2.navigationDelegate = self
+        webView2.scrollView.delegate = self
         
     }
     func animateView() {

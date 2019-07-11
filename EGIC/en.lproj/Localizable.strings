@@ -40,7 +40,7 @@
 
 /***********************/
 
-"changeLanguage" = "Choose language"; // change language action sheet alert
+"changeLanguage" = "Change language?"; // change language action sheet alert
 "LogoutAlert" = "Are you sure you want to logout?"; // logout alert
 
 "label1" = "New Launches"; // home lebel 1
@@ -65,6 +65,8 @@
 "View" = "View";
 "Spec" = "Spec";
 "Plan" = "Plan";
+"3d" = "3D";
+
 
 "closeButton" = "Close";
 

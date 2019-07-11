@@ -32,6 +32,10 @@ extension ApiManager {
                     completed(false, "Unexpected Error Please Try Again In A While",nil)
                     return
                 }else {
+                    if response.response?.statusCode == -3 {
+                        
+                    }
+                    
                     completed(false, "Unexpected Error Please Try Again In A While",nil)
                     return
                 }
