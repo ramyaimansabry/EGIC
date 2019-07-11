@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Change language?"; ObjectID = "09d-2b-SKw"; */
+"09d-2b-SKw.text" = "Change language?";
+
+/* Class = "UILabel"; text = "Error"; ObjectID = "XqN-0m-eie"; */
+"XqN-0m-eie.text" = "Error";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor "; ObjectID = "bz7-9A-frT"; */
+"bz7-9A-frT.text" = "Lorem ipsum dolor ";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor "; ObjectID = "fag-zU-Jj5"; */
+"fag-zU-Jj5.text" = "Lorem ipsum dolor ";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "glo-QV-yif"; */
+"glo-QV-yif.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Rate"; ObjectID = "oL0-uc-3Z0"; */
+"oL0-uc-3Z0.normalTitle" = "Rate";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "opE-1h-Lo5"; */
+"opE-1h-Lo5.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "العربية"; ObjectID = "rBl-uu-lFt"; */
+"rBl-uu-lFt.text" = "العربية";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "usk-6U-NyV"; */
+"usk-6U-NyV.text" = "English";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "vRi-z4-bRF"; */
+"vRi-z4-bRF.normalTitle" = "OK";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "xGc-Zt-caJ"; */
+"xGc-Zt-caJ.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "Error"; ObjectID = "xOw-3b-uqr"; */
+"xOw-3b-uqr.text" = "Error";

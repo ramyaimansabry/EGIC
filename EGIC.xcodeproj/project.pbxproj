@@ -22,6 +22,10 @@
 		F060109822CFBFA9008BDCF4 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109722CFBFA9008BDCF4 /* SignInController.swift */; };
 		F060109A22CFC283008BDCF4 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109922CFC283008BDCF4 /* SignUpController.swift */; };
 		F060109C22CFCBF8008BDCF4 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */; };
+		F07707B322D7709B00212D78 /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07707B522D7709B00212D78 /* Alerts.storyboard */; };
+		F0981DF622D76428004D0878 /* OneButtonAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0981DF522D76428004D0878 /* OneButtonAlertController.swift */; };
+		F0981DF822D76451004D0878 /* TwoButtonAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0981DF722D76451004D0878 /* TwoButtonAlertController.swift */; };
+		F0981DFA22D76491004D0878 /* ChangeLanguageAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0981DF922D76491004D0878 /* ChangeLanguageAlert.swift */; };
 		F0BC873022D4BA4F00076B6A /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC872E22D4BA4F00076B6A /* CategoriesCell.swift */; };
 		F0BC873122D4BA4F00076B6A /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0BC872F22D4BA4F00076B6A /* CategoriesCell.xib */; };
 		F0BC873322D4BA7700076B6A /* CategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC873222D4BA7700076B6A /* CategoriesController.swift */; };
@@ -79,6 +83,10 @@
 		F060109722CFBFA9008BDCF4 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		F060109922CFC283008BDCF4 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
+		F07707B422D7709B00212D78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Alerts.storyboard; sourceTree = "<group>"; };
+		F0981DF522D76428004D0878 /* OneButtonAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonAlertController.swift; sourceTree = "<group>"; };
+		F0981DF722D76451004D0878 /* TwoButtonAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonAlertController.swift; sourceTree = "<group>"; };
+		F0981DF922D76491004D0878 /* ChangeLanguageAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageAlert.swift; sourceTree = "<group>"; };
 		F0BC872E22D4BA4F00076B6A /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		F0BC872F22D4BA4F00076B6A /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
 		F0BC873222D4BA7700076B6A /* CategoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesController.swift; sourceTree = "<group>"; };
@@ -203,6 +211,7 @@
 				F0CE693A22D3735F0042D94E /* Contact Us */,
 				F0CE692F22D35E8F0042D94E /* About Us */,
 				F060109622CFBF8A008BDCF4 /* StartUp */,
+				F0981DF422D76410004D0878 /* Alerts */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +234,7 @@
 				F060107322CF6D9E008BDCF4 /* Main.storyboard */,
 				F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */,
 				F060107822CF6DA0008BDCF4 /* LaunchScreen.storyboard */,
+				F07707B522D7709B00212D78 /* Alerts.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -260,6 +270,16 @@
 				F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */,
 			);
 			path = StartUp;
+			sourceTree = "<group>";
+		};
+		F0981DF422D76410004D0878 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				F0981DF522D76428004D0878 /* OneButtonAlertController.swift */,
+				F0981DF722D76451004D0878 /* TwoButtonAlertController.swift */,
+				F0981DF922D76491004D0878 /* ChangeLanguageAlert.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		F0BC872D22D4B9D900076B6A /* Categories */ = {
@@ -421,6 +441,7 @@
 				F0BC873C22D4D48000076B6A /* ProductsCell.xib in Resources */,
 				F060107722CF6DA0008BDCF4 /* Assets.xcassets in Resources */,
 				F060107522CF6D9E008BDCF4 /* Main.storyboard in Resources */,
+				F07707B322D7709B00212D78 /* Alerts.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +538,7 @@
 				F0BC874022D4F13100076B6A /* ProductDetailsController.swift in Sources */,
 				F0CE693F22D385500042D94E /* SocialController.swift in Sources */,
 				F0CE694822D3CB690042D94E /* StoresController++.swift in Sources */,
+				F0981DF822D76451004D0878 /* TwoButtonAlertController.swift in Sources */,
 				F0CE692C22D26C530042D94E /* CatalogCell.swift in Sources */,
 				F0BC873022D4BA4F00076B6A /* CategoriesCell.swift in Sources */,
 				F0CE693122D35EB90042D94E /* ContactUsCell.swift in Sources */,
@@ -529,7 +551,9 @@
 				F060109322CF781B008BDCF4 /* Categories.swift in Sources */,
 				F0CE691622D0EDA80042D94E /* LanguageController.swift in Sources */,
 				F0CE693922D373340042D94E /* CustomPointAnnotation.swift in Sources */,
+				F0981DF622D76428004D0878 /* OneButtonAlertController.swift in Sources */,
 				F0CE694622D3987B0042D94E /* Store.swift in Sources */,
+				F0981DFA22D76491004D0878 /* ChangeLanguageAlert.swift in Sources */,
 				F0CE692222D225680042D94E /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +577,14 @@
 				F0DA4C4222D0E437001C5FA0 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F07707B522D7709B00212D78 /* Alerts.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F07707B422D7709B00212D78 /* Base */,
+			);
+			name = Alerts.storyboard;
 			sourceTree = "<group>";
 		};
 		F0CE691B22D0F2CA0042D94E /* Localizable.strings */ = {

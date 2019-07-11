@@ -42,6 +42,8 @@ class AboutController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.isNavigationBarHidden = false
         navigationItem.title = "About".localized
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.darkGray]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
         SVProgressHUD.setupView()
         
         let leftButton = UIButton(type: .custom)

@@ -99,67 +99,56 @@ extension SVProgressHUD {
 extension UIViewController: UITextFieldDelegate{
     
     func show1buttonAlert(title: String, message: String, buttonTitle: String, callback: @escaping () -> ()){
-       let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: { action in
-            callback()
-        }))
-        
-         alert.view.tintColor = UIColor.mainAppColor()
-         self.present(alert, animated: true, completion: nil)
+//       let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+//
+//        alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: { action in
+//            callback()
+//        }))
+//         alert.view.tintColor = UIColor.mainAppColor()
+//         self.present(alert, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Alerts", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "OneButtonAlertController") as! OneButtonAlertController
+        controller.alertTitle = title
+        controller.alertMessage = message
+        controller.alertCancelButtonTitle = buttonTitle
+        controller.buttonAction = callback
+        present(controller, animated: true, completion: nil)
     }
     
     
     func show2buttonAlert(title: String, message: String, cancelButtonTitle: String, defaultButtonTitle: String, callback: @escaping (_ defualt: Bool) -> ()) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: cancelButtonTitle, style: .cancel, handler: {
-            alertAction in
-            callback(false)
-        }))
-        
-        alert.addAction(UIAlertAction(title: defaultButtonTitle, style: .default, handler: {
-            alertAction in
-            callback(true)
-        }))
-        
-        alert.view.tintColor = UIColor.mainAppColor()
-        self.present(alert, animated: true, completion: nil)
-       
+//        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+//        alert.addAction(UIAlertAction(title: cancelButtonTitle, style: .cancel, handler: {
+//            alertAction in
+//            callback(false)
+//        }))
+//
+//        alert.addAction(UIAlertAction(title: defaultButtonTitle, style: .default, handler: {
+//            alertAction in
+//            callback(true)
+//        }))
+//        alert.view.tintColor = UIColor.mainAppColor()
+//        self.present(alert, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Alerts", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "TwoButtonAlertController") as! TwoButtonAlertController
+        controller.alertTitle = title
+        controller.alertMessage = message
+        controller.alertCancelButtonTitle = cancelButtonTitle
+        controller.alertDefualtButtonTitle = defaultButtonTitle
+        controller.buttonAction = callback
+        present(controller, animated: true, completion: nil)
     }
     
-    func showLanguageAlert(callback: @escaping (_ language: String) -> ()) {
-        let alert = UIAlertController(title: "changeLanguage".localized, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
-
-        alert.addAction(UIAlertAction(title: "العربية", style: .default, handler: {
-            alertAction in
-            callback("ar")
-        }))
-        alert.addAction(UIAlertAction(title: "English", style: .default, handler: {
-            alertAction in
-            callback("en")
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {
-            alertAction in
-            callback("cance")
-        }))
-         alert.view.tintColor = UIColor.mainAppColor()
-        
-        
-        if let popoverController = alert.popoverPresentationController {
-            popoverController.sourceView = self.view
-            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-            popoverController.permittedArrowDirections = []
-
-            self.present(alert, animated: true, completion: {
-            })
-            return
-        }
-        
-        
-        
-        self.present(alert, animated: true, completion: nil)
+    
+     func showLanguageAlert(callback: @escaping (_ valid: Bool,_ language: String) -> ()) {
+        let storyboard = UIStoryboard(name: "Alerts", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ChangeLanguageAlert") as! ChangeLanguageAlert
+        controller.buttonAction = callback
+        present(controller, animated: true, completion: nil)
     }
     
+    
+   
     func dismissRingIndecator(){
         DispatchQueue.main.async {
             SVProgressHUD.dismiss()

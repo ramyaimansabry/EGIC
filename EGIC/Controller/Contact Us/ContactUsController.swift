@@ -51,6 +51,8 @@ class ContactUsController: UIViewController, MKMapViewDelegate {
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.isNavigationBarHidden = false
         navigationItem.title = "Contact".localized
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.darkGray]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
         SVProgressHUD.setupView()
         
         collectionView1.delegate = self

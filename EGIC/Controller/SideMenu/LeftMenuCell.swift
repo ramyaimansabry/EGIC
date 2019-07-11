@@ -32,7 +32,7 @@ class LeftMenuCell: UICollectionViewCell{
         
 
         addSubview(lineView)
-        lineView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor,size: CGSize(width: 0, height: 0.6))
+        lineView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor,size: CGSize(width: 0, height: 0.4))
     }
     let iconImage: UIImageView = {
         let iv = UIImageView()
@@ -54,7 +54,7 @@ class LeftMenuCell: UICollectionViewCell{
     }()
     let lineView: UIView = {
         let li = UIView()
-        li.backgroundColor = UIColor.gray
+        li.backgroundColor = UIColor.lightGray
         return li
     }()
     

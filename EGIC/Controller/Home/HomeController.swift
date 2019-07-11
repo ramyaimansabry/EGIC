@@ -76,8 +76,8 @@ class HomeController: UIViewController {
         iconImage.contentMode = .scaleAspectFit
         iconImage.backgroundColor = UIColor.clear
         iconImage.translatesAutoresizingMaskIntoConstraints = false
-        iconImage.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        iconImage.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        iconImage.widthAnchor.constraint(equalToConstant: 38).isActive = true
+        iconImage.heightAnchor.constraint(equalToConstant: 38).isActive = true
         navigationItem.titleView = iconImage
         
         let leftButton = UIButton(type: .custom)
@@ -118,14 +118,16 @@ class HomeController: UIViewController {
     
     func changeLanguage(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
-            self.showLanguageAlert(callback: { (language) in
-                if language == "en" && "currentLang".localized == "ar" {
-                    MOLH.setLanguageTo(language)
-                    MOLH.reset()
-                }
-                else if language == "ar" && "currentLang".localized == "en" {
-                    MOLH.setLanguageTo(language)
-                    MOLH.reset()
+            self.showLanguageAlert(callback: { (valid, language) in
+                if valid {
+                    if language == "en" && "currentLang".localized == "ar" {
+                        MOLH.setLanguageTo(language)
+                        MOLH.reset()
+                    }
+                    else if language == "ar" && "currentLang".localized == "en" {
+                        MOLH.setLanguageTo(language)
+                        MOLH.reset()
+                    }
                 }
             })
         }
