@@ -48,12 +48,22 @@ extension ProductsController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        if ((indexPaths.last?.row)! + 3) > self.productsArray.count && isFinishedPaging == true {
+        if (((indexPaths.last?.row)! + 3) >= self.productsArray.count) && isFinishedPaging == true {
+            self.fetchProducts(id: self.bassedCategoryID!, offset: pagesNumber, limit: 15)
             pagesNumber += 1
-            self.fetchProducts(id: self.bassedCategoryID!, offset: pagesNumber, limit: 7)
         }
     }
     
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let offsetY = scrollView.contentOffset.y + 700
+//        let contentHeight = scrollView.contentSize.height
+//
+//        if offsetY > contentHeight - scrollView.frame.size.height{
+//            if isFinishedPaging == true {
+//                self.fetchProducts(id: self.bassedCategoryID!, offset: pagesNumber, limit: 10)
+//                pagesNumber += 1
+//            }
+//        }
+    }
     
 }

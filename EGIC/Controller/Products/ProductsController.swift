@@ -6,7 +6,7 @@ class ProductsController: UIViewController {
     @IBOutlet weak var collectionView1: UICollectionView!
     var isFinishedPaging = true
     var firstOpen: Bool = true
-    var pagesNumber: Int = 1
+    var pagesNumber: Int = 2
     var bassedCategoryID: Int?
     var productsArray = [Product]()
     
@@ -14,20 +14,20 @@ class ProductsController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         SVProgressHUD.show()
-        fetchProducts(id: bassedCategoryID!, offset: 0, limit: 10)
+        fetchProducts(id: bassedCategoryID!, offset: 1, limit: 15)
     }
     
     func fetchProducts(id: Int, offset: Int, limit: Int){
         isFinishedPaging = false
         ApiManager.sharedInstance.loadProducts(id: id, offset: offset, limit: limit) { (valid, msg, products) in
             self.dismissRingIndecator()
-            self.isFinishedPaging = true
+            
             if valid {
                 if products.count > 0 {
                     for product in products {
                         self.productsArray.append(product)
                     }
-                   self.collectionView1.reloadData()
+                    self.collectionView1.reloadData()
                     self.collectionView1.layoutIfNeeded()
                 }else {
                     if self.firstOpen {
@@ -37,11 +37,14 @@ class ProductsController: UIViewController {
                     }
                 }
             }else {
-                self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK", callback: {
-                })
+                if self.firstOpen {
+                    self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK", callback: {
+                    })
+                }
             }
             
             self.firstOpen = false
+            self.isFinishedPaging = true
         }
     }
     
