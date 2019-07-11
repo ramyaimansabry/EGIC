@@ -15,6 +15,7 @@
 "termsLabel" = "Terms & Conditions";
 
 "Error" = "Error";
+"tokenError" = "Please login again";
 "LoginError" = "Enter valid phone number!";
 
 "SignUpError" = "Enter valid info!";

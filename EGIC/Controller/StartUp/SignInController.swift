@@ -16,14 +16,19 @@ class SignInController: UIViewController {
 /********************************************************************************/
     func login(phone: String){
         SVProgressHUD.show()
-        ApiManager.sharedInstance.signIn(phoneNumber: phone, language: currentAppLanguage) { (valid, msg) in
+        ApiManager.sharedInstance.signIn(phoneNumber: phone, language: currentAppLanguage) { (valid, msg, code) in
             self.dismissRingIndecator()
             if valid {
                 UserDefaults.standard.set(true, forKey: "clientLoggedIn")
                 UserDefaults.standard.synchronize()
                 self.dismiss(animated: true, completion: nil)
             }else {
-                self.show1buttonAlert(title: "Error".localized, message: "LoginError".localized, buttonTitle: "OK") {
+                if code  == -4 {
+                    self.show1buttonAlert(title: "Error".localized, message: "LoginError".localized, buttonTitle: "OK") {
+                    }
+                }else {
+                    self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK") {
+                    }
                 }
             }
         }

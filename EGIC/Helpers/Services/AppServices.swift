@@ -4,7 +4,7 @@ import Alamofire
 
 extension ApiManager {
 
-    func loadHomeCategories(completed: @escaping (_ valid:Bool,_ msg:String,_ homeCategories: HomeCategories?)->()){
+    func loadHomeCategories(completed: @escaping (_ valid:Bool,_ msg:String,_ homeCategories: HomeCategories?,_ code: Int)->()){
         self.stopAllRequests()
         let url = "\(HelperData.sharedInstance.serverBasePath)/home"
         let headers: HTTPHeaders = [
@@ -21,27 +21,28 @@ extension ApiManager {
                     if let theJSONData = try? JSONSerialization.data(withJSONObject: userData) {
                         guard let loadedCategories = try? JSONDecoder().decode(HomeCategories.self, from: theJSONData) else {
                             print("Error: Couldn't decode data into HomeCategories")
-                            completed(false,"Couldn't decode data into HomeCategories",nil)
+                            completed(false,"Couldn't decode data into HomeCategories",nil,0)
                             return
                         }
 
-                        completed(true,"Home data loaded successfully",loadedCategories)
+                        completed(true,"Home data loaded successfully",loadedCategories,0)
                         return
                     }
 
-                    completed(false, "Unexpected Error Please Try Again In A While",nil)
+                    completed(false, "Unexpected Error Please Try Again In A While",nil,0)
                     return
                 }else {
                     if response.response?.statusCode == -3 {
-                        
+                        completed(false, "Unexpected Error Please Try Again In A While",nil,-3)
+                        return
+                    }else {
+                        completed(false, "Unexpected Error Please Try Again In A While",nil,0)
+                        return
                     }
-                    
-                    completed(false, "Unexpected Error Please Try Again In A While",nil)
-                    return
                 }
                 
             }else{
-                completed(false, "Unexpected Error Please Try Again In A While ",nil)
+                completed(false, "Unexpected Error Please Try Again In A While ",nil,0)
                 return
             }
         }

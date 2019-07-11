@@ -21,7 +21,7 @@ class SplashScreenController: UIViewController {
             self.LoadingActivityIndicator.isHidden = false
             HelperData.sharedInstance.loggedInClient.language = "currentLang".localized
             HelperData.sharedInstance.loggedInClient.login()
-            ApiManager.sharedInstance.loadHomeCategories { (valid, msg, homeCategories) in
+            ApiManager.sharedInstance.loadHomeCategories { (valid, msg, homeCategories, code) in
                 self.LoadingActivityIndicator.stopAnimating()
                 self.LoadingActivityIndicator.isHidden = true
                 if valid {
@@ -32,11 +32,21 @@ class SplashScreenController: UIViewController {
                     controller.bassedHomeCategories = homeCategories
                     self.present(homeController, animated: true, completion: nil)
                 }else {
-                    // must check if token expires > will force user to login again
-                    // or if token works must present error
-                    self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "Retry".localized, callback: {
-                        self.ShowViewController()
-                    })
+                    if code == -3 {
+                        UserDefaults.standard.removeObject(forKey: "loggedInClient")
+                        UserDefaults.standard.synchronize()
+                        UserDefaults.standard.set(false, forKey: "clientLoggedIn")
+                        UserDefaults.standard.synchronize()
+                        self.show1buttonAlert(title: "Error".localized, message: "tokenError".localized, buttonTitle: "Retry".localized, callback: {
+                            self.ShowViewController()
+                        })
+                        
+                    }else {
+                        self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "Retry".localized, callback: {
+                            self.ShowViewController()
+                        })
+                    }
+                    
                 }
             }
         }else {

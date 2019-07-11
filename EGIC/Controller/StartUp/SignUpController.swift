@@ -22,14 +22,19 @@ class SignUpController: UIViewController {
 /********************************************************************************/
     func signUp(name: String, email: String = "", phone: String, jobId: String){
         SVProgressHUD.show()
-        ApiManager.sharedInstance.signUp(phoneNumber: phone, name: name, email: email, job_id: jobId, language: currentAppLanguage) { (valid, msg) in
+        ApiManager.sharedInstance.signUp(phoneNumber: phone, name: name, email: email, job_id: jobId, language: currentAppLanguage) { (valid, msg, code) in
             self.dismissRingIndecator()
             if valid {
                 UserDefaults.standard.set(true, forKey: "clientLoggedIn")
                 UserDefaults.standard.synchronize()
                 self.dismiss(animated: true, completion: nil)
             }else {
-                self.show1buttonAlert(title: "Error".localized, message: "SignUpError".localized, buttonTitle: "OK") {
+                if code  == -4 {
+                    self.show1buttonAlert(title: "Error".localized, message: "LoginError".localized, buttonTitle: "OK") {
+                    }
+                }else {
+                    self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK") {
+                    }
                 }
             }
             
