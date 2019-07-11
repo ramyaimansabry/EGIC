@@ -31,7 +31,7 @@ class ProductsController: UIViewController {
                     self.collectionView1.layoutIfNeeded()
                 }else {
                     if self.firstOpen {
-                        self.show1buttonAlert(title: "Error".localized, message: "LoadingDataError".localized, buttonTitle: "OK", callback: {
+                        self.show1buttonAlert(title: "Error".localized, message: "EmptyProducts".localized, buttonTitle: "OK", callback: {
                             self.navigationController?.popViewController(animated: true)
                         })
                     }

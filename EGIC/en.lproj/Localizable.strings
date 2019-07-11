@@ -17,6 +17,7 @@
 "Error" = "Error";
 "tokenError" = "Please login again";
 "LoginError" = "Enter valid phone number!";
+"EmptyProducts" = "Sorry no products in this category yet";
 
 "SignUpError" = "Enter valid info!";
 
