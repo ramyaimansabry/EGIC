@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" reuseIdentifier="CalculateCell" id="gTV-IL-0wX" customClass="CalculateCell" customModule="EGIC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="353" height="145"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addNewICON" translatesAutoresizingMaskIntoConstraints="NO" id="LuZ-2i-dT6">
+                        <rect key="frame" x="286" y="51" width="46" height="43.5"/>
+                        <color key="tintColor" red="0.1764705882" green="0.38823529410000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVM-5X-dzY">
+                        <rect key="frame" x="5" y="65.5" width="276" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="LuZ-2i-dT6" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.13" id="KRO-lu-nbH"/>
+                <constraint firstItem="LuZ-2i-dT6" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.3" id="O9g-8V-g3b"/>
+                <constraint firstItem="LuZ-2i-dT6" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="ReL-Nn-HUE"/>
+                <constraint firstItem="LuZ-2i-dT6" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" multiplier="1.75" id="Ybr-GV-GfU"/>
+                <constraint firstItem="eVM-5X-dzY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="aCJ-8T-K4E"/>
+                <constraint firstItem="eVM-5X-dzY" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="dh4-d4-NUX"/>
+                <constraint firstItem="LuZ-2i-dT6" firstAttribute="leading" secondItem="eVM-5X-dzY" secondAttribute="trailing" constant="5" id="fOX-nM-4nM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="353" height="145"/>
+            <connections>
+                <outlet property="image" destination="LuZ-2i-dT6" id="6uK-8a-ReL"/>
+                <outlet property="label" destination="eVM-5X-dzY" id="HKY-ea-5x0"/>
+            </connections>
+            <point key="canvasLocation" x="-20" y="96.7016491754123"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="addNewICON" width="384" height="384"/>
+    </resources>
+</document>

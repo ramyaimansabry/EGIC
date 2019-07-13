@@ -68,9 +68,9 @@ class LeftMenuController: UIViewController, UICollectionViewDataSource,UICollect
             }
             return
         case 1:
-            
-            
-       
+            self.dismiss(animated: true) {
+                self.homeController?.goCalculate()
+            }
             return
         case 2:
             self.dismiss(animated: true) {

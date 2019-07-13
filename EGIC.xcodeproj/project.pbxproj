@@ -60,6 +60,10 @@
 		F0CE694622D3987B0042D94E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE694522D3987B0042D94E /* Store.swift */; };
 		F0CE694822D3CB690042D94E /* StoresController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE694722D3CB690042D94E /* StoresController++.swift */; };
 		F0CE694A22D40C5C0042D94E /* HomeController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE694922D40C5C0042D94E /* HomeController++.swift */; };
+		F0D9FF4E22D9714C00B9246D /* CalculateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9FF4D22D9714C00B9246D /* CalculateController.swift */; };
+		F0D9FF5022D97BB100B9246D /* BathroomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9FF4F22D97BB100B9246D /* BathroomController.swift */; };
+		F0D9FF5322D97C0100B9246D /* CalculateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9FF5122D97C0100B9246D /* CalculateCell.swift */; };
+		F0D9FF5422D97C0100B9246D /* CalculateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D9FF5222D97C0100B9246D /* CalculateCell.xib */; };
 		F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +127,10 @@
 		F0CE694522D3987B0042D94E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		F0CE694722D3CB690042D94E /* StoresController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoresController++.swift"; sourceTree = "<group>"; };
 		F0CE694922D40C5C0042D94E /* HomeController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeController++.swift"; sourceTree = "<group>"; };
+		F0D9FF4D22D9714C00B9246D /* CalculateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateController.swift; sourceTree = "<group>"; };
+		F0D9FF4F22D97BB100B9246D /* BathroomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomController.swift; sourceTree = "<group>"; };
+		F0D9FF5122D97C0100B9246D /* CalculateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCell.swift; sourceTree = "<group>"; };
+		F0D9FF5222D97C0100B9246D /* CalculateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateCell.xib; sourceTree = "<group>"; };
 		F0DA4C4222D0E437001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F0DA4C4322D0E438001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F0DA4C4522D0E469001C5FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginBoard.storyboard; sourceTree = "<group>"; };
@@ -201,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				F060106F22CF6D9E008BDCF4 /* AppDelegate.swift */,
+				F0D9FF4C22D9713100B9246D /* Calculate & Estimate */,
 				F0BC874122D508A500076B6A /* ProductDetails */,
 				F0BC872D22D4B9D900076B6A /* Categories */,
 				F0BC873622D4D44A00076B6A /* Products */,
@@ -372,6 +381,17 @@
 			path = Stores;
 			sourceTree = "<group>";
 		};
+		F0D9FF4C22D9713100B9246D /* Calculate & Estimate */ = {
+			isa = PBXGroup;
+			children = (
+				F0D9FF4D22D9714C00B9246D /* CalculateController.swift */,
+				F0D9FF4F22D97BB100B9246D /* BathroomController.swift */,
+				F0D9FF5122D97C0100B9246D /* CalculateCell.swift */,
+				F0D9FF5222D97C0100B9246D /* CalculateCell.xib */,
+			);
+			path = "Calculate & Estimate";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -441,6 +461,7 @@
 				F0BC873C22D4D48000076B6A /* ProductsCell.xib in Resources */,
 				F060107722CF6DA0008BDCF4 /* Assets.xcassets in Resources */,
 				F060107522CF6D9E008BDCF4 /* Main.storyboard in Resources */,
+				F0D9FF5422D97C0100B9246D /* CalculateCell.xib in Resources */,
 				F07707B322D7709B00212D78 /* Alerts.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +544,7 @@
 				F0CE694122D38BAA0042D94E /* SocialCell.swift in Sources */,
 				F0BC873522D4C1C600076B6A /* AppServices++.swift in Sources */,
 				F0CE693322D35ED20042D94E /* ContactUsController.swift in Sources */,
+				F0D9FF4E22D9714C00B9246D /* CalculateController.swift in Sources */,
 				F0CE692A22D26C430042D94E /* SliderCell.swift in Sources */,
 				F060108B22CF7450008BDCF4 /* ClientServices.swift in Sources */,
 				F060109822CFBFA9008BDCF4 /* SignInController.swift in Sources */,
@@ -543,12 +565,14 @@
 				F0BC873022D4BA4F00076B6A /* CategoriesCell.swift in Sources */,
 				F0CE693122D35EB90042D94E /* ContactUsCell.swift in Sources */,
 				F0BC873E22D4D5FC00076B6A /* Product.swift in Sources */,
+				F0D9FF5322D97C0100B9246D /* CalculateCell.swift in Sources */,
 				F0CE693522D36BE60042D94E /* ContactUsController++.swift in Sources */,
 				F0CE694A22D40C5C0042D94E /* HomeController++.swift in Sources */,
 				F060108F22CF766A008BDCF4 /* HelperData.swift in Sources */,
 				F0C351DF22D6803500D39372 /* LeftMenuHeader.swift in Sources */,
 				F060109122CF7759008BDCF4 /* Extentions.swift in Sources */,
 				F060109322CF781B008BDCF4 /* Categories.swift in Sources */,
+				F0D9FF5022D97BB100B9246D /* BathroomController.swift in Sources */,
 				F0CE691622D0EDA80042D94E /* LanguageController.swift in Sources */,
 				F0CE693922D373340042D94E /* CustomPointAnnotation.swift in Sources */,
 				F0981DF622D76428004D0878 /* OneButtonAlertController.swift in Sources */,

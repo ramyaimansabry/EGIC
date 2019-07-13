@@ -116,9 +116,9 @@ class ProductDetailsController: UIViewController {
         segmentControl.insertSegment(withTitle: "Plan".localized, at: 1, animated: true)
         segmentControl.insertSegment(withTitle: "Spec".localized, at: 2, animated: true)
         segmentControl.insertSegment(withTitle: "3d".localized, at: 3, animated: true)
-        
         segmentControl.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         segmentControl.tintColor = .clear
+        segmentControl.selectedSegmentIndex = 0
         
         segmentControl.setTitleTextAttributes([
             NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15),
@@ -134,8 +134,8 @@ class ProductDetailsController: UIViewController {
         webView1.scrollView.delegate = self
         webView2.navigationDelegate = self
         webView2.scrollView.delegate = self
-        
     }
+    
     func animateView() {
         DetailedView.alpha = 0
         self.DetailedView.frame.origin.y = self.DetailedView.frame.origin.y + 50

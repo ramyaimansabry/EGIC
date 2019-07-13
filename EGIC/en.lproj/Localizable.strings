@@ -72,3 +72,20 @@
 
 "closeButton" = "Close";
 
+
+// calculate & estimate
+"Bath" = "Bathroom";
+"Kit" = "Kitchen";
+"Drainage" = "Drainage";
+"Area" = "Area";
+"CalculateButton" = "Calculate";
+
+// bathroom
+"B1" = "Tub";
+"B2" = "Toilet";
+"B3" = "Bathub";
+"B4" = "Heater";
+"B5" = "Washing Machine";
+"B6" = "Bidet";
+"B7" = "Shower cabin (Normal)";
+"B8" = "Shower cabin (Built in controls)";
