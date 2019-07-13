@@ -18,43 +18,45 @@ extension ApiManager {
         ]
         Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
             if let jsonResponse = response.result.value{
-                
                 if response.result.isSuccess {
-                    let data = jsonResponse as! [String : Any]
-                    let userData = data["data"] as! [String : Any]
-                    if let theJSONData = try? JSONSerialization.data(withJSONObject: userData) {
-                        guard let loggedInClient = try? JSONDecoder().decode(Client.self, from: theJSONData) else {
-                            print("Error: Couldn't decode data into Client")
-                            completed(false,"Couldn't decode data into Client",0)
-                            return
-                        }
-                        HelperData.sharedInstance.loggedInClient = loggedInClient
-                        HelperData.sharedInstance.loggedInClient.language = language
-                        HelperData.sharedInstance.loggedInClient.login()
-                        completed(true,"User Signed in sucessfully",0)
-                        return
-                    }
-                    
-                    completed(false, "Unexpected Error Please Try Again In A While",0)
-                    return
-                }else {
-                    if response.response?.statusCode == -4 {
-                        completed(false, "Unexpected Error Please Try Again In A While",-4)
-                        return
-                    }else {
+                    guard let data = jsonResponse as? [String : Any] else {
                         completed(false, "Unexpected Error Please Try Again In A While",0)
                         return
                     }
+                    if let userData = data["data"] as? [String : Any] {
+                        if let theJSONData = try? JSONSerialization.data(withJSONObject: userData) {
+                            guard let loggedInClient = try? JSONDecoder().decode(Client.self, from: theJSONData) else {
+                                print("Error: Couldn't decode data into Client")
+                                completed(false,"Couldn't decode data into Client",0)
+                                return
+                            }
+                            HelperData.sharedInstance.loggedInClient = loggedInClient
+                            HelperData.sharedInstance.loggedInClient.language = language
+                            HelperData.sharedInstance.loggedInClient.login()
+                            completed(true,"User Signed in sucessfully",0)
+                            return
+                        }
+                        completed(false, "Unexpected Error Please Try Again In A While",0)
+                        return
+                    }else {
+                        if let code = data["code"] as? Int {
+                            completed(false, "Unexpected Error Please Try Again In A While",code)
+                            return
+                        }
+                        else {
+                            completed(false, "Unexpected Error Please Try Again In A While",0)
+                            return
+                        }
+                    }
+                }else{
+                    completed(false, "Unexpected Error Please Try Again In A While ",0)
+                    return
                 }
-                
-            }else{
-                completed(false, "Unexpected Error Please Try Again In A While ",0)
-                return
             }
+            
+            
         }
     }
-    
-    
     
     
     
@@ -73,10 +75,56 @@ extension ApiManager {
         ]
         Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
             if let jsonResponse = response.result.value{
-              
                 if response.result.isSuccess {
-                    let data = jsonResponse as! [String : Any]
-                    let userData = data["data"] as! [String : Any]
+                    guard let data = jsonResponse as? [String : Any] else {
+                        completed(false, "Unexpected Error Please Try Again In A While",0)
+                        return
+                    }
+                    if let userData = data["data"] as? [String : Any] {
+                        if let theJSONData = try? JSONSerialization.data(withJSONObject: userData) {
+                            guard let loggedInClient = try? JSONDecoder().decode(Client.self, from: theJSONData) else {
+                                print("Error: Couldn't decode data into Client")
+                                completed(false,"Couldn't decode data into Client",0)
+                                return
+                            }
+                            HelperData.sharedInstance.loggedInClient = loggedInClient
+                            HelperData.sharedInstance.loggedInClient.language = language
+                            HelperData.sharedInstance.loggedInClient.login()
+                            completed(true,"User Signed in sucessfully",0)
+                            return
+                        }
+                    completed(false, "Unexpected Error Please Try Again In A While",0)
+                    return
+                }else {
+                        if let code = data["code"] as? Int {
+                            completed(false, "Unexpected Error Please Try Again In A While",code)
+                            return
+                        }
+                        else {
+                        completed(false, "Unexpected Error Please Try Again In A While",0)
+                        return
+                       }
+                }
+            }else{
+                completed(false, "Unexpected Error Please Try Again In A While ",0)
+                return
+            }
+        }
+            
+                
+    }
+}
+    
+    
+    
+    
+    
+}
+
+
+
+
+//    let userData = data["data"] as! [String : Any]
 //                    do {
 //                        if let theJSONData = try? JSONSerialization.data(withJSONObject: userData) {
 //                        let loggedInClient = try JSONDecoder().decode(Client.self, from: theJSONData)
@@ -85,40 +133,3 @@ extension ApiManager {
 //                    } catch {
 //                        print(error)
 //                    }
-                    if let theJSONData = try? JSONSerialization.data(withJSONObject: userData) {
-                        guard let loggedInClient = try? JSONDecoder().decode(Client.self, from: theJSONData) else {
-                            print("Error: Couldn't decode data into Client")
-                            completed(false,"Couldn't decode data into Client",0)
-                            return
-                        }
-                        HelperData.sharedInstance.loggedInClient = loggedInClient
-                        HelperData.sharedInstance.loggedInClient.language = language
-                        HelperData.sharedInstance.loggedInClient.login()
-                        completed(true,"User Signed in sucessfully",0)
-                        return
-                    }
-
-                    completed(false, "Unexpected Error Please Try Again In A While",0)
-                    return
-                }else {
-                    if response.response?.statusCode == -4 {
-                        completed(false, "Unexpected Error Please Try Again In A While",-4)
-                        return
-                    }else {
-                        completed(false, "Unexpected Error Please Try Again In A While",0)
-                        return
-                    }
-                }
-                
-            }else{
-                completed(false, "Unexpected Error Please Try Again In A While ",0)
-                return
-            }
-        }
-    }
-    
-    
-    
-    
-    
-}

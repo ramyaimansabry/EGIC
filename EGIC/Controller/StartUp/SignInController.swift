@@ -31,8 +31,8 @@ class SignInController: UIViewController {
                     }
                 }
             }
+            
         }
-        
     }
     
     @IBAction func LoginButtonAction(_ sender: UIButton) {

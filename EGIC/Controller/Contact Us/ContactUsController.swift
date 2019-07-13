@@ -6,16 +6,8 @@ import SVProgressHUD
 class ContactUsController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var collectionView1: UICollectionView!
     @IBOutlet weak var mapView1: MKMapView!
-    
-    let array: [Contact] = {
-        let contact1 = Contact(title: "Hotline".localized, color: UIColor.orange, number: "19678", image: "ContactUs1")
-        let contact2 = Contact(title: "Tel".localized, color: UIColor.gray, number: "20223666500", image: "ContactUs2")
-        let contact3 = Contact(title: "Email".localized, color: UIColor.blue, number: "info@egic.com.eg", image: "ContactUs3")
-        return [contact1, contact2, contact3]
-    }()
-    
+
     lazy var EGICLocationCoordinates = CLLocationCoordinate2D(latitude: CLLocationDegrees(EGICLatitude), longitude: CLLocationDegrees(EGICLongitude))
-    
     var EGICLongitude: Float = -0.1275
     var EGICLatitude: Float = 51.507222
     var name: String = "EGICName".localized
@@ -31,7 +23,12 @@ class ContactUsController: UIViewController, MKMapViewDelegate {
          centerMapOnLocation()
     }
     
-    
+    let array: [Contact] = {
+        let contact1 = Contact(title: "Hotline".localized, color: UIColor.orange, number: "19678", image: "ContactUs1")
+        let contact2 = Contact(title: "Tel".localized, color: UIColor.gray, number: "20223666500", image: "ContactUs2")
+        let contact3 = Contact(title: "Email".localized, color: UIColor.blue, number: "info@egic.com.eg", image: "ContactUs3")
+        return [contact1, contact2, contact3]
+    }()
     
     func call(number: String){
         let encodedPhoneNumber = number.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)

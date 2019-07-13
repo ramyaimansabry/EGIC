@@ -19,9 +19,8 @@ class ProductsController: UIViewController {
     
     func fetchProducts(id: Int, offset: Int, limit: Int){
         isFinishedPaging = false
-        ApiManager.sharedInstance.loadProducts(id: id, offset: offset, limit: limit) { (valid, msg, products) in
+        ApiManager.sharedInstance.loadProducts(id: id, offset: offset, limit: limit) { (valid, msg, products, code) in
             self.dismissRingIndecator()
-            
             if valid {
                 if products.count > 0 {
                     for product in products {
@@ -38,8 +37,18 @@ class ProductsController: UIViewController {
                 }
             }else {
                 if self.firstOpen {
-                    self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK", callback: {
-                    })
+                    if code == -3 {
+                        HelperData.sharedInstance.signOut()
+                        self.show1buttonAlert(title: "Error".localized, message: "tokenError".localized, buttonTitle: "Retry".localized, callback: {
+                            HelperData.sharedInstance.signOut()
+                            self.dismiss(animated: true, completion: nil)
+                        })
+                        
+                    }else {
+                        self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "Retry".localized, callback: {
+                            
+                        })
+                    }
                 }
             }
             

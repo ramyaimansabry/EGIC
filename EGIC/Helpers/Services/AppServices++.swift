@@ -3,7 +3,7 @@ import Alamofire
 
 extension ApiManager {
 
-    func loadCategories(id: String = "",completed: @escaping (_ valid:Bool,_ msg:String,_ categories: [Categories])->()){
+    func loadCategories(id: String = "",completed: @escaping (_ valid:Bool,_ msg:String,_ categories: [Categories],_ code: Int)->()){
         self.stopAllRequests()
         let url = "\(HelperData.sharedInstance.serverBasePath)/products/categories"
         let headers: HTTPHeaders = [
@@ -17,32 +17,39 @@ extension ApiManager {
         Alamofire.request(url, method: .get ,parameters: parameters, encoding: URLEncoding(destination: .queryString), headers: headers).responseJSON { (response) in
             if let jsonResponse = response.result.value{
                 if response.result.isSuccess {
-                    let data = jsonResponse as! [String : Any]
-                    let data2 = data["data"] as! [String : Any]
-                     let categoriesData = data2["data"] as! [[String : Any]]
-                    
-                    if let theJSONData = try? JSONSerialization.data(withJSONObject: categoriesData) {
-                        guard let loadedStores = try? JSONDecoder().decode([Categories].self, from: theJSONData) else {
-                            print("Error: Couldn't decode data into Categories")
-                            completed(false,"Couldn't decode data into Categories",[])
-                            return
-                        }
-                        
-                        completed(true,"Categories loaded successfully",loadedStores)
+                    guard let data = jsonResponse as? [String : Any] else {
+                        completed(false, "Unexpected Error Please Try Again In A While",[],0)
                         return
                     }
-                    
-                    completed(false, "Unexpected Error Please Try Again In A While",[])
-                    return
-                }else {
-                    completed(false, "Unexpected Error Please Try Again In A While",[])
-                    return
+                    if let data2 = data["data"] as? [String : Any], let categoriesData = data2["data"] as? [[String : Any]] {
+                        if let theJSONData = try? JSONSerialization.data(withJSONObject: categoriesData) {
+                            guard let loadedStores = try? JSONDecoder().decode([Categories].self, from: theJSONData) else {
+                                print("Error: Couldn't decode data into Categories")
+                                completed(false,"Couldn't decode data into Categories",[],0)
+                                return
+                            }
+                            completed(true,"Categories loaded successfully",loadedStores,0)
+                            return
+                        }
+                        completed(false, "Unexpected Error Please Try Again In A While",[],0)
+                        return
+                    }
+                    else{
+                        if let code = data["code"] as? Int {
+                            completed(false, "Unexpected Error Please Try Again In A While",[],code)
+                            return
+                        }
+                        else {
+                            completed(false, "Unexpected Error Please Try Again In A While",[],0)
+                            return
+                        }
+                    }
                 }
-                
             }else{
-                completed(false, "Unexpected Error Please Try Again In A While ",[])
+                completed(false, "Unexpected Error Please Try Again In A While ",[],0)
                 return
             }
+            
         }
     }
 
@@ -50,7 +57,7 @@ extension ApiManager {
     
     
     
-    func loadProducts(id: Int, offset: Int, limit: Int ,completed: @escaping (_ valid:Bool,_ msg:String,_ categories: [Product])->()){
+    func loadProducts(id: Int, offset: Int, limit: Int ,completed: @escaping (_ valid:Bool,_ msg:String,_ categories: [Product],_ code: Int)->()){
         self.stopAllRequests()
         let url = "\(HelperData.sharedInstance.serverBasePath)/products"
         let headers: HTTPHeaders = [
@@ -66,32 +73,39 @@ extension ApiManager {
         Alamofire.request(url, method: .get ,parameters: parameters, encoding: URLEncoding(destination: .queryString), headers: headers).responseJSON { (response) in
             if let jsonResponse = response.result.value{
                 if response.result.isSuccess {
-                    let data = jsonResponse as! [String : Any]
-                    let data2 = data["data"] as! [String : Any]
-                    let productsData = data2["data"] as! [[String : Any]]
-                    
-                    if let theJSONData = try? JSONSerialization.data(withJSONObject: productsData) {
-                        guard let loadedProducts = try? JSONDecoder().decode([Product].self, from: theJSONData) else {
-                            print("Error: Couldn't decode data into Product")
-                            completed(false,"Couldn't decode data into Product",[])
-                            return
-                        }
-                        
-                        completed(true,"Products loaded successfully",loadedProducts)
+                    guard let data = jsonResponse as? [String : Any] else {
+                        completed(false, "Unexpected Error Please Try Again In A While",[],0)
                         return
                     }
-                    
-                    completed(false, "Unexpected Error Please Try Again In A While",[])
-                    return
-                }else {
-                    completed(false, "Unexpected Error Please Try Again In A While",[])
-                    return
+                    if let data2 = data["data"] as? [String : Any], let productsData = data2["data"] as? [[String : Any]] {
+                        if let theJSONData = try? JSONSerialization.data(withJSONObject: productsData) {
+                            guard let loadedProducts = try? JSONDecoder().decode([Product].self, from: theJSONData) else {
+                                print("Error: Couldn't decode data into Product")
+                                completed(false,"Couldn't decode data into Product",[],0)
+                                return
+                            }
+                            completed(true,"Products loaded successfully",loadedProducts,0)
+                            return
+                        }
+                        completed(false, "Unexpected Error Please Try Again In A While",[],0)
+                        return
+                   }
+                    else{
+                        if let code = data["code"] as? Int {
+                            completed(false, "Unexpected Error Please Try Again In A While",[],code)
+                            return
+                        }
+                        else {
+                            completed(false, "Unexpected Error Please Try Again In A While",[],0)
+                            return
+                        }
+                    }
                 }
-                
             }else{
-                completed(false, "Unexpected Error Please Try Again In A While ",[])
+                completed(false, "Unexpected Error Please Try Again In A While ",[],0)
                 return
             }
+            
         }
     }
     

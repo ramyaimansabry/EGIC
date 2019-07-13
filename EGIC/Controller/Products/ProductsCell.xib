@@ -25,7 +25,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QPw-D1-lDr">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="AppICON" translatesAutoresizingMaskIntoConstraints="NO" id="QPw-D1-lDr">
                         <rect key="frame" x="0.0" y="0.0" width="289" height="324"/>
                     </imageView>
                 </subviews>
@@ -48,4 +48,7 @@
             <point key="canvasLocation" x="-98.400000000000006" y="80.50974512743629"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="AppICON" width="1024" height="1024"/>
+    </resources>
 </document>

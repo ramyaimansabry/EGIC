@@ -21,31 +21,47 @@ class CategoriesController: UIViewController {
     
     func fetchCategories(){
         SVProgressHUD.show()
-        ApiManager.sharedInstance.loadCategories { (valid, msg, categories) in
+        ApiManager.sharedInstance.loadCategories { (valid, msg, categories, code) in
             self.dismissRingIndecator()
             if valid {
                 self.categoriesArray = categories
                 self.currentCategoriesArray = categories
                 self.collectionView1.reloadData()
             }else {
-                self.show1buttonAlert(title: "Error".localized, message: "LoadingDataError".localized, buttonTitle: "OK", callback: {
+                if code == -3 {
+                    HelperData.sharedInstance.signOut()
+                    self.show1buttonAlert(title: "Error".localized, message: "tokenError".localized, buttonTitle: "Retry".localized, callback: {
+                        HelperData.sharedInstance.signOut()
+                        self.dismiss(animated: true, completion: nil)
+                    })
                     
-                })
+                }else {
+                    self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "Retry".localized, callback: {
+                    })
+                }
             }
         }
     }
     func fetchCategoriesWithId(){
         SVProgressHUD.show()
-        ApiManager.sharedInstance.loadCategories(id: bassedCategoryId!) { (valid, msg, categories) in
+        ApiManager.sharedInstance.loadCategories(id: bassedCategoryId!) { (valid, msg, categories, code) in
             self.dismissRingIndecator()
             if valid {
                 self.categoriesArray = categories
                 self.currentCategoriesArray = categories
                 self.collectionView1.reloadData()
             }else {
-                self.show1buttonAlert(title: "Error".localized, message: "LoadingDataError".localized, buttonTitle: "OK", callback: {
+                if code == -3 {
+                    HelperData.sharedInstance.signOut()
+                    self.show1buttonAlert(title: "Error".localized, message: "tokenError".localized, buttonTitle: "Retry".localized, callback: {
+                        HelperData.sharedInstance.signOut()
+                        self.dismiss(animated: true, completion: nil)
+                    })
                     
-                })
+                }else {
+                    self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "Retry".localized, callback: {
+                    })
+                }
             }
         }
     }

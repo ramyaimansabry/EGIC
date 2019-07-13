@@ -16,15 +16,25 @@ class StoresController: UIViewController {
     }
     func fetchStores(){
         SVProgressHUD.show()
-        ApiManager.sharedInstance.loadStores { (valid, msg, stores) in
+        ApiManager.sharedInstance.loadStores { (valid, msg, stores, code) in
             self.dismissRingIndecator()
             if valid {
                 self.storesArray = stores
                 self.addAnnotations()
                 self.checkLocationServices()
             }else {
-                self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK", callback: {
-                })
+                if code == -3 {
+                    HelperData.sharedInstance.signOut()
+                    self.show1buttonAlert(title: "Error".localized, message: "tokenError".localized, buttonTitle: "Retry".localized, callback: {
+                        HelperData.sharedInstance.signOut()
+                        self.dismiss(animated: true, completion: nil)
+                    })
+                    
+                }else {
+                    self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "Retry".localized, callback: {
+                        
+                    })
+                }
             }
         }
     }

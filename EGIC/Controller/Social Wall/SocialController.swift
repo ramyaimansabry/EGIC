@@ -9,7 +9,6 @@ class SocialController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-    
     }
     
     let array: [Contact] = {

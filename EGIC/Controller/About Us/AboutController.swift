@@ -19,7 +19,7 @@ class AboutController: UIViewController {
     }
     func fetchData(){
         SVProgressHUD.show()
-        ApiManager.sharedInstance.loadAbout { (valid, msg) in
+        ApiManager.sharedInstance.loadAbout { (valid, msg, code) in
             self.dismissRingIndecator()
             if valid {
                 let style = NSMutableParagraphStyle()
@@ -29,9 +29,18 @@ class AboutController: UIViewController {
 
                 self.textView.attributedText = NSAttributedString(string: msg, attributes: atributes)
             }else {
-                self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "OK", callback: {
+                if code == -3 {
+                    HelperData.sharedInstance.signOut()
+                    self.show1buttonAlert(title: "Error".localized, message: "tokenError".localized, buttonTitle: "Retry".localized, callback: {
+                       HelperData.sharedInstance.signOut()
+                       self.dismiss(animated: true, completion: nil)
+                    })
                     
-                })
+                }else {
+                    self.show1buttonAlert(title: "Error".localized, message: "LoadingHomeError".localized, buttonTitle: "Retry".localized, callback: {
+                        
+                    })
+                }
             }
         }
     }

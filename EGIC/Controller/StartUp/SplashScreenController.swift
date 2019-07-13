@@ -33,10 +33,7 @@ class SplashScreenController: UIViewController {
                     self.present(homeController, animated: true, completion: nil)
                 }else {
                     if code == -3 {
-                        UserDefaults.standard.removeObject(forKey: "loggedInClient")
-                        UserDefaults.standard.synchronize()
-                        UserDefaults.standard.set(false, forKey: "clientLoggedIn")
-                        UserDefaults.standard.synchronize()
+                        HelperData.sharedInstance.signOut()
                         self.show1buttonAlert(title: "Error".localized, message: "tokenError".localized, buttonTitle: "Retry".localized, callback: {
                             self.ShowViewController()
                         })
@@ -46,7 +43,6 @@ class SplashScreenController: UIViewController {
                             self.ShowViewController()
                         })
                     }
-                    
                 }
             }
         }else {
