@@ -21,6 +21,8 @@ class ChangeLanguageAlert: UIViewController {
         CancelButton.layer.borderWidth = 1
         CancelButton.layer.borderColor = UIColor.mainAppColor().cgColor
         titleLabel.text = "changeLanguage".localized
+        CancelButton.setTitle("CancelButton".localized, for: .normal)
+        OkButton.setTitle("ChangeLanguageButton".localized, for: .normal)
         
         if "currentLang".localized == "en"{
             englishSwitch.isOn = true

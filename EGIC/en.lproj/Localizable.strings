@@ -26,6 +26,9 @@
 
 "currentLang" = "en";  // app language
 
+"CancelButton" = "Cancel";
+"ChangeLanguageButton" = "Change";
+
 
 /**********************/
 // side menu strings

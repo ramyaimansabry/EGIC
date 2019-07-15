@@ -26,6 +26,9 @@
 
 "currentLang" = "ar";
 
+"CancelButton" = "الغاء";
+"ChangeLanguageButton" = "تغيير";
+
 
 /**********************/
 // side menu strings
