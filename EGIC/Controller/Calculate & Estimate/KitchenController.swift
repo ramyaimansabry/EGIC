@@ -13,7 +13,12 @@ class KitchenController: UIViewController {
         super.viewDidLoad()
         setupCOmponent()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        for n in collectionArray {
+            print(n[1])
+        }
+    }
     let drainageArray: [[String]] = [["kessel","kessel"],["shome","Smart Home"]]
     let collectionArray: [[String]] = [["","K1".localized],
                                        ["","K2".localized],

@@ -97,9 +97,9 @@
 "K2" = "Filter";
 "K3" = "Valve";
 "K4" = "Point Drain";
-"K5" = "Dwasher";
+"K5" = "Dish Washer";
 "K6" = "Heater";
-"K7" = "Wmachine";
+"K7" = "Washing Machine";
 
 
 // Bill controller
