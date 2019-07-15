@@ -1,6 +1,7 @@
 
 
 import UIKit
+import SVProgressHUD
 
 class BathroomController: UIViewController {
     @IBOutlet weak var drainageLabel: UILabel!
@@ -25,12 +26,42 @@ class BathroomController: UIViewController {
                                        ["bidet","B6".localized],
                                        ["cabin1","B7".localized],
                                        ["cabin2","B8".localized]]
+    var selectedItems: [Int] = [1,1,0,0,0,0,0,0]
+    
+    
+    func calculateEstimation(formula: String, drain: String){
+        SVProgressHUD.show()
+        ApiManager.sharedInstance.calculateBathroom(formula: formula, drain: drain, selectedItems: selectedItems) { (valid, msg, data, code) in
+            self.dismissRingIndecator()
+            if valid {
+                self.showResult(result: data!)
+            }else {
+                if code == -3 {
+                    HelperData.sharedInstance.signOut()
+                    self.show1buttonAlert(title: "Error".localized, message: "tokenError".localized, buttonTitle: "OK", callback: {
+                        HelperData.sharedInstance.signOut()
+                        self.dismiss(animated: true, completion: nil)
+                    })
+                    
+                }else {
+                    self.show1buttonAlert(title: "OK", message: "LoadingHomeError".localized, buttonTitle: "Retry".localized, callback: {
+                    })
+                }
+            }
+        }
+    }
+    
+    func showResult(result: Calculate){
+        let storyboard = UIStoryboard(name: "SideMenu", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "BillController") as! BillController
+        controller.bassedResult = result
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
     
     @IBAction func calculateButtonAction(_ sender: UIButton) {
-        
-        
-        
-        
+        let drain = drainageArray[drainagePickerView.selectedRow(inComponent: 0)][1]
+        let formula = areaArray[areaPickerView.selectedRow(inComponent: 0)]
+        calculateEstimation(formula: formula, drain: drain)
     }
     
     func setupCOmponent(){
@@ -49,6 +80,8 @@ class BathroomController: UIViewController {
         collectionView1.allowsMultipleSelection = true
         collectionView1.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .top)
         collectionView1.selectItem(at: IndexPath(item: 1, section: 0), animated: true, scrollPosition: .top)
+        
+        SVProgressHUD.setupView()
     }
     
     
@@ -115,12 +148,17 @@ extension BathroomController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView1.cellForItem(at: indexPath)
         if cell?.isSelected == false {
-           
-
+            self.selectedItems[indexPath.row] = 0
         }else {
-            
-            
-            
+            self.selectedItems[indexPath.row] = 1
+        }
+    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView1.cellForItem(at: indexPath)
+        if cell?.isSelected == false {
+            self.selectedItems[indexPath.row] = 0
+        }else {
+            self.selectedItems[indexPath.row] = 1
         }
     }
     

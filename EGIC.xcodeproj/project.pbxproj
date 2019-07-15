@@ -23,6 +23,10 @@
 		F060109A22CFC283008BDCF4 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109922CFC283008BDCF4 /* SignUpController.swift */; };
 		F060109C22CFCBF8008BDCF4 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */; };
 		F07707B322D7709B00212D78 /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07707B522D7709B00212D78 /* Alerts.storyboard */; };
+		F079142C22DCA4A400CC1700 /* CalculateResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079142A22DCA4A400CC1700 /* CalculateResultCell.swift */; };
+		F079142D22DCA4A400CC1700 /* CalculateResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F079142B22DCA4A400CC1700 /* CalculateResultCell.xib */; };
+		F079143022DCA52C00CC1700 /* CalculateItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079142E22DCA52C00CC1700 /* CalculateItemCell.swift */; };
+		F079143122DCA52C00CC1700 /* CalculateItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F079142F22DCA52C00CC1700 /* CalculateItemCell.xib */; };
 		F0981DF622D76428004D0878 /* OneButtonAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0981DF522D76428004D0878 /* OneButtonAlertController.swift */; };
 		F0981DF822D76451004D0878 /* TwoButtonAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0981DF722D76451004D0878 /* TwoButtonAlertController.swift */; };
 		F0981DFA22D76491004D0878 /* ChangeLanguageAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0981DF922D76491004D0878 /* ChangeLanguageAlert.swift */; };
@@ -64,6 +68,8 @@
 		F0D9FF5022D97BB100B9246D /* BathroomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9FF4F22D97BB100B9246D /* BathroomController.swift */; };
 		F0D9FF5322D97C0100B9246D /* CalculateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9FF5122D97C0100B9246D /* CalculateCell.swift */; };
 		F0D9FF5422D97C0100B9246D /* CalculateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D9FF5222D97C0100B9246D /* CalculateCell.xib */; };
+		F0D9FF5622DA389400B9246D /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9FF5522DA389400B9246D /* Calculate.swift */; };
+		F0D9FF5B22DA462600B9246D /* BillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9FF5A22DA462600B9246D /* BillController.swift */; };
 		F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DA4C4622D0E469001C5FA0 /* LoginBoard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +94,10 @@
 		F060109922CFC283008BDCF4 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		F060109B22CFCBF8008BDCF4 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
 		F07707B422D7709B00212D78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Alerts.storyboard; sourceTree = "<group>"; };
+		F079142A22DCA4A400CC1700 /* CalculateResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateResultCell.swift; sourceTree = "<group>"; };
+		F079142B22DCA4A400CC1700 /* CalculateResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateResultCell.xib; sourceTree = "<group>"; };
+		F079142E22DCA52C00CC1700 /* CalculateItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateItemCell.swift; sourceTree = "<group>"; };
+		F079142F22DCA52C00CC1700 /* CalculateItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateItemCell.xib; sourceTree = "<group>"; };
 		F0981DF522D76428004D0878 /* OneButtonAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonAlertController.swift; sourceTree = "<group>"; };
 		F0981DF722D76451004D0878 /* TwoButtonAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonAlertController.swift; sourceTree = "<group>"; };
 		F0981DF922D76491004D0878 /* ChangeLanguageAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageAlert.swift; sourceTree = "<group>"; };
@@ -131,6 +141,8 @@
 		F0D9FF4F22D97BB100B9246D /* BathroomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomController.swift; sourceTree = "<group>"; };
 		F0D9FF5122D97C0100B9246D /* CalculateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCell.swift; sourceTree = "<group>"; };
 		F0D9FF5222D97C0100B9246D /* CalculateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateCell.xib; sourceTree = "<group>"; };
+		F0D9FF5522DA389400B9246D /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
+		F0D9FF5A22DA462600B9246D /* BillController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillController.swift; sourceTree = "<group>"; };
 		F0DA4C4222D0E437001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F0DA4C4322D0E438001C5FA0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F0DA4C4522D0E469001C5FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginBoard.storyboard; sourceTree = "<group>"; };
@@ -228,6 +240,7 @@
 		F060108422CF734C008BDCF4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F0D9FF5522DA389400B9246D /* Calculate.swift */,
 				F060109222CF781B008BDCF4 /* Categories.swift */,
 				F0BC873D22D4D5FC00076B6A /* Product.swift */,
 				F0CE691D22D21FFA0042D94E /* HomeCategories.swift */,
@@ -388,8 +401,21 @@
 				F0D9FF4F22D97BB100B9246D /* BathroomController.swift */,
 				F0D9FF5122D97C0100B9246D /* CalculateCell.swift */,
 				F0D9FF5222D97C0100B9246D /* CalculateCell.xib */,
+				F0D9FF5722DA45E100B9246D /* Bill Quantity */,
 			);
 			path = "Calculate & Estimate";
+			sourceTree = "<group>";
+		};
+		F0D9FF5722DA45E100B9246D /* Bill Quantity */ = {
+			isa = PBXGroup;
+			children = (
+				F0D9FF5A22DA462600B9246D /* BillController.swift */,
+				F079142A22DCA4A400CC1700 /* CalculateResultCell.swift */,
+				F079142B22DCA4A400CC1700 /* CalculateResultCell.xib */,
+				F079142E22DCA52C00CC1700 /* CalculateItemCell.swift */,
+				F079142F22DCA52C00CC1700 /* CalculateItemCell.xib */,
+			);
+			path = "Bill Quantity";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,7 +429,7 @@
 				F060106822CF6D9E008BDCF4 /* Sources */,
 				F060106922CF6D9E008BDCF4 /* Frameworks */,
 				F060106A22CF6D9E008BDCF4 /* Resources */,
-				80DF892A1B952595932023F3 /* [CP] Embed Pods Frameworks */,
+				B55BC59643EE71D55B03DA5A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -460,9 +486,11 @@
 				F0DA4C4422D0E469001C5FA0 /* LoginBoard.storyboard in Resources */,
 				F0BC873C22D4D48000076B6A /* ProductsCell.xib in Resources */,
 				F060107722CF6DA0008BDCF4 /* Assets.xcassets in Resources */,
+				F079142D22DCA4A400CC1700 /* CalculateResultCell.xib in Resources */,
 				F060107522CF6D9E008BDCF4 /* Main.storyboard in Resources */,
 				F0D9FF5422D97C0100B9246D /* CalculateCell.xib in Resources */,
 				F07707B322D7709B00212D78 /* Alerts.storyboard in Resources */,
+				F079143122DCA52C00CC1700 /* CalculateItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +519,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		80DF892A1B952595932023F3 /* [CP] Embed Pods Frameworks */ = {
+		B55BC59643EE71D55B03DA5A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -506,7 +534,6 @@
 				"${BUILT_PRODUCTS_DIR}/MOLH/MOLH.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -518,7 +545,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MOLH.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -556,6 +582,7 @@
 				F0CE692422D24A450042D94E /* LeftMenuController.swift in Sources */,
 				F060109A22CFC283008BDCF4 /* SignUpController.swift in Sources */,
 				F060107022CF6D9E008BDCF4 /* AppDelegate.swift in Sources */,
+				F0D9FF5622DA389400B9246D /* Calculate.swift in Sources */,
 				F0CE692022D220460042D94E /* AppServices.swift in Sources */,
 				F0BC874022D4F13100076B6A /* ProductDetailsController.swift in Sources */,
 				F0CE693F22D385500042D94E /* SocialController.swift in Sources */,
@@ -573,9 +600,12 @@
 				F060109122CF7759008BDCF4 /* Extentions.swift in Sources */,
 				F060109322CF781B008BDCF4 /* Categories.swift in Sources */,
 				F0D9FF5022D97BB100B9246D /* BathroomController.swift in Sources */,
+				F079143022DCA52C00CC1700 /* CalculateItemCell.swift in Sources */,
 				F0CE691622D0EDA80042D94E /* LanguageController.swift in Sources */,
 				F0CE693922D373340042D94E /* CustomPointAnnotation.swift in Sources */,
 				F0981DF622D76428004D0878 /* OneButtonAlertController.swift in Sources */,
+				F079142C22DCA4A400CC1700 /* CalculateResultCell.swift in Sources */,
+				F0D9FF5B22DA462600B9246D /* BillController.swift in Sources */,
 				F0CE694622D3987B0042D94E /* Store.swift in Sources */,
 				F0981DFA22D76491004D0878 /* ChangeLanguageAlert.swift in Sources */,
 				F0CE692222D225680042D94E /* HomeController.swift in Sources */,
