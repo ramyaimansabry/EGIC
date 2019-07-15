@@ -124,6 +124,7 @@ extension BathroomController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4)
             cell.image.tintColor = UIColor.mainAppColor()
         }
+        
         if indexPath.row == 0 || indexPath.row == 1 {
             cell.isUserInteractionEnabled = false
         }else {
@@ -135,14 +136,14 @@ extension BathroomController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let cellWidth = (collectionView1.frame.width-20)/2
-        let cellHeight = 0.35*cellWidth
+        let cellWidth = (view.frame.width-50)/2
+        let cellHeight = 0.37*cellWidth
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 20
+        return 15
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

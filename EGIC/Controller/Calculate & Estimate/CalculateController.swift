@@ -13,13 +13,12 @@ class CalculateController: UIViewController {
         setupComponent()
     }
     
-    
     func setupComponent(){
         SVProgressHUD.setupView()
-        segmentControl.apportionsSegmentWidthsByContent = true
         segmentControl.removeAllSegments()
         segmentControl.insertSegment(withTitle: "Bath".localized, at: 0, animated: true)
         segmentControl.insertSegment(withTitle: "Kit".localized, at: 1, animated: true)
+        segmentControl.apportionsSegmentWidthsByContent = true
         segmentControl.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         segmentControl.tintColor = .clear
         segmentControl.selectedSegmentIndex = 0

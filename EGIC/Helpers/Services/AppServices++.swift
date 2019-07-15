@@ -128,7 +128,6 @@ extension ApiManager {
             "cabin2": selectedItems[7],
             ]
         Alamofire.request(url, method: .post ,parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
-            print(response)
             if let jsonResponse = response.result.value{
                 if response.result.isSuccess {
                     guard let data = jsonResponse as? [String : Any] else {
@@ -184,7 +183,6 @@ extension ApiManager {
             "wmachine": selectedItems[6],
             ]
         Alamofire.request(url, method: .post ,parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
-            print(response)
             if let jsonResponse = response.result.value{
                 if response.result.isSuccess {
                     guard let data = jsonResponse as? [String : Any] else {

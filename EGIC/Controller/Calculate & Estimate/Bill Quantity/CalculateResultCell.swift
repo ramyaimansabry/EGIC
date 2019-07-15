@@ -30,7 +30,6 @@ extension CalculateResultCell: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CalculateItemCell = collectionViewRow.dequeueReusableCell(withReuseIdentifier: "CalculateItemCell", for: indexPath) as! CalculateItemCell
         
@@ -49,7 +48,7 @@ extension CalculateResultCell: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if indexPath.row == 2 {
-             return CGSize(width: frame.width/6, height: frame.height)
+             return CGSize(width: frame.width/7, height: frame.height)
         }else {
              let firstRowWidth = frame.width/5
              return CGSize(width: (frame.width-firstRowWidth)/2, height: frame.height)

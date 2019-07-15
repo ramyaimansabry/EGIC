@@ -122,8 +122,8 @@ extension KitchenController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let cellWidth = (collectionView1.frame.width-20)/2
-        let cellHeight = 0.35*cellWidth
+        let cellWidth = (view.frame.width-50)/2
+        let cellHeight = 0.37*cellWidth
         return CGSize(width: cellWidth, height: cellHeight)
     }
     

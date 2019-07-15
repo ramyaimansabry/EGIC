@@ -335,11 +335,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n1a-QC-35V">
-                                <rect key="frame" x="104" y="30.5" width="140" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n1a-QC-35V">
+                                <rect key="frame" x="104" y="25.5" width="140" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="4rM-ZB-YRN"/>
+                                    <constraint firstAttribute="height" constant="40" id="mwP-Aq-KGt"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -350,32 +352,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1T-wS-RcX">
-                                <rect key="frame" x="70.5" y="81" width="140" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1T-wS-RcX">
+                                <rect key="frame" x="70.5" y="76" width="140" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="J5k-Sp-7Pu"/>
+                                    <constraint firstAttribute="height" constant="40" id="hvj-9F-GhD"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Xm-Po-Ssc">
-                                <rect key="frame" x="20" y="141" width="335" height="364"/>
+                                <rect key="frame" x="20" y="146" width="335" height="364"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i3q-lc-8El">
                                     <size key="itemSize" width="238" height="99"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKf-qI-eeJ" userLabel="bottomSpacingView">
-                                <rect key="frame" x="0.0" y="505" width="375" height="102"/>
+                                <rect key="frame" x="0.0" y="510" width="375" height="82"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjE-cD-mYr">
-                                <rect key="frame" x="137.5" y="536" width="100" height="40"/>
+                                <rect key="frame" x="137.5" y="531" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="NRI-w0-imp"/>
                                     <constraint firstAttribute="height" constant="40" id="hB7-an-eVz"/>
@@ -410,7 +413,7 @@
                             <constraint firstItem="MvI-eQ-G7i" firstAttribute="leading" secondItem="ghz-dn-U20" secondAttribute="leading" constant="20" id="Iww-sx-Aen"/>
                             <constraint firstAttribute="trailing" secondItem="oKf-qI-eeJ" secondAttribute="trailing" id="PKm-Ll-Utk"/>
                             <constraint firstAttribute="trailing" secondItem="4Xm-Po-Ssc" secondAttribute="trailing" constant="20" id="VHH-HA-zJt"/>
-                            <constraint firstAttribute="bottom" secondItem="oKf-qI-eeJ" secondAttribute="bottom" id="XiR-aU-JsQ"/>
+                            <constraint firstAttribute="bottom" secondItem="oKf-qI-eeJ" secondAttribute="bottom" constant="15" id="XiR-aU-JsQ"/>
                             <constraint firstItem="n1a-QC-35V" firstAttribute="leading" secondItem="CFp-Fs-h7H" secondAttribute="trailing" constant="15" id="f2z-pb-7C6"/>
                             <constraint firstItem="MvI-eQ-G7i" firstAttribute="top" secondItem="CFp-Fs-h7H" secondAttribute="bottom" constant="30" id="fEr-bz-5rG"/>
                             <constraint firstItem="hjE-cD-mYr" firstAttribute="centerY" secondItem="oKf-qI-eeJ" secondAttribute="centerY" id="fdo-gE-Nqw"/>
@@ -523,9 +526,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70S-Bk-p2P">
-                                <rect key="frame" x="104" y="50.5" width="140" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70S-Bk-p2P">
+                                <rect key="frame" x="104" y="45.5" width="140" height="40"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NrT-kg-rvM"/>
                                     <constraint firstAttribute="width" constant="140" id="mnG-Z4-KZz"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -533,22 +537,22 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SEG-7s-R6Y">
-                                <rect key="frame" x="20" y="121" width="335" height="364"/>
+                                <rect key="frame" x="20" y="126" width="335" height="364"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tmS-IN-NsK">
                                     <size key="itemSize" width="238" height="99"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vJ-DG-18i" userLabel="bottomSpacingView">
-                                <rect key="frame" x="0.0" y="485" width="375" height="122"/>
+                                <rect key="frame" x="0.0" y="490" width="375" height="107"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf8-ax-XS1">
-                                <rect key="frame" x="137.5" y="526" width="100" height="40"/>
+                                <rect key="frame" x="137.5" y="523.5" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="GGV-B1-IG4"/>
                                     <constraint firstAttribute="height" constant="40" id="z6W-ug-XD7"/>
@@ -580,7 +584,7 @@
                             <constraint firstItem="cZG-60-Pir" firstAttribute="leading" secondItem="mUp-4E-CJ4" secondAttribute="leading" constant="20" id="8Vc-AA-Rdb"/>
                             <constraint firstItem="bf8-ax-XS1" firstAttribute="centerY" secondItem="3vJ-DG-18i" secondAttribute="centerY" id="Ajg-SS-kHv"/>
                             <constraint firstItem="mUp-4E-CJ4" firstAttribute="trailing" secondItem="SEG-7s-R6Y" secondAttribute="trailing" constant="20" id="Bzj-Dw-p61"/>
-                            <constraint firstItem="mUp-4E-CJ4" firstAttribute="bottom" secondItem="3vJ-DG-18i" secondAttribute="bottom" id="F4h-xo-C37"/>
+                            <constraint firstItem="mUp-4E-CJ4" firstAttribute="bottom" secondItem="3vJ-DG-18i" secondAttribute="bottom" constant="10" id="F4h-xo-C37"/>
                             <constraint firstItem="mUp-4E-CJ4" firstAttribute="trailing" secondItem="3vJ-DG-18i" secondAttribute="trailing" id="Lnp-bJ-znF"/>
                             <constraint firstItem="3vJ-DG-18i" firstAttribute="top" secondItem="SEG-7s-R6Y" secondAttribute="bottom" id="OOb-F4-tbp"/>
                             <constraint firstItem="cZG-60-Pir" firstAttribute="top" secondItem="mUp-4E-CJ4" secondAttribute="top" constant="35" id="OVM-Yh-HbP"/>

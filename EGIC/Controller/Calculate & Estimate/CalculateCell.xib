@@ -24,8 +24,8 @@
                         <color key="tintColor" red="0.1764705882" green="0.38823529410000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVM-5X-dzY">
-                        <rect key="frame" x="5" y="65.5" width="276" height="14.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <rect key="frame" x="7" y="64.5" width="271" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                         <color key="textColor" red="0.1764705882" green="0.38823529410000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -36,9 +36,9 @@
                 <constraint firstItem="LuZ-2i-dT6" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.3" id="O9g-8V-g3b"/>
                 <constraint firstItem="LuZ-2i-dT6" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="ReL-Nn-HUE"/>
                 <constraint firstItem="LuZ-2i-dT6" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" multiplier="1.75" id="Ybr-GV-GfU"/>
-                <constraint firstItem="eVM-5X-dzY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="aCJ-8T-K4E"/>
+                <constraint firstItem="eVM-5X-dzY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="aCJ-8T-K4E"/>
                 <constraint firstItem="eVM-5X-dzY" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="dh4-d4-NUX"/>
-                <constraint firstItem="LuZ-2i-dT6" firstAttribute="leading" secondItem="eVM-5X-dzY" secondAttribute="trailing" constant="5" id="fOX-nM-4nM"/>
+                <constraint firstItem="LuZ-2i-dT6" firstAttribute="leading" secondItem="eVM-5X-dzY" secondAttribute="trailing" constant="8" id="fOX-nM-4nM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="353" height="145"/>
