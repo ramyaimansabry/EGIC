@@ -137,7 +137,8 @@ extension BathroomController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let cellWidth = (view.frame.width-50)/2
-        let cellHeight = 0.37*cellWidth
+        let finalWidth = min(200, cellWidth)
+        let cellHeight = 0.37*finalWidth
         return CGSize(width: cellWidth, height: cellHeight)
     }
     

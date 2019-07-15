@@ -12,13 +12,6 @@ class BillController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        
-        print(bassedResult?.feedItems.count)
-        print("*****************")
-        for n in (bassedResult?.feedItems)! {
-            print(n.name)
-        }
-         print("*****************")
     }
     
     func setupNavigationBar(){
