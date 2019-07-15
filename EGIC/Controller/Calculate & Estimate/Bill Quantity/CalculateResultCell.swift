@@ -49,7 +49,7 @@ extension CalculateResultCell: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if indexPath.row == 2 {
-             return CGSize(width: frame.width/5, height: frame.height)
+             return CGSize(width: frame.width/6, height: frame.height)
         }else {
              let firstRowWidth = frame.width/5
              return CGSize(width: (frame.width-firstRowWidth)/2, height: frame.height)

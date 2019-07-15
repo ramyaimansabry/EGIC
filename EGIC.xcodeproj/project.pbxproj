@@ -42,6 +42,7 @@
 		F0BC874322D508DB00076B6A /* CategoriesController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC874222D508DB00076B6A /* CategoriesController++.swift */; };
 		F0BC874522D5090300076B6A /* ProductsController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC874422D5090300076B6A /* ProductsController++.swift */; };
 		F0C351DF22D6803500D39372 /* LeftMenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C351DE22D6803500D39372 /* LeftMenuHeader.swift */; };
+		F0C7B04F22DCB40600366CC4 /* KitchenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C7B04E22DCB40600366CC4 /* KitchenController.swift */; };
 		F0CE691622D0EDA80042D94E /* LanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE691522D0EDA80042D94E /* LanguageController.swift */; };
 		F0CE691922D0F2CA0042D94E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0CE691B22D0F2CA0042D94E /* Localizable.strings */; };
 		F0CE691E22D21FFA0042D94E /* HomeCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE691D22D21FFA0042D94E /* HomeCategories.swift */; };
@@ -113,6 +114,7 @@
 		F0BC874222D508DB00076B6A /* CategoriesController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesController++.swift"; sourceTree = "<group>"; };
 		F0BC874422D5090300076B6A /* ProductsController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductsController++.swift"; sourceTree = "<group>"; };
 		F0C351DE22D6803500D39372 /* LeftMenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuHeader.swift; sourceTree = "<group>"; };
+		F0C7B04E22DCB40600366CC4 /* KitchenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenController.swift; sourceTree = "<group>"; };
 		F0CE691422D0E49F0042D94E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoginBoard.strings; sourceTree = "<group>"; };
 		F0CE691522D0EDA80042D94E /* LanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageController.swift; sourceTree = "<group>"; };
 		F0CE691A22D0F2CA0042D94E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 			children = (
 				F0D9FF4D22D9714C00B9246D /* CalculateController.swift */,
 				F0D9FF4F22D97BB100B9246D /* BathroomController.swift */,
+				F0C7B04E22DCB40600366CC4 /* KitchenController.swift */,
 				F0D9FF5122D97C0100B9246D /* CalculateCell.swift */,
 				F0D9FF5222D97C0100B9246D /* CalculateCell.xib */,
 				F0D9FF5722DA45E100B9246D /* Bill Quantity */,
@@ -590,6 +593,7 @@
 				F0981DF822D76451004D0878 /* TwoButtonAlertController.swift in Sources */,
 				F0CE692C22D26C530042D94E /* CatalogCell.swift in Sources */,
 				F0BC873022D4BA4F00076B6A /* CategoriesCell.swift in Sources */,
+				F0C7B04F22DCB40600366CC4 /* KitchenController.swift in Sources */,
 				F0CE693122D35EB90042D94E /* ContactUsCell.swift in Sources */,
 				F0BC873E22D4D5FC00076B6A /* Product.swift in Sources */,
 				F0D9FF5322D97C0100B9246D /* CalculateCell.swift in Sources */,

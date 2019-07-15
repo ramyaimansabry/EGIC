@@ -74,6 +74,7 @@
 
 
 // calculate & estimate
+/*******************************************/
 "Bath" = "Bathroom";
 "Kit" = "Kitchen";
 "Drainage" = "Drainage";
@@ -90,6 +91,15 @@
 "B6" = "Bidet";
 "B7" = "Shower cabin (Normal)";
 "B8" = "Shower cabin (Built in controls)";
+
+// kitchen
+"K1" = "Tub";
+"K2" = "Filter";
+"K3" = "Valve";
+"K4" = "Point Drain";
+"K5" = "Dwasher";
+"K6" = "Heater";
+"K7" = "Wmachine";
 
 
 // Bill controller
