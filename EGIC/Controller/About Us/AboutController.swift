@@ -28,6 +28,7 @@ class AboutController: UIViewController {
                 let atributes = [NSAttributedString.Key.paragraphStyle: style, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]
 
                 self.textView.attributedText = NSAttributedString(string: msg, attributes: atributes)
+                self.textView.textColor = .white
             }else {
                 if code == -3 {
                     HelperData.sharedInstance.signOut()

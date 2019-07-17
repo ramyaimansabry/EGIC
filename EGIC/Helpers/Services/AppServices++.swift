@@ -111,7 +111,7 @@ extension ApiManager {
 
     
     func calculateBathroom(formula: String, drain: String, selectedItems: [Int] ,completed: @escaping (_ valid:Bool,_ msg:String,_ result: Calculate? ,_ code: Int)->()){
-        self.stopAllRequests()
+    //    self.stopAllRequests()
         let url = "\(HelperData.sharedInstance.serverBasePath)/calculate/bath"
         let headers: HTTPHeaders = [
             "lang": "\(HelperData.sharedInstance.loggedInClient.language ?? "en")",
@@ -173,7 +173,7 @@ extension ApiManager {
     
     
     func calculateKitchen(drain: String, selectedItems: [Int] ,completed: @escaping (_ valid:Bool,_ msg:String,_ result: Calculate? ,_ code: Int)->()){
-        self.stopAllRequests()
+    //    self.stopAllRequests()
         let url = "\(HelperData.sharedInstance.serverBasePath)/calculate/kitchen"
         let headers: HTTPHeaders = [
             "lang": "\(HelperData.sharedInstance.loggedInClient.language ?? "en")",

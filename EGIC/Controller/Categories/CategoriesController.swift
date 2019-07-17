@@ -24,8 +24,8 @@ class CategoriesController: UIViewController {
         ApiManager.sharedInstance.loadCategories { (valid, msg, categories, code) in
             self.dismissRingIndecator()
             if valid {
-                self.categoriesArray = categories
-                self.currentCategoriesArray = categories
+                self.categoriesArray = categories.reversed()
+                self.currentCategoriesArray = categories.reversed()
                 self.collectionView1.reloadData()
             }else {
                 if code == -3 {
