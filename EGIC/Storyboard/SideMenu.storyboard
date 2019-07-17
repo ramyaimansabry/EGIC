@@ -39,7 +39,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPe-9N-ihJ">
-                                                    <rect key="frame" x="0.0" y="78.5" width="257" height="14.5"/>
+                                                    <rect key="frame" x="0.0" y="73" width="257" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="pPe-9N-ihJ" secondAttribute="trailing" id="0ec-qs-ZPI"/>
-                                            <constraint firstItem="pPe-9N-ihJ" firstAttribute="centerY" secondItem="kuv-Zi-UUJ" secondAttribute="centerY" multiplier="1.6" id="0lz-bP-dcJ"/>
+                                            <constraint firstItem="pPe-9N-ihJ" firstAttribute="centerY" secondItem="kuv-Zi-UUJ" secondAttribute="centerY" multiplier="1.5" id="0lz-bP-dcJ"/>
                                             <constraint firstItem="6Iy-NE-MJf" firstAttribute="height" secondItem="kuv-Zi-UUJ" secondAttribute="height" multiplier="1:2" id="LbQ-3A-eqi"/>
                                             <constraint firstItem="6Iy-NE-MJf" firstAttribute="centerY" secondItem="kuv-Zi-UUJ" secondAttribute="centerY" multiplier="0.7" id="PYs-fb-NDY"/>
                                             <constraint firstItem="6Iy-NE-MJf" firstAttribute="width" secondItem="kuv-Zi-UUJ" secondAttribute="width" multiplier="1:2.5" id="aW9-N6-2KD"/>

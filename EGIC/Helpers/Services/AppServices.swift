@@ -5,14 +5,14 @@ import Alamofire
 extension ApiManager {
 
     func loadHomeCategories(completed: @escaping (_ valid:Bool,_ msg:String,_ homeCategories: HomeCategories?,_ code: Int)->()){
-        self.stopAllRequests()
+//        self.stopAllRequests()
         let url = "\(HelperData.sharedInstance.serverBasePath)/home"
         let headers: HTTPHeaders = [
             "Accept": "application/json",
             "lang": "\(HelperData.sharedInstance.loggedInClient.language ?? "en")",
             "Authorization": "Bearer \(HelperData.sharedInstance.loggedInClient.token)"
         ]
-        Alamofire.request(url, method: .get ,parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+        publicAlamofireManager.request(url, method: .get ,parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             if let jsonResponse = response.result.value{
                 if response.result.isSuccess {
                     guard let data = jsonResponse as? [String : Any] else {
@@ -53,14 +53,14 @@ extension ApiManager {
     
     
     func loadAbout(completed: @escaping (_ valid:Bool,_ msg:String,_ code: Int)->()){
-        self.stopAllRequests()
+//        self.stopAllRequests()
         let url = "\(HelperData.sharedInstance.serverBasePath)/about"
         let headers: HTTPHeaders = [
             "Accept": "application/json",
             "lang": "\(HelperData.sharedInstance.loggedInClient.language ?? "en")",
             "Authorization": "Bearer \(HelperData.sharedInstance.loggedInClient.token)"
         ]
-        Alamofire.request(url, method: .get ,parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+        publicAlamofireManager.request(url, method: .get ,parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             if let jsonResponse = response.result.value{
                 if response.result.isSuccess {
                     guard let data = jsonResponse as? [String : Any] else {
@@ -93,14 +93,14 @@ extension ApiManager {
     
     
     func loadStores(completed: @escaping (_ valid:Bool,_ msg:String,_ homeCategories: [Store],_ code: Int)->()){
-        self.stopAllRequests()
+//        self.stopAllRequests()
         let url = "\(HelperData.sharedInstance.serverBasePath)/location"
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",
             "lang": "\(HelperData.sharedInstance.loggedInClient.language ?? "en")",
             "Authorization": "Bearer \(HelperData.sharedInstance.loggedInClient.token)"
         ]
-        Alamofire.request(url, method: .get ,parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+        publicAlamofireManager.request(url, method: .get ,parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             if let jsonResponse = response.result.value{
                 if response.result.isSuccess {
                     guard let data = jsonResponse as? [String : Any] else {

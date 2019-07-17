@@ -4,7 +4,7 @@ import Alamofire
 extension ApiManager {
     
     func signUp(phoneNumber: String,name: String,email: String, job_id: String, language: String, completed: @escaping (_ valid:Bool, _ msg:String,_ code: Int)->()){
-        self.stopAllRequests()
+//        self.stopAllRequests()
         let url = "\(HelperData.sharedInstance.serverBasePath)/user/register"
         let parameters: Parameters = [
             "mobile_number" : phoneNumber,
@@ -16,7 +16,7 @@ extension ApiManager {
             "Accept": "application/json",
             "lang": language
         ]
-        Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
+        publicAlamofireManager.request(url, method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
             if let jsonResponse = response.result.value{
                 if response.result.isSuccess {
                     guard let data = jsonResponse as? [String : Any] else {
@@ -64,7 +64,7 @@ extension ApiManager {
     
     
     func signIn(phoneNumber: String, language: String, completed: @escaping (_ valid:Bool, _ msg:String,_ code: Int)->()){
-        self.stopAllRequests()
+//        self.stopAllRequests()
         let url = "\(HelperData.sharedInstance.serverBasePath)/user/auth"
         let parameters: Parameters = [
             "mobile_number" : phoneNumber,
@@ -73,7 +73,7 @@ extension ApiManager {
             "Accept": "application/json",
             "lang": language
         ]
-        Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
+        publicAlamofireManager.request(url, method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
             if let jsonResponse = response.result.value{
                 if response.result.isSuccess {
                     guard let data = jsonResponse as? [String : Any] else {

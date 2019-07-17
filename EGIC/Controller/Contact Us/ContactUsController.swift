@@ -16,11 +16,12 @@ class ContactUsController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        centerMapOnLocation()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-         centerMapOnLocation()
-         addAnnotation()
+        addAnnotation()
+        centerMapOnLocation()
     }
     
     let array: [Contact] = {
